@@ -139,6 +139,146 @@
       "crowd": "Περιπετειώδεις ταξιδιώτες",
       "food": "Anemos Cafe (στο χωριό Άγιος Γεώργιος)",
       "image": "images/beaches/porto_timoni.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Άγιος Στέφανος (Βορράς)",
+      "distance_km": 38,
+      "location": "Βόρεια",
+      "features": [
+        "Αμμώδης",
+        "Ήρεμα νερά",
+        "Οργανωμένη"
+      ],
+      "crowd": "Οικογένειες & τουρίστες",
+      "food": "Taverna Eucalyptus",
+      "image": "images/beaches/agios_stefanos_north.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Ρόδα",
+      "distance_km": 36,
+      "location": "Βόρεια",
+      "features": [
+        "Αμμώδης",
+        "Ρηχή",
+        "Κατάλληλη για παιδιά"
+      ],
+      "crowd": "Οικογένειες",
+      "food": "Roda Park Restaurant",
+      "image": "images/beaches/roda.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Αχαράβη",
+      "distance_km": 35,
+      "location": "Βόρεια",
+      "features": [
+        "Αμμώδης",
+        "Μεγάλη ακτογραμμή",
+        "Οργανωμένη"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Maistro Taverna",
+      "image": "images/beaches/acharavi.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Σιδάρι",
+      "distance_km": 38,
+      "location": "Βορειοδυτικά",
+      "features": [
+        "Αμμώδης",
+        "Canal d'Amour",
+        "Τουριστική"
+      ],
+      "crowd": "Ζευγάρια & τουρίστες",
+      "food": "The Wave",
+      "image": "images/beaches/sidari.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Κανάλι του Έρωτα",
+      "distance_km": 39,
+      "location": "Βορειοδυτικά",
+      "features": [
+        "Στενά κανάλια",
+        "Γλυπτά από άμμο",
+        "Ινσταγκραμικό"
+      ],
+      "crowd": "Ζευγάρια",
+      "food": "Canal D'Amour Cafe",
+      "image": "images/beaches/canal_erotas.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Άγιος Γεώργιος Πάγων",
+      "distance_km": 30,
+      "location": "Βορειοδυτικά",
+      "features": [
+        "Αμμώδης",
+        "Μεγάλη ακτή",
+        "Ιδανική για windsurfing"
+      ],
+      "crowd": "Οικογένειες & σπορ λάτρεις",
+      "food": "San George Restaurant",
+      "image": "images/beaches/agios_georgios_pagon.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Άγνι",
+      "distance_km": 28,
+      "location": "Ανατολικά",
+      "features": [
+        "Βότσαλο",
+        "Καθαρά νερά",
+        "Ήρεμο"
+      ],
+      "crowd": "Ζευγάρια & ψαροντουφεκάδες",
+      "food": "Toula's Seaside",
+      "image": "images/beaches/agni.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Κουλούρα",
+      "distance_km": 30,
+      "location": "Ανατολικά",
+      "features": [
+        "Βότσαλο",
+        "Ιστορικό σημείο",
+        "Ήσυχη παραλία"
+      ],
+      "crowd": "Ντόπιοι",
+      "food": "Taverna Kouloura",
+      "image": "images/beaches/kouloura.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Καλάμι",
+      "distance_km": 29,
+      "location": "Ανατολικά",
+      "features": [
+        "Βότσαλο",
+        "Σκιά από δέντρα",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Ντόπιοι & τουρίστες",
+      "food": "White House Restaurant",
+      "image": "images/beaches/kalami.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Μπαρμπάτι",
+      "distance_km": 25,
+      "location": "Ανατολικά",
+      "features": [
+        "Βότσαλο",
+        "Οργανωμένη",
+        "Beach Bars"
+      ],
+      "crowd": "Νεολαία",
+      "food": "Piedra del Mar",
+      "image": "images/beaches/barmpati.jpg"
     }
   ]
 }
