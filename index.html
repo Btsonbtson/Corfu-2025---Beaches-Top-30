@@ -2,72 +2,128 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corfu 2025</title>
-  <script src="scripts.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Οδηγός Κέρκυρας 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    .modal {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    .modal-content {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-green-700 text-white p-6 text-center">
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-green-800 text-white p-6 text-center">
     <h1 class="text-4xl font-bold">Οδηγός Κέρκυρας 2025</h1>
-    <p class="text-sm mt-2">Ανακαλύψτε τις ομορφιές του νησιού, οργανώστε τις εξορμήσεις σας και κρατήστε σημειώσεις!</p>
+    <p class="mt-2 text-lg">Ανακαλύψτε τις καλύτερες εμπειρίες στο νησί</p>
   </header>
 
-  <!-- Section: Benitses -->
-  <section id="benitses" class="py-16 px-6 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Μπενίτσες (Benitses)</h2>
-      <p class="mb-4">Οι Μπενίτσες είναι ένα παραδοσιακό παραθαλάσσιο χωριό με πλούσια ιστορία, γραφική αρχιτεκτονική και σύγχρονες υποδομές. Από το ψαροχώρι της Βενετοκρατίας στο αγαπημένο σημείο διακοπών των δεκαετιών του '70, προσφέρει ηρεμία, φύση και πολιτισμό.</p>
+  <main class="p-6">
+    <!-- Buttons -->
+    <div class="flex flex-wrap justify-center gap-4 mb-6">
+      <button onclick="showSection('benitses')" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">Μπενίτσες</button>
+      <button onclick="showSection('beaches')" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded">Παραλίες</button>
+    </div>
 
-      <h3 class="text-xl font-semibold mt-8 mb-2">📍 Τι να Δεις & Να Κάνεις</h3>
-      <ul class="list-disc list-inside mb-6">
-        <li>Περίπατος στο λιμάνι και στο παλιό χωριό</li>
-        <li>Εκδρομές με θαλάσσιο ταξί προς γειτονικές παραλίες</li>
-        <li>Εξερεύνηση παλιών αρχοντικών και εκκλησιών</li>
-      </ul>
+    <!-- Παραλίες (θα συμπληρωθεί από JSON) -->
+    <div id="beach-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </main>
 
-      <h3 class="text-xl font-semibold mt-8 mb-2">🥾 Πεζοπορικές Διαδρομές</h3>
-      <p class="mb-2">Διαδρομές από 3 έως 10 χλμ γύρω από το χωριό με υπέροχη θέα:</p>
-      <ul class="list-disc list-inside mb-6">
-        <li>Benitses – Makrata – Loukata (~4 χλμ)</li>
-        <li>Ξυλόκαστρο – Agia Triada – Stavros (~5.5 χλμ)</li>
-        <li>Radar Hill Circuit (~8 χλμ)</li>
-        <li>Benitses – Pelekas – Benitses (~10 χλμ)</li>
-      </ul>
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" onclick="hideModal(event)">
+    <div class="modal-content" id="modal-content">
+      <span class="modal-close" onclick="hideModal(event)">✖</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
-      <h3 class="text-xl font-semibold mt-8 mb-2">🍽️ Προτάσεις Φαγητού</h3>
-      <ul class="list-disc list-inside mb-6">
-        <li>Klimataria – θαλασσινά στο λιμάνι</li>
-        <li>Paxinos – τοπική κουζίνα</li>
-        <li>Avli Restaurant – θέα θάλασσα στην Kardaki</li>
-        <li>The Village Taverna – μεζεδάκια στα Μωραΐτικα</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold mt-8 mb-2">⛪ Εκκλησίες & Κτήρια</h3>
-      <ul class="list-disc list-inside">
-        <li>Agia Triada, Agios Nikolaos Vrysiliotis</li>
-        <li>Evaggelistria & Taksiarches στα μονοπάτια</li>
-        <li>Αρχοντικό Vandoros, παλιό Δημαρχείο</li>
+  <!-- Benitses template -->
+  <template id="benitses">
+    <div class="p-4">
+      <h2 class="text-2xl font-bold mb-3">Μπενίτσες</h2>
+      <p class="mb-3">Οι Μπενίτσες είναι ένα γραφικό παραθαλάσσιο χωριό στη νοτιοανατολική Κέρκυρα. Έχουν μακρά ιστορία και αποτελούν ιδανικό σημείο για εξερεύνηση.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><strong>Πεζοπορίες:</strong> 3km, 5km, 8km, 10km γύρω από το παλιό χωριό</li>
+        <li><strong>Εστιατόρια:</strong> Paxinos, Klimataria, Avra On The Beach</li>
+        <li><strong>Αξιοθέατα:</strong> Παλιό Χωριό, Λιμανάκι, Ρωμαϊκά Λουτρά</li>
+        <li><strong>Εκκλησίες:</strong> Αγ. Νικόλαος, Αγ. Παρασκευή, Παντοκράτωρ</li>
       </ul>
     </div>
-  </section>
+  </template>
 
-  <!-- Placeholder: Beaches section (dynamically generated) -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-2xl font-bold">Οι Παραλίες της Κέρκυρας</h2>
-    <div id="beaches" class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Εδώ θα φορτωθούν οι παραλίες από το recommendations.json -->
-    </div>
-  </section>
+  <!-- Script -->
+  <script>
+    function showSection(sectionId) {
+      const template = document.getElementById(sectionId);
+      if (template) {
+        document.getElementById("modal-body").innerHTML = template.innerHTML;
+        document.getElementById("modal").classList.remove("hidden");
+      }
+    }
 
-  <!-- Notes section -->
-  <section class="py-16 px-6 bg-gray-100">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">📒 Οι σημειώσεις μου</h2>
-      <textarea id="user-notes" rows="6" class="w-full p-3 border rounded-md" placeholder="Γράψε τις σημειώσεις σου εδώ..."></textarea>
-      <button onclick="saveNotes()" class="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Αποθήκευση</button>
-      <p id="save-message" class="text-green-700 mt-2 hidden">✔ Οι σημειώσεις αποθηκεύτηκαν στον browser σας.</p>
-    </div>
-  </section>
+    function hideModal(event) {
+      if (event.target.id === "modal" || event.target.classList.contains("modal-close")) {
+        document.getElementById("modal").classList.add("hidden");
+        document.getElementById("modal-body").innerHTML = "";
+      }
+    }
+
+    function openBeachModal(beach) {
+      const html = `
+        <h2 class="text-xl font-bold mb-2">${beach.name}</h2>
+        <img src="${beach.image}" alt="${beach.name}" class="mb-3 rounded shadow">
+        <p>${beach.description}</p>
+        <ul class="list-disc list-inside mt-2 text-sm text-gray-700">
+          <li><strong>Τοποθεσία:</strong> ${beach.location}</li>
+          <li><strong>Απόσταση από Μπενίτσες:</strong> ${beach.distance}</li>
+          <li><strong>Χαρακτηριστικά:</strong> ${beach.features}</li>
+          <li><strong>Beach Bars:</strong> ${beach.beachBars}</li>
+          <li><strong>Επισκεψιμότητα:</strong> ${beach.visitorType}</li>
+          <li><strong>Φαγητό:</strong> ${beach.foodTips}</li>
+        </ul>`;
+      document.getElementById("modal-body").innerHTML = html;
+      document.getElementById("modal").classList.remove("hidden");
+    }
+
+    // Fetch beach data
+    fetch("data/beachDetails.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("beach-grid");
+        data.beaches.forEach(beach => {
+          const div = document.createElement("div");
+          div.className = "cursor-pointer";
+          div.innerHTML = `
+            <img src="${beach.image}" alt="${beach.name}" class="rounded shadow mb-2 w-full h-48 object-cover">
+            <h3 class="text-lg font-semibold text-center">${beach.name}</h3>`;
+          div.onclick = () => openBeachModal(beach);
+          container.appendChild(div);
+        });
+      })
+      .catch(() => {
+        document.getElementById("beach-grid").innerHTML = "<p class='text-red-500'>Σφάλμα φόρτωσης παραλιών.</p>";
+      });
+  </script>
 </body>
 </html>
