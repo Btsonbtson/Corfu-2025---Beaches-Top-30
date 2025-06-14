@@ -3,94 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corfu 2025</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <title>Παραλίες Κέρκυρας</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: linear-gradient(to bottom right, #eef7fb, #e8fff4);
+      font-family: sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 1rem;
     }
-    .hidden { display: none; }
+
+    .beach-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .beach-card {
+      cursor: pointer;
+      border-radius: 6px;
+      overflow: hidden;
+      width: 200px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .beach-card:hover {
+      transform: scale(1.03);
+    }
+
+    .beach-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .beach-card h3 {
+      margin: 0;
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      color: #144b6b;
+    }
   </style>
 </head>
-<body class="text-gray-900 font-sans">
+<body>
+  <h1>Παραλίες Κέρκυρας</h1>
 
-  <header class="bg-blue-900 text-white text-center p-6">
-    <h1 class="text-3xl font-bold">Corfu 2025 <span>🌿</span></h1>
-    <p class="mt-2">Ο προσωπικός σου οδηγός για τις ομορφιές της Κέρκυρας</p>
-  </header>
+  <div class="beach-container" id="beachContainer"></div>
 
-  <nav class="bg-white border-b p-4 flex justify-center space-x-6 text-lg font-medium">
-    <a href="#beaches">🏖️ Παραλίες</a>
-    <a href="#excursions">🚢 Εκδρομές</a>
-    <a href="#food">🍽️ Φαγητό</a>
-    <a href="#hiking">🥾 Πεζοπορίες</a>
-    <a href="#news">🗞️ Νέα</a>
-    <a href="#notes">📝 Σημειώσεις</a>
-  </nav>
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
 
-  <main class="p-6 space-y-16">
-
-    <!-- Beaches Section -->
-    <section id="beaches">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">🏖️ Κορυφαίες Παραλίες</h2>
-      <div id="beach-list" class="grid gap-4 md:grid-cols-2"></div>
-    </section>
-
-    <!-- Excursions -->
-    <section id="excursions">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">🚢 Εκδρομές</h2>
-      <p>Μικρές αποδράσεις κοντά στην Κέρκυρα, όπως Παξοί, Αντίπαξοι, Κανόνι, Ποντικονήσι.</p>
-    </section>
-
-    <!-- Food -->
-    <section id="food">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">🍽️ Φαγητό & Τοπικά Πιάτα</h2>
-      <p>Μερικά αγαπημένα εστιατόρια: <strong>Εν Πλω, Αμβροσία, Βενετία.</strong></p>
-    </section>
-
-    <!-- Hiking -->
-    <section id="hiking">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">🥾 Πεζοπορικές Διαδρομές</h2>
-      <p>Η διαδρομή στον Πάντοκρατορα ή το μονοπάτι από Παλαιοκαστρίτσα προς Λάκωνα είναι εξαιρετικές επιλογές.</p>
-    </section>
-
-    <!-- News -->
-    <section id="news">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">🗞️ Νέα</h2>
-      <p>Ενημερώσου με RSS από: <a class="text-blue-600 underline" href="https://kerkyrasimera.gr" target="_blank">Κέρκυρα Σήμερα</a>, <a class="text-blue-600 underline" href="https://corfutvnews.gr" target="_blank">Corfu TV</a>.</p>
-    </section>
-
-    <!-- Notes -->
-    <section id="notes">
-      <h2 class="text-2xl font-bold text-blue-800 mb-4">📝 Σημειώσεις</h2>
-      <textarea id="user-notes" rows="5" class="w-full p-2 border border-gray-300 rounded" placeholder="Γράψε εδώ τις προσωπικές σου σημειώσεις..."></textarea>
-      <button onclick="saveNotes()" class="mt-2 px-4 py-2 bg-blue-700 text-white rounded">Αποθήκευση</button>
-      <p id="save-message" class="hidden text-green-600 mt-2">Οι σημειώσεις αποθηκεύτηκαν!</p>
-    </section>
-
-  </main>
-
-  <!-- JS -->
-  <script src="scripts.js"></script>
   <script>
-    fetch('data/recommendations.json')
+    let beachData = [];
+
+    fetch('data/beachDetails.json')
       .then(res => res.json())
       .then(data => {
-        const list = document.getElementById('beach-list');
-        if (!data.beaches) return;
-        data.beaches.forEach(item => {
-          const div = document.createElement('div');
-          div.className = 'bg-white p-4 rounded shadow-md flex';
-          div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="w-28 h-28 object-cover rounded mr-4">
-            <div>
-              <h3 class="font-semibold text-xl">${item.name}</h3>
-              <p>${item.description}</p>
-            </div>
-          `;
-          list.appendChild(div);
+        beachData = data.beaches;
+        const container = document.getElementById('beachContainer');
+        container.innerHTML = '';
+        data.beaches.forEach(beach => {
+          const card = document.createElement('div');
+          card.className = 'beach-card';
+          card.innerHTML = `
+            <img src="${beach.image}" alt="${beach.name}">
+            <h3>${beach.name}</h3>`;
+          card.onclick = () => showModal(beach.name);
+          container.appendChild(card);
         });
       });
+
+    function showModal(beachName) {
+      const beach = beachData.find(b => b.name === beachName);
+      if (!beach) return;
+      document.getElementById('modalTitle').textContent = beach.name;
+      document.getElementById('modalText').innerHTML = 
+        '<strong>Απόσταση:</strong> ' + beach.distance_km + 'km<br>' +
+        '<strong>Περιοχή:</strong> ' + beach.location + '<br>' +
+        '<strong>Χαρακτηριστικά:</strong> ' + beach.features.join(', ') + '<br>' +
+        '<strong>Συχνότητα επισκεπτών:</strong> ' + beach.crowd + '<br>' +
+        '<strong>Προτεινόμενο φαγητό:</strong> ' + beach.food;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) closeModal();
+    }
   </script>
 </body>
 </html>
+
