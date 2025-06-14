@@ -1,143 +1,96 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Corfu 2025</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #f0f8ff, #e8f5e9);
-      color: #333;
+      background: linear-gradient(to bottom right, #eef7fb, #e8fff4);
     }
-
-    header {
-      background-color: #1e40af;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      gap: 2rem;
-      border-bottom: 1px solid #ddd;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    h2 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #1e3a8a;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .beach-card img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      resize: vertical;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #1e40af;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
-
-    #save-message {
-      color: green;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-    }
-
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
   </style>
 </head>
-<body>
+<body class="text-gray-900 font-sans">
 
-  <header>
-    <h1>Corfu 2025 🌿</h1>
-    <p>Ο προσωπικός σου οδηγός για τις ομορφιές της Κέρκυρας</p>
+  <header class="bg-blue-900 text-white text-center p-6">
+    <h1 class="text-3xl font-bold">Corfu 2025 <span>🌿</span></h1>
+    <p class="mt-2">Ο προσωπικός σου οδηγός για τις ομορφιές της Κέρκυρας</p>
   </header>
 
-  <nav>
+  <nav class="bg-white border-b p-4 flex justify-center space-x-6 text-lg font-medium">
     <a href="#beaches">🏖️ Παραλίες</a>
-    <a href="#excursions">🛳️ Εκδρομές</a>
+    <a href="#excursions">🚢 Εκδρομές</a>
     <a href="#food">🍽️ Φαγητό</a>
-    <a href="#hikes">🥾 Πεζοπορίες</a>
-    <a href="#news">📰 Νέα</a>
+    <a href="#hiking">🥾 Πεζοπορίες</a>
+    <a href="#news">🗞️ Νέα</a>
     <a href="#notes">📝 Σημειώσεις</a>
   </nav>
 
-  <main>
+  <main class="p-6 space-y-16">
 
+    <!-- Beaches Section -->
     <section id="beaches">
-      <h2>🏖️ Κορυφαίες Παραλίες</h2>
-      <div id="beaches-section">
-        <!-- Οι παραλίες θα φορτωθούν δυναμικά -->
-      </div>
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">🏖️ Κορυφαίες Παραλίες</h2>
+      <div id="beach-list" class="grid gap-4 md:grid-cols-2"></div>
     </section>
 
+    <!-- Excursions -->
     <section id="excursions">
-      <h2>🛳️ Εκδρομές</h2>
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">🚢 Εκδρομές</h2>
       <p>Μικρές αποδράσεις κοντά στην Κέρκυρα, όπως Παξοί, Αντίπαξοι, Κανόνι, Ποντικονήσι.</p>
     </section>
 
+    <!-- Food -->
     <section id="food">
-      <h2>🍽️ Φαγητό & Τοπικά Πιάτα</h2>
-      <p>Μερικά αγαπημένα εστιατόρια: <strong>Εν Πλω</strong>, <strong>Αμβροσία</strong>, <strong>Βενετία</strong>.</p>
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">🍽️ Φαγητό & Τοπικά Πιάτα</h2>
+      <p>Μερικά αγαπημένα εστιατόρια: <strong>Εν Πλω, Αμβροσία, Βενετία.</strong></p>
     </section>
 
-    <section id="hikes">
-      <h2>🥾 Πεζοπορικές Διαδρομές</h2>
-      <p>Η διαδρομή στον Πάντοκράτορα ή το μονοπάτι από Παλαιοκαστρίτσα προς Λάκωνα είναι εξαιρετικές επιλογές.</p>
+    <!-- Hiking -->
+    <section id="hiking">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">🥾 Πεζοπορικές Διαδρομές</h2>
+      <p>Η διαδρομή στον Πάντοκρατορα ή το μονοπάτι από Παλαιοκαστρίτσα προς Λάκωνα είναι εξαιρετικές επιλογές.</p>
     </section>
 
+    <!-- News -->
+    <section id="news">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">🗞️ Νέα</h2>
+      <p>Ενημερώσου με RSS από: <a class="text-blue-600 underline" href="https://kerkyrasimera.gr" target="_blank">Κέρκυρα Σήμερα</a>, <a class="text-blue-600 underline" href="https://corfutvnews.gr" target="_blank">Corfu TV</a>.</p>
+    </section>
+
+    <!-- Notes -->
     <section id="notes">
-      <h2>📝 Σημειώσεις</h2>
-      <textarea id="user-notes" placeholder="Γράψε εδώ ό,τι θέλεις να θυμάσαι..."></textarea>
-      <br>
-      <button onclick="saveNotes()">💾 Αποθήκευση</button>
-      <div id="save-message" class="hidden">Οι σημειώσεις αποθηκεύτηκαν τοπικά ✅</div>
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">📝 Σημειώσεις</h2>
+      <textarea id="user-notes" rows="5" class="w-full p-2 border border-gray-300 rounded" placeholder="Γράψε εδώ τις προσωπικές σου σημειώσεις..."></textarea>
+      <button onclick="saveNotes()" class="mt-2 px-4 py-2 bg-blue-700 text-white rounded">Αποθήκευση</button>
+      <p id="save-message" class="hidden text-green-600 mt-2">Οι σημειώσεις αποθηκεύτηκαν!</p>
     </section>
 
   </main>
 
+  <!-- JS -->
   <script src="scripts.js"></script>
+  <script>
+    fetch('data/recommendations.json')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('beach-list');
+        if (!data.beaches) return;
+        data.beaches.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'bg-white p-4 rounded shadow-md flex';
+          div.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="w-28 h-28 object-cover rounded mr-4">
+            <div>
+              <h3 class="font-semibold text-xl">${item.name}</h3>
+              <p>${item.description}</p>
+            </div>
+          `;
+          list.appendChild(div);
+        });
+      });
+  </script>
 </body>
 </html>
