@@ -1,1 +1,144 @@
-
+{
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Μωραΐτικα",
+      "distance_km": 5,
+      "location": "Νοτιοανατολικά",
+      "features": [
+        "Αμμώδης",
+        "Ρηχή",
+        "Κατάλληλη για οικογένειες"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "The Village Taverna",
+      "image": "images/beaches/moraitika.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Μπενίτσες",
+      "distance_km": 0,
+      "location": "Νοτιοανατολικά",
+      "features": [
+        "Βότσαλο",
+        "Καθαρά νερά",
+        "Μικρό λιμανάκι"
+      ],
+      "crowd": "Ντόπιοι & τουρίστες",
+      "food": "Klimataria, Paxinos",
+      "image": "images/beaches/benitses.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Άγιος Γόρδιος",
+      "distance_km": 14,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Βραχώδης γύρω περιοχή",
+        "Οργανωμένη"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Sebastian's Taverna",
+      "image": "images/beaches/agios_gordios.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Καρδάκι",
+      "distance_km": 12,
+      "location": "Ανατολικά (Μον Ρεπό)",
+      "features": [
+        "Βότσαλο",
+        "Σκιά από δέντρα",
+        "Ήσυχη"
+      ],
+      "crowd": "Ντόπιοι",
+      "food": "Avli Restaurant",
+      "image": "images/beaches/kardaki.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Γλυφάδα",
+      "distance_km": 18,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Beach Bars",
+        "Οργανωμένη"
+      ],
+      "crowd": "Νεολαία & οικογένειες",
+      "food": "Pazuzu",
+      "image": "images/beaches/glyfada.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Ίσσος",
+      "distance_km": 28,
+      "location": "Νότια",
+      "features": [
+        "Αμμώδης",
+        "Αμμόλοφοι",
+        "Κοντά σε λίμνη Κορισσίων"
+      ],
+      "crowd": "Εξερευνητές & φυσιολάτρες",
+      "food": "Taverna Alonaki",
+      "image": "images/beaches/issos.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Χαλικούνας",
+      "distance_km": 27,
+      "location": "Νότια",
+      "features": [
+        "Αμμώδης",
+        "Άγρια φυσική ομορφιά",
+        "Μακριά"
+      ],
+      "crowd": "Ήσυχοι παραθεριστές",
+      "food": "Taverna Nikolas",
+      "image": "images/beaches/halikounas.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Παλαιοκαστρίτσα",
+      "distance_km": 24,
+      "location": "Βορειοδυτικά",
+      "features": [
+        "Βραχώδης",
+        "Σπήλαια",
+        "Κατάλληλη για καταδύσεις"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Akron Seaside",
+      "image": "images/beaches/palaiokastritsa.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Μυρτιώτισσα",
+      "distance_km": 20,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Απομονωμένη",
+        "Γυμνιστών"
+      ],
+      "crowd": "Ντόπιοι & εναλλακτικοί ταξιδιώτες",
+      "food": "Δεν διαθέτει κοντά",
+      "image": "images/beaches/myrtiotissa.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Πόρτο Τιμόνι",
+      "distance_km": 35,
+      "location": "Βορειοδυτικά",
+      "features": [
+        "Διπλή παραλία",
+        "Μόνο με πεζοπορία",
+        "Γαλαζοπράσινα νερά"
+      ],
+      "crowd": "Περιπετειώδεις ταξιδιώτες",
+      "food": "Anemos Cafe (στο χωριό Άγιος Γεώργιος)",
+      "image": "images/beaches/porto_timoni.jpg"
+    }
+  ]
+}
