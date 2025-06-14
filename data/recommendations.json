@@ -1,35 +1,104 @@
 {
   "beaches": [
     {
-      "name": "Παλαιοκαστρίτσα",
-      "description": "Κρυστάλλινα νερά και ιδανική για snorkeling.",
-      "image": "images/beaches/palaiokastritsa.jpg"
+      "name": "Μωραΐτικα",
+      "description": "Αμμώδης, Ρηχή, Κατάλληλη για οικογένειες. Φαγητό: The Village Taverna",
+      "image": "images/beaches/moraitika.jpg"
+    },
+    {
+      "name": "Μπενίτσες",
+      "description": "Βότσαλο, Καθαρά νερά, Μικρό λιμανάκι. Φαγητό: Klimataria, Paxinos",
+      "image": "images/beaches/benitses.jpg"
+    },
+    {
+      "name": "Άγιος Γόρδιος",
+      "description": "Αμμώδης, Βραχώδης γύρω περιοχή, Οργανωμένη. Φαγητό: Sebastian's Taverna",
+      "image": "images/beaches/agios_gordios.jpg"
+    },
+    {
+      "name": "Καρδάκι",
+      "description": "Βότσαλο, Σκιά από δέντρα, Ήσυχη. Φαγητό: Avli Restaurant",
+      "image": "images/beaches/kardaki.jpg"
     },
     {
       "name": "Γλυφάδα",
-      "description": "Οργανωμένη παραλία με beach bars και χρυσή άμμο.",
+      "description": "Αμμώδης, Beach Bars, Οργανωμένη. Φαγητό: Pazuzu",
       "image": "images/beaches/glyfada.jpg"
     },
     {
       "name": "Ίσσος",
-      "description": "Αμμώδης παραλία με αμμόλοφους και λίμνη Κορισσίων δίπλα.",
+      "description": "Αμμώδης, Αμμόλοφοι, Κοντά σε λίμνη Κορισσίων. Φαγητό: Taverna Alonaki",
       "image": "images/beaches/issos.jpg"
-    }
-  ],
-  "restaurants": [
+    },
     {
-      "name": "Εν Πλω",
-      "location": "Μπενίτσες",
-      "description": "Θαλασσινά δίπλα στο κύμα και όμορφο ηλιοβασίλεμα.",
-      "image": "images/food/enplo.jpg"
-    }
-  ],
-  "excursions": [
+      "name": "Χαλικούνας",
+      "description": "Αμμώδης, Άγρια φυσική ομορφιά, Μακριά. Φαγητό: Taverna Nikolas",
+      "image": "images/beaches/halikounas.jpg"
+    },
     {
-      "name": "Εκδρομή στους Παξούς",
-      "description": "Μονοήμερη με καραβάκι από την πόλη. Ιδανική για βουτιές στις μπλε σπηλιές.",
-      "image": "images/excursions/paxoi.jpg"
+      "name": "Παλαιοκαστρίτσα",
+      "description": "Βραχώδης, Σπήλαια, Κατάλληλη για καταδύσεις. Φαγητό: Akron Seaside",
+      "image": "images/beaches/palaiokastritsa.jpg"
+    },
+    {
+      "name": "Μυρτιώτισσα",
+      "description": "Αμμώδης, Απομονωμένη, Γυμνιστών. Φαγητό: Δεν διαθέτει κοντά",
+      "image": "images/beaches/myrtiotissa.jpg"
+    },
+    {
+      "name": "Πόρτο Τιμόνι",
+      "description": "Διπλή παραλία, Μόνο με πεζοπορία, Γαλαζοπράσινα νερά. Φαγητό: Anemos Cafe (στο χωριό Άγιος Γεώργιος)",
+      "image": "images/beaches/porto_timoni.jpg"
+    },
+    {
+      "name": "Άγιος Στέφανος (Βορράς)",
+      "description": "Αμμώδης, Ήρεμα νερά, Οργανωμένη. Φαγητό: Taverna Eucalyptus",
+      "image": "images/beaches/agios_stefanos_north.jpg"
+    },
+    {
+      "name": "Ρόδα",
+      "description": "Αμμώδης, Ρηχή, Κατάλληλη για παιδιά. Φαγητό: Roda Park Restaurant",
+      "image": "images/beaches/roda.jpg"
+    },
+    {
+      "name": "Αχαράβη",
+      "description": "Αμμώδης, Μεγάλη ακτογραμμή, Οργανωμένη. Φαγητό: Maistro Taverna",
+      "image": "images/beaches/acharavi.jpg"
+    },
+    {
+      "name": "Σιδάρι",
+      "description": "Αμμώδης, Canal d'Amour, Τουριστική. Φαγητό: The Wave",
+      "image": "images/beaches/sidari.jpg"
+    },
+    {
+      "name": "Κανάλι του Έρωτα",
+      "description": "Στενά κανάλια, Γλυπτά από άμμο, Ινσταγκραμικό. Φαγητό: Canal D'Amour Cafe",
+      "image": "images/beaches/canal_erotas.jpg"
+    },
+    {
+      "name": "Άγιος Γεώργιος Πάγων",
+      "description": "Αμμώδης, Μεγάλη ακτή, Ιδανική για windsurfing. Φαγητό: San George Restaurant",
+      "image": "images/beaches/agios_georgios_pagon.jpg"
+    },
+    {
+      "name": "Άγνι",
+      "description": "Βότσαλο, Καθαρά νερά, Ήρεμο. Φαγητό: Toula's Seaside",
+      "image": "images/beaches/agni.jpg"
+    },
+    {
+      "name": "Κουλούρα",
+      "description": "Βότσαλο, Ιστορικό σημείο, Ήσυχη παραλία. Φαγητό: Taverna Kouloura",
+      "image": "images/beaches/kouloura.jpg"
+    },
+    {
+      "name": "Καλάμι",
+      "description": "Βότσαλο, Σκιά από δέντρα, Καθαρά νερά. Φαγητό: White House Restaurant",
+      "image": "images/beaches/kalami.jpg"
+    },
+    {
+      "name": "Μπαρμπάτι",
+      "description": "Βότσαλο, Οργανωμένη, Beach Bars. Φαγητό: Piedra del Mar",
+      "image": "images/beaches/barmpati.jpg"
     }
   ]
 }
-
