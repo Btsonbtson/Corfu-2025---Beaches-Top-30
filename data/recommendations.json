@@ -1,0 +1,29 @@
+{
+  "beaches": [
+    {
+      "name": "Παλαιοκαστρίτσα",
+      "description": "Κρυστάλλινα νερά και ιδανική για snorkeling.",
+      "image": "images/beaches/palaiokastritsa.jpg"
+    },
+    {
+      "name": "Γλυφάδα",
+      "description": "Οργανωμένη παραλία με beach bars και χρυσή άμμο.",
+      "image": "images/beaches/glyfada.jpg"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Εν Πλω",
+      "location": "Μπενίτσες",
+      "description": "Θαλασσινά δίπλα στο κύμα και όμορφο ηλιοβασίλεμα.",
+      "image": "images/food/enplo.jpg"
+    }
+  ],
+  "excursions": [
+    {
+      "name": "Εκδρομή στους Παξούς",
+      "description": "Μονοήμερη με καραβάκι από την πόλη. Ιδανική για βουτιές στις μπλε σπηλιές.",
+      "image": "images/excursions/paxoi.jpg"
+    }
+  ]
+}
