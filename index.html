@@ -3,95 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Οδηγός Κέρκυρας 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom right, #f0fdfa, #ecfdf5);
+      font-family: 'Noto Sans Greek', sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #f3f7f5;
     }
+
     header {
-      background-color: #083344;
+      background-color: #023020;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
+
     h1 {
-      margin-bottom: 5px;
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
-    nav {
+
+    .section-buttons {
       text-align: center;
-      margin: 20px 0;
+      margin-top: 20px;
     }
-    nav button {
-      margin: 0 10px;
-      padding: 10px 20px;
+
+    .section-buttons button {
+      margin: 5px;
+      padding: 10px 18px;
       font-size: 16px;
-      background-color: #0369a1;
+      background-color: #02675b;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
     }
-    nav button.active {
-      background-color: #0f766e;
-    }
+
     .section {
       display: none;
       padding: 20px;
     }
+
+    .section.active {
+      display: block;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: white;
       border-radius: 8px;
       overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 10px;
-      font-size: 18px;
+      cursor: pointer;
     }
 
-    /* Modal */
-    .modal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
     }
+
+    .card h3 {
+      margin: 10px;
+      font-size: 1.1em;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+
     .modal-content {
-      background: white;
-      max-width: 600px;
+      background-color: #fff;
+      margin: 10% auto;
       padding: 20px;
       border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
       position: relative;
     }
-    .modal-close {
+
+    .close {
+      color: #aaa;
       position: absolute;
-      top: 10px; right: 15px;
+      right: 15px;
+      top: 15px;
       font-size: 24px;
       cursor: pointer;
-      color: #991b1b;
+    }
+
+    .modal img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .modal h3 {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -101,92 +124,88 @@
     <p>Ανακαλύψτε τις καλύτερες εμπειρίες στο νησί</p>
   </header>
 
-  <nav>
-    <button onclick="showSection('benitses')" id="btn-benitses">Μπενίτσες</button>
-    <button onclick="showSection('beaches')" id="btn-beaches">Παραλίες</button>
-  </nav>
-
-  <section id="benitses" class="section">
-    <h2>Μπενίτσες</h2>
-    <div class="grid" id="benitsesGrid"></div>
-  </section>
-
-  <section id="beaches" class="section">
-    <h2>Κορυφαίες Παραλίες</h2>
-    <div class="grid" id="beachGrid"></div>
-  </section>
-
-  <!-- Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content" id="modalContent">
-      <span class="modal-close" onclick="closeModal()">×</span>
-      <div id="modalDetails"></div>
-    </div>
+  <div class="section-buttons">
+    <button onclick="showSection('benitses')">Μπενίτσες</button>
+    <button onclick="showSection('beaches')">Παραλίες</button>
   </div>
 
+  <div id="benitses" class="section">
+    <h2>Μπενίτσες</h2>
+    <div id="benitses-container"></div>
+  </div>
+
+  <div id="beaches" class="section active">
+    <h2>Παραλίες</h2>
+    <div class="grid" id="beach-grid"></div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(event)">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <p id="modal-location"></p>
+      <p id="modal-distance"></p>
+      <p id="modal-amenities"></p>
+      <p id="modal-food"></p>
+    </div>
+  </div>
   <script>
-    const beachDataUrl = 'data/beachDetails.json';
-    const benitsesDataUrl = 'data/benitses.json';
-
+    // Εναλλαγή sections (Benitses / Παραλίες)
     function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
-      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-      document.getElementById(sectionId).style.display = 'block';
-      document.getElementById('btn-' + sectionId).classList.add('active');
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
     }
 
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
+    // Άνοιγμα Modal
+    function openModal(data) {
+      document.getElementById('modal-img').src = data.image;
+      document.getElementById('modal-title').textContent = data.name;
+      document.getElementById('modal-desc').textContent = data.description;
+      document.getElementById('modal-location').textContent = "Τοποθεσία: " + (data.location || "-");
+      document.getElementById('modal-distance').textContent = "Απόσταση από Μπενίτσες: " + (data.distance || "-");
+      document.getElementById('modal-amenities').textContent = "Χαρακτηριστικά: " + (data.features || "-");
+      document.getElementById('modal-food').textContent = "Προτάσεις φαγητού: " + (data.food || "-");
+      document.getElementById('modal').style.display = 'block';
     }
 
-    window.onclick = function(event) {
-      const modal = document.getElementById('modal');
-      if (event.target === modal) {
-        closeModal();
+    // Κλείσιμο Modal
+    function closeModal(event) {
+      if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
+        document.getElementById('modal').style.display = 'none';
       }
     }
 
-    function openModal(data) {
-      const content = `
-        <h2>${data.name}</h2>
-        <img src="${data.image}" style="width:100%; max-height:250px; object-fit:cover;">
-        <p>${data.description}</p>
-        ${data.location ? `<p><strong>Περιοχή:</strong> ${data.location}</p>` : ''}
-        ${data.distance ? `<p><strong>Απόσταση από Μπενίτσες:</strong> ${data.distance}</p>` : ''}
-        ${data.features ? `<p><strong>Χαρακτηριστικά:</strong> ${data.features.join(', ')}</p>` : ''}
-        ${data.beachBar ? `<p><strong>Beach Bar:</strong> ${data.beachBar}</p>` : ''}
-        ${data.food ? `<p><strong>Προτάσεις φαγητού:</strong> ${data.food}</p>` : ''}
-      `;
-      document.getElementById('modalDetails').innerHTML = content;
-      document.getElementById('modal').style.display = 'flex';
-    }
-
-    function createCards(containerId, dataList) {
-      const container = document.getElementById(containerId);
-      container.innerHTML = '';
-      dataList.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <img src="${item.image}" alt="${item.name}">
-          <h3>${item.name}</h3>
-        `;
-        card.onclick = () => openModal(item);
-        container.appendChild(card);
+    // Φόρτωμα δεδομένων beachDetails.json
+    fetch('data/beachDetails.json')
+      .then(response => response.json())
+      .then(data => {
+        const grid = document.getElementById('beach-grid');
+        data.beaches.forEach(beach => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${beach.image}" alt="${beach.name}">
+            <h3>${beach.name}</h3>
+          `;
+          card.onclick = () => openModal(beach);
+          grid.appendChild(card);
+        });
       });
-    }
 
-    async function loadData() {
-      const [beaches, benitses] = await Promise.all([
-        fetch(beachDataUrl).then(res => res.json()),
-        fetch(benitsesDataUrl).then(res => res.json())
-      ]);
-      createCards('beachGrid', beaches);
-      createCards('benitsesGrid', benitses);
-    }
-
-    loadData();
-    showSection('benitses');
+    // Φόρτωμα δεδομένων benitses.json
+    fetch('data/benitses.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('benitses-container');
+        container.innerHTML = `
+          <p><strong>Ιστορία:</strong> ${data.history}</p>
+          <p><strong>Διαδρομές:</strong> ${data.routes}</p>
+          <p><strong>Εκκλησίες:</strong> ${data.churches.join(', ')}</p>
+          <p><strong>Εστιατόρια:</strong> ${data.food.map(f => `<li>${f}</li>`).join('')}</p>
+        `;
+      });
   </script>
 </body>
 </html>
