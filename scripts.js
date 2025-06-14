@@ -1,5 +1,6 @@
-// scripts.js
-
+// -----------------------
+// ΣΗΜΕΙΩΣΕΙΣ ΤΟΠΙΚΗΣ ΑΠΟΘΗΚΕΥΣΗΣ
+// -----------------------
 function saveNotes() {
   const notes = document.getElementById('user-notes').value;
   localStorage.setItem('corfu_notes', notes);
@@ -7,50 +8,52 @@ function saveNotes() {
 }
 
 window.onload = () => {
-  // 🔹 Φόρτωση αποθηκευμένων σημειώσεων
   const saved = localStorage.getItem('corfu_notes');
   if (saved) document.getElementById('user-notes').value = saved;
 
-  // 🔹 Φόρτωση προτάσεων από JSON
-  fetch('data/recommendations.json')
-    .then(res => res.json())
-    .then(data => {
-      renderBeaches(data.beaches);
-    })
-    .catch(err => {
-      console.error('Σφάλμα φόρτωσης δεδομένων:', err);
-    });
+  loadBeaches();
 };
 
-function renderBeaches(beaches) {
-  const container = document.getElementById('beaches-section');
-  container.innerHTML = '';
+// -----------------------
+// ΔΥΝΑΜΙΚΗ ΦΟΡΤΩΣΗ ΠΑΡΑΛΙΩΝ
+// -----------------------
+async function loadBeaches() {
+  try {
+    const response = await fetch('data/recommendations.json');
+    const data = await response.json();
 
-  beaches.forEach(beach => {
-    const card = document.createElement('div');
-    card.className = 'beach-card';
-    card.style.border = '1px solid #ccc';
-    card.style.borderRadius = '10px';
-    card.style.padding = '10px';
-    card.style.marginBottom = '15px';
-    card.style.backgroundColor = '#fff';
+    const beaches = data.beaches;
+    const container = document.getElementById('beaches-section');
 
-    const img = document.createElement('img');
-    img.src = beach.image;
-    img.alt = beach.name;
-    img.style.width = '100%';
-    img.style.borderRadius = '8px';
+    if (!container) return;
 
-    const title = document.createElement('h3');
-    title.textContent = beach.name;
+    beaches.forEach(beach => {
+      const card = document.createElement('div');
+      card.className = 'beach-card';
+      card.style.marginBottom = '1.5rem';
 
-    const desc = document.createElement('p');
-    desc.textContent = beach.description;
+      const img = document.createElement('img');
+      img.src = beach.image;
+      img.alt = beach.name;
+      img.style.borderRadius = '8px';
+      img.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+      img.style.maxWidth = '100%';
 
-    card.appendChild(img);
-    card.appendChild(title);
-    card.appendChild(desc);
+      const title = document.createElement('h3');
+      title.textContent = beach.name;
+      title.style.margin = '0.5rem 0 0.2rem';
 
-    container.appendChild(card);
-  });
+      const desc = document.createElement('p');
+      desc.textContent = beach.description;
+      desc.style.margin = '0';
+
+      card.appendChild(img);
+      card.appendChild(title);
+      card.appendChild(desc);
+
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Σφάλμα κατά τη φόρτωση των παραλιών:', error);
+  }
 }
