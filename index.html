@@ -2,147 +2,72 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Παραλίες Κέρκυρας</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 1rem;
-    }
-
-    h1 {
-      text-align: center;
-      color: #0b3d91;
-    }
-
-    .beach-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .beach-card {
-      cursor: pointer;
-      border-radius: 6px;
-      overflow: hidden;
-      width: 200px;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
-      text-align: center;
-    }
-
-    .beach-card:hover {
-      transform: scale(1.03);
-    }
-
-    .beach-card img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-
-    .beach-card h3 {
-      margin: 0;
-      padding: 0.5rem;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      max-width: 450px;
-      position: relative;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    @media (max-width: 500px) {
-      .beach-card {
-        width: 90%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corfu 2025</title>
+  <script src="scripts.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Παραλίες Κέρκυρας</h1>
-  <div class="beach-container" id="beachContainer"></div>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-green-700 text-white p-6 text-center">
+    <h1 class="text-4xl font-bold">Οδηγός Κέρκυρας 2025</h1>
+    <p class="text-sm mt-2">Ανακαλύψτε τις ομορφιές του νησιού, οργανώστε τις εξορμήσεις σας και κρατήστε σημειώσεις!</p>
+  </header>
 
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-content" id="modalContent">
-      <span class="modal-close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalText"></p>
+  <!-- Section: Benitses -->
+  <section id="benitses" class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Μπενίτσες (Benitses)</h2>
+      <p class="mb-4">Οι Μπενίτσες είναι ένα παραδοσιακό παραθαλάσσιο χωριό με πλούσια ιστορία, γραφική αρχιτεκτονική και σύγχρονες υποδομές. Από το ψαροχώρι της Βενετοκρατίας στο αγαπημένο σημείο διακοπών των δεκαετιών του '70, προσφέρει ηρεμία, φύση και πολιτισμό.</p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">📍 Τι να Δεις & Να Κάνεις</h3>
+      <ul class="list-disc list-inside mb-6">
+        <li>Περίπατος στο λιμάνι και στο παλιό χωριό</li>
+        <li>Εκδρομές με θαλάσσιο ταξί προς γειτονικές παραλίες</li>
+        <li>Εξερεύνηση παλιών αρχοντικών και εκκλησιών</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">🥾 Πεζοπορικές Διαδρομές</h3>
+      <p class="mb-2">Διαδρομές από 3 έως 10 χλμ γύρω από το χωριό με υπέροχη θέα:</p>
+      <ul class="list-disc list-inside mb-6">
+        <li>Benitses – Makrata – Loukata (~4 χλμ)</li>
+        <li>Ξυλόκαστρο – Agia Triada – Stavros (~5.5 χλμ)</li>
+        <li>Radar Hill Circuit (~8 χλμ)</li>
+        <li>Benitses – Pelekas – Benitses (~10 χλμ)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">🍽️ Προτάσεις Φαγητού</h3>
+      <ul class="list-disc list-inside mb-6">
+        <li>Klimataria – θαλασσινά στο λιμάνι</li>
+        <li>Paxinos – τοπική κουζίνα</li>
+        <li>Avli Restaurant – θέα θάλασσα στην Kardaki</li>
+        <li>The Village Taverna – μεζεδάκια στα Μωραΐτικα</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">⛪ Εκκλησίες & Κτήρια</h3>
+      <ul class="list-disc list-inside">
+        <li>Agia Triada, Agios Nikolaos Vrysiliotis</li>
+        <li>Evaggelistria & Taksiarches στα μονοπάτια</li>
+        <li>Αρχοντικό Vandoros, παλιό Δημαρχείο</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
-  <script>
-    let beaches = [];
+  <!-- Placeholder: Beaches section (dynamically generated) -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-2xl font-bold">Οι Παραλίες της Κέρκυρας</h2>
+    <div id="beaches" class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Εδώ θα φορτωθούν οι παραλίες από το recommendations.json -->
+    </div>
+  </section>
 
-    fetch('data/beachDetails.json')
-      .then(response => response.json())
-      .then(data => {
-        beaches = data.beaches;
-        const container = document.getElementById('beachContainer');
-        beaches.forEach(beach => {
-          const card = document.createElement('div');
-          card.className = 'beach-card';
-          card.innerHTML = `
-            <img src="${beach.image}" alt="${beach.name}">
-            <h3>${beach.name}</h3>
-          `;
-          card.onclick = () => showModal(beach);
-          container.appendChild(card);
-        });
-      });
-
-    function showModal(beach) {
-      document.getElementById('modalTitle').textContent = beach.name;
-      document.getElementById('modalText').innerHTML = `
-        <strong>Απόσταση:</strong> ${beach.distance_km}km<br>
-        <strong>Περιοχή:</strong> ${beach.location}<br>
-        <strong>Χαρακτηριστικά:</strong> ${beach.features.join(', ')}<br>
-        <strong>Συχνότητα:</strong> ${beach.crowd}<br>
-        <strong>Προτεινόμενο φαγητό:</strong> ${beach.food}
-      `;
-      document.getElementById('modalOverlay').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modalOverlay').style.display = 'none';
-    }
-
-    // Κλείσιμο με click έξω από το modal
-    window.addEventListener('click', function(event) {
-      const modal = document.getElementById('modalOverlay');
-      const content = document.getElementById('modalContent');
-      if (event.target === modal) {
-        closeModal();
-      }
-    });
-  </script>
+  <!-- Notes section -->
+  <section class="py-16 px-6 bg-gray-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">📒 Οι σημειώσεις μου</h2>
+      <textarea id="user-notes" rows="6" class="w-full p-3 border rounded-md" placeholder="Γράψε τις σημειώσεις σου εδώ..."></textarea>
+      <button onclick="saveNotes()" class="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Αποθήκευση</button>
+      <p id="save-message" class="text-green-700 mt-2 hidden">✔ Οι σημειώσεις αποθηκεύτηκαν στον browser σας.</p>
+    </div>
+  </section>
 </body>
 </html>
