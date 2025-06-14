@@ -43,22 +43,22 @@
     <!-- Buttons -->
     <div class="flex flex-wrap justify-center gap-4 mb-6">
       <button onclick="showSection('benitses')" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">Μπενίτσες</button>
-      <button onclick="showSection('beaches')" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded">Παραλίες</button>
+      <button onclick="showSection('beaches-overview')" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded">Παραλίες</button>
     </div>
 
-    <!-- Παραλίες (θα συμπληρωθεί από JSON) -->
-    <div id="beach-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    <!-- Grid for Beaches -->
+    <div id="beaches-overview" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
   </main>
 
   <!-- Modal -->
   <div id="modal" class="modal hidden" onclick="hideModal(event)">
-    <div class="modal-content" id="modal-content">
+    <div class="modal-content" onclick="event.stopPropagation();">
       <span class="modal-close" onclick="hideModal(event)">✖</span>
       <div id="modal-body"></div>
     </div>
   </div>
 
-  <!-- Benitses template -->
+  <!-- Hidden Template -->
   <template id="benitses">
     <div class="p-4">
       <h2 class="text-2xl font-bold mb-3">Μπενίτσες</h2>
@@ -72,7 +72,7 @@
     </div>
   </template>
 
-  <!-- Script -->
+  <!-- JavaScript -->
   <script>
     function showSection(sectionId) {
       const template = document.getElementById(sectionId);
@@ -106,11 +106,11 @@
       document.getElementById("modal").classList.remove("hidden");
     }
 
-    // Fetch beach data
+    // Load beach data
     fetch("data/beachDetails.json")
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById("beach-grid");
+        const container = document.getElementById("beaches-overview");
         data.beaches.forEach(beach => {
           const div = document.createElement("div");
           div.className = "cursor-pointer";
@@ -122,7 +122,7 @@
         });
       })
       .catch(() => {
-        document.getElementById("beach-grid").innerHTML = "<p class='text-red-500'>Σφάλμα φόρτωσης παραλιών.</p>";
+        document.getElementById("beaches-overview").innerHTML = "<p class='text-red-500'>Σφάλμα φόρτωσης παραλιών.</p>";
       });
   </script>
 </body>
