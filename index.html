@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Corfu 2025 – Οδηγός για το Νησί</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="scripts.js"></script>
 </head>
@@ -14,7 +14,7 @@
     <p class="text-sm mt-2">Ο προσωπικός σου οδηγός για τις ομορφιές της Κέρκυρας</p>
   </header>
 
-  <nav class="flex justify-center gap-4 bg-white py-4 shadow">
+  <nav class="flex justify-center gap-4 bg-white py-4 shadow text-sm md:text-base">
     <a href="#beaches" class="hover:underline">🏖️ Παραλίες</a>
     <a href="#excursions" class="hover:underline">🛥️ Εκδρομές</a>
     <a href="#food" class="hover:underline">🍽️ Φαγητό</a>
@@ -25,49 +25,41 @@
 
   <main class="p-6 space-y-12">
 
-    <!-- Section: Παραλίες -->
+    <!-- Παραλίες -->
     <section id="beaches">
       <h2 class="text-2xl font-bold mb-4">🏖️ Κορυφαίες Παραλίες</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white shadow rounded p-4">
-          <img src="images/beaches/palaiokastritsa.jpg" alt="Παλαιοκαστρίτσα" class="rounded mb-2">
-          <h3 class="font-semibold">Παλαιοκαστρίτσα</h3>
-          <p>Κρυστάλλινα νερά ιδανικά για καταδύσεις και ηλιοθεραπεία.</p>
-          <div class="text-yellow-400 mt-2">⭐⭐⭐⭐⭐</div>
-        </div>
-        <!-- Περισσότερες παραλίες εδώ -->
-      </div>
+      <div id="beach-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
-    <!-- Section: Εκδρομές -->
+    <!-- Εκδρομές -->
     <section id="excursions">
       <h2 class="text-2xl font-bold mb-4">🛥️ Εκδρομές</h2>
       <p>Μικρές αποδράσεις κοντά στην Κέρκυρα, όπως Παξοί, Αντίπαξοι, Κανόνι, Ποντικονήσι.</p>
     </section>
 
-    <!-- Section: Φαγητό -->
+    <!-- Φαγητό -->
     <section id="food">
       <h2 class="text-2xl font-bold mb-4">🍽️ Φαγητό & Τοπικά Πιάτα</h2>
       <p>Μερικά αγαπημένα εστιατόρια: <strong>Εν Πλω</strong>, <strong>Αμβροσία</strong>, <strong>Βενετία</strong>.</p>
     </section>
 
-    <!-- Section: Πεζοπορίες -->
+    <!-- Πεζοπορίες -->
     <section id="walks">
       <h2 class="text-2xl font-bold mb-4">🥾 Πεζοπορικές Διαδρομές</h2>
       <p>Η διαδρομή στον Πάντοκρατορα ή το μονοπάτι από Παλαιοκαστρίτσα προς Λάκωνα είναι εξαιρετικές επιλογές.</p>
     </section>
 
-    <!-- Section: Νέα από RSS -->
+    <!-- RSS Νέα -->
     <section id="rss">
       <h2 class="text-2xl font-bold mb-4">📰 Τουριστικά Νέα</h2>
-      <ul id="rss-feed" class="list-disc pl-6 text-blue-600">
-        <li><a href="https://corfunews.org" target="_blank">Νέα από CorfuNews.org</a></li>
+      <ul class="list-disc pl-6 text-blue-600">
+        <li><a href="https://corfunews.org" target="_blank">Corfu News</a></li>
         <li><a href="https://kerkyrasimera.gr" target="_blank">Κέρκυρα Σήμερα</a></li>
-        <li><a href="https://corfutvnews.gr" target="_blank">CorfuTVNews</a></li>
+        <li><a href="https://corfutvnews.gr" target="_blank">Corfu TV News</a></li>
       </ul>
     </section>
 
-    <!-- Section: Notes -->
+    <!-- Notes -->
     <section id="notes">
       <h2 class="text-2xl font-bold mb-4">📝 Προσωπικές Σημειώσεις</h2>
       <textarea id="user-notes" class="w-full h-40 p-2 border rounded" placeholder="Γράψε εδώ τις προσωπικές σου σημειώσεις..."></textarea>
@@ -80,6 +72,24 @@
   <footer class="text-center text-sm py-6 text-gray-500">
     Made with ❤️ για την Κέρκυρα – 2025
   </footer>
+
+  <script>
+    fetch('data/recommendations.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('beach-list');
+        data.beaches.forEach(beach => {
+          container.innerHTML += `
+            <div class="bg-white shadow rounded p-4">
+              <img src="${beach.image}" alt="${beach.name}" class="rounded mb-2 w-full h-48 object-cover" />
+              <h3 class="font-semibold text-lg">${beach.name}</h3>
+              <p>${beach.description}</p>
+              <div class="text-yellow-400 mt-2">⭐⭐⭐⭐⭐</div>
+            </div>
+          `;
+        });
+      });
+  </script>
 
 </body>
 </html>
