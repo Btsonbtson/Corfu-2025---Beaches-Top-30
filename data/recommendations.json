@@ -11,6 +11,11 @@
       "image": "images/beaches/glyfada.jpg"
     }
   ],
+  {
+  "name": "Ίσσος",
+  "description": "Αμμώδης παραλία με αμμόλοφους και λίμνη Κορισσίων δίπλα.",
+  "image": "images/beaches/issos.jpg"
+},
   "restaurants": [
     {
       "name": "Εν Πλω",
@@ -27,8 +32,4 @@
     }
   ]
 }
-{
-  "name": "Ίσσος",
-  "description": "Αμμώδης παραλία με αμμόλοφους και λίμνη Κορισσίων δίπλα.",
-  "image": "images/beaches/issos.jpg"
-}
+
