@@ -139,7 +139,6 @@
       <p><strong>📏 Απόσταση:</strong> <span id="modal-distance"></span> χλμ από Μπενίτσες</p>
       <p><strong>🏖️ Χαρακτηριστικά:</strong> <span id="modal-features"></span></p>
       <p><strong>👥 Επισκέπτες:</strong> <span id="modal-crowd"></span></p>
-      <p><strong>🍽️ Τοπική Ταβέρνα:</strong> <span id="modal-food"></span></p>
     </div>
   </div>
 
@@ -160,7 +159,6 @@
       document.getElementById('modal-distance').innerText = beach.distance_km;
       document.getElementById('modal-features').innerText = beach.features.join(', ');
       document.getElementById('modal-crowd').innerText = beach.crowd;
-      document.getElementById('modal-food').innerText = beach.food;
       document.getElementById('beach-modal').style.display = 'block';
     }
 
@@ -188,3 +186,4 @@
   </script>
 </body>
 </html>
+
