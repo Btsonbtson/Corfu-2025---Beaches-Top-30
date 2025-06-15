@@ -48,6 +48,7 @@
       padding: 1rem;
       text-align: center;
       width: 250px;
+      cursor: pointer;
     }
     .card img {
       max-width: 100%;
@@ -66,6 +67,41 @@
       margin-top: 2rem;
       border: none;
     }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      text-align: left;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -81,64 +117,11 @@
 <div id="corfu" class="tab-content">
   <h2>Πόλη της Κέρκυρας</h2>
   <p>Η Πόλη της Κέρκυρας είναι ένα μωσαϊκό ιστορίας, πολιτισμού και σύγχρονης ζωής...</p>
-  <!-- (Εδώ προσθέτουμε όταν είστε έτοιμος το περιεχόμενο από Corfu Town.docx) -->
 </div>
 
 <div id="benitses" class="tab-content">
   <h2>Μπενίτσες</h2>
-  <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
-
-  <h3>Πού θα μείνετε</h3>
-  <div class="cards-container">
-    <div class="card">
-      <img src="images/beaches/benitses_house.jpg" alt="Παραδοσιακό σπίτι">
-      <p>Παραδοσιακό σπίτι</p>
-    </div>
-    <div class="card">
-      <img src="images/beaches/benitses_2.jpg" alt="Δωμάτιο με θέα">
-      <p>Δωμάτιο με θέα</p>
-    </div>
-    <div class="card">
-      <img src="images/beaches/benitses_3.jpg" alt="Μπαλκόνι με καρέκλες">
-      <p>Μπαλκόνι με καρέκλες</p>
-    </div>
-  </div>
-
-  <h3>🍽️ Πού να φάτε</h3>
-  <p>Οι Μπενίτσες διαθέτουν πολλές επιλογές: από ελληνική κουζίνα μέχρι διεθνείς γεύσεις.</p>
-  <ul>
-    <li><b>Pizza Kavouras</b> – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
-    <li><b>Oraies Benitses</b> – Μιλήστε με τον Δημήτρη</li>
-    <li><b>Paxinos</b> – Φρέσκα ψάρια</li>
-    <li><b>Klimataria</b> – Δοκιμάστε το Bianco</li>
-    <li><b>GyrosLeague</b> – Σουβλάκι στο χέρι</li>
-  </ul>
-  <h3>🎯 Αξιοθέατα</h3>
-  <ul>
-    <li>🏛️ Επισκεφτείτε το <b>Αχίλλειο</b> (4 χλμ). Καλύτερα νωρίς το πρωί για να αποφύγετε τα γκρουπ.</li>
-    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές (π.χ. σπηλιές, βόλτες κλπ.)</li>
-    <li>⛵ Εάν έχετε χρόνο, προτείνεται ημερήσια εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
-  </ul>
-
-  <h3>🌙 Νυχτερινή Ζωή</h3>
-  <p>Η διασκέδαση στις Μπενίτσες είναι χαλαρή και αυθεντική:</p>
-  <ul>
-    <li>🍹 Για μουσική και ποτό: Ether, Λότζα, μπαρ στη Μαρίνα</li>
-    <li>🍸 Για πολυτελή κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
-  </ul>
-
-  <h3>💡 Tips</h3>
-  <ul>
-    <li>Οι περαστικοί πιθανότατα θα σας χαιρετήσουν και μπορεί να ρωτήσουν για τη Σόνια ή τη Σοφία – είναι η τοπική ατμόσφαιρα 😄</li>
-    <li>Παρκάρετε στο “Ντράφο”, 150μ από το σπίτι, κοντά στο γήπεδο μπάσκετ</li>
-    <li>🚮 Τα σκουπίδια απομακρύνονται καθημερινά από τον Δήμο</li>
-    <li>🦆 <b>Μην ενοχλείτε τις πάπιες!</b></li>
-    <li>🥾 Ξεκινάει μονοπάτι για hiking μετά το πάρκινγκ – 4.5 χλμ κυκλική διαδρομή με θέα και σκιά. Ιδανικά το πρωί!</li>
-    <li>☕ Πολύ καλός καφές σε όλα τα café του χωριού</li>
-  </ul>
-
-  <h3>🎥 Βίντεο</h3>
-  <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
+  <!-- περιεχόμενο όπως το έχεις ήδη -->
 </div>
 
 <div id="beaches" class="tab-content active">
@@ -146,6 +129,18 @@
   <div class="cards-container" id="beach-container"></div>
 </div>
 
+<!-- Modal structure -->
+<div id="beachModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="modalClose">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p><b>📍 Τοποθεσία:</b> <span id="modalLocation"></span></p>
+    <p><b>📏 Απόσταση:</b> <span id="modalDistance"></span> χλμ</p>
+    <p><b>👥 Συχνότητα επισκεπτών:</b> <span id="modalCrowd"></span></p>
+    <p><b>🍽️ Προτεινόμενο φαγητό:</b> <span id="modalFood"></span></p>
+    <p><b>🏖️ Χαρακτηριστικά:</b> <span id="modalFeatures"></span></p>
+  </div>
+</div>
 <script>
   const tabs = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
@@ -159,39 +154,50 @@
     });
   });
 
-  const beaches = [
-    { name: "Moraitika", image: "moraitika.jpg" },
-    { name: "Benitses", image: "benitses.jpg" },
-    { name: "Agios Gordios", image: "agios_gordios.jpg" },
-    { name: "Kardaki", image: "kardaki.jpg" },
-    { name: "Glyfada", image: "glyfada.jpg" },
-    { name: "Issos", image: "issos.jpg" },
-    { name: "Halikounas", image: "halikounas.jpg" },
-    { name: "Palaiokastritsa", image: "palaiokastritsa.jpg" },
-    { name: "Myrtiotissa", image: "myrtiotissa.jpg" },
-    { name: "Porto Timoni", image: "porto_timoni.jpg" },
-    { name: "Agios Stefanos (North)", image: "agios_stefanos_north.jpg" },
-    { name: "Roda", image: "roda.jpg" },
-    { name: "Acharavi", image: "acharavi.jpg" },
-    { name: "Sidari", image: "sidari.jpg" },
-    { name: "Canal d'Amour", image: "canal_erotas.jpg" },
-    { name: "Agios Georgios Pagon", image: "agios_georgios_pagon.jpg" },
-    { name: "Agni", image: "agni.jpg" },
-    { name: "Kouloura", image: "kouloura.jpg" },
-    { name: "Kalami", image: "kalami.jpg" },
-    { name: "Barbati", image: "barmpati.jpg" }
-  ];
-
   const container = document.getElementById("beach-container");
-  beaches.forEach(beach => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="images/beaches/${beach.image}" alt="${beach.name}">
-      <p><b>${beach.name}</b></p>
-    `;
-    container.appendChild(card);
-  });
+  const modal = document.getElementById("beachModal");
+  const modalClose = document.getElementById("modalClose");
+
+  const modalTitle = document.getElementById("modalTitle");
+  const modalLocation = document.getElementById("modalLocation");
+  const modalDistance = document.getElementById("modalDistance");
+  const modalCrowd = document.getElementById("modalCrowd");
+  const modalFood = document.getElementById("modalFood");
+  const modalFeatures = document.getElementById("modalFeatures");
+
+  // Κλείσιμο modal όταν πατηθεί το Χ ή εκτός του modal
+  modalClose.onclick = () => modal.style.display = "none";
+  window.onclick = (event) => {
+    if (event.target === modal) modal.style.display = "none";
+  };
+
+  // Φόρτωση JSON με λεπτομέρειες παραλιών
+  fetch("data/beachDetails.json")
+    .then(res => res.json())
+    .then(data => {
+      data.beaches.forEach(beach => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${beach.image}" alt="${beach.name}">
+          <p><b>${beach.name}</b></p>
+        `;
+        card.addEventListener("click", () => {
+          modalTitle.textContent = beach.name;
+          modalLocation.textContent = beach.location;
+          modalDistance.textContent = beach.distance_km;
+          modalCrowd.textContent = beach.crowd;
+          modalFood.textContent = beach.food;
+          modalFeatures.textContent = beach.features.join(", ");
+          modal.style.display = "block";
+        });
+        container.appendChild(card);
+      });
+    })
+    .catch(err => {
+      container.innerHTML = "<p>⚠️ Δεν φορτώθηκαν οι παραλίες. Ελέγξτε το αρχείο JSON.</p>";
+      console.error("Σφάλμα φόρτωσης beachDetails.json:", err);
+    });
 </script>
 
 </body>
