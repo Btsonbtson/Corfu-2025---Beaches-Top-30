@@ -1,114 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benitses Guide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Noto Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .gallery img {
-      width: calc(50% - 10px);
-      border-radius: 5px;
-    }
-    @media (max-width: 600px) {
-      .gallery img {
-        width: 100%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Benitses – Corfu 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Benitses – Corfu 2025</h1>
-    <p>Your guide to a peaceful, authentic village</p>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-green-700 text-white py-6 shadow">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold">Benitses – Corfu 2025</h1>
+      <p class="text-sm mt-1">Your personal guide to a charming fishing village in Corfu</p>
+    </div>
   </header>
-  <main>
-    <div class="section">
-      <h2>🍽️ Where to Eat</h2>
-      <p>The village has many restaurants and tavernas serving everything from traditional Greek cuisine to Chinese and Mexican dishes.</p>
-      <ul>
+
+  <main class="container mx-auto px-4 py-8 space-y-12">
+
+    <section id="intro">
+      <h2 class="text-2xl font-semibold mb-4">About Benitses</h2>
+      <p class="mb-4">Benitses is a charming fishing village on the east coast of Corfu, known for its authenticity and lively seaside tavernas. It's a blend of local tradition and touristic comfort with a warm and welcoming vibe.</p>
+    </section>
+
+    <section id="eat">
+      <h2 class="text-2xl font-semibold mb-4">🍽️ Where to Eat</h2>
+      <p class="mb-4">The village offers a wide variety of restaurants and tavernas serving traditional Greek food as well as Chinese and Mexican dishes.</p>
+      <ul class="list-disc list-inside space-y-2">
         <li><strong>Pizza Kavouras</strong> – Ask for Spyros or Gregory</li>
         <li><strong>Oraies Benitses</strong> – Ask for Dimitris</li>
-        <li><strong>Paxinos</strong> – Specializing in Fresh Fish</li>
-        <li><strong>Klimataria</strong> – Special Dish: Bianco</li>
-        <li><strong>GyrosLeague</strong> – Souvlaki to go</li>
+        <li><strong>Paxinos</strong> – Specializing in fresh fish</li>
+        <li><strong>Klimataria</strong> – Signature dish: Bianco</li>
+        <li><strong>GyrosLeague</strong> – Great souvlaki to go</li>
       </ul>
-    </div>
-    <div class="section">
-      <h2>🗺️ What to See</h2>
-      <ul>
-        <li><strong>Achilleion Palace</strong> – About 4km away by car. Go early to avoid tourist crowds.</li>
-        <li>Explore local agencies offering boat and cave excursions.</li>
-        <li><strong>Daily trip to Erikousa island</strong> – A paradise if you have enough days.</li>
+    </section>
+
+    <section id="sightseeing">
+      <h2 class="text-2xl font-semibold mb-4">🏛️ Sightseeing</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Achilleion Palace:</strong> Only 4 km away by car. Go early to avoid crowds.</li>
+        <li><strong>Local tour offices:</strong> Organize boat trips and tours with highlights like sea caves.</li>
+        <li><strong>Recommended:</strong> Day cruise to <strong>Erikousa Island</strong> – A hidden paradise! 🌴</li>
       </ul>
-    </div>
-    <div class="section">
-      <h2>🎉 Nightlife</h2>
-      <p>
-        In the evening, you can enjoy a meal at one of the many restaurants and then move on to a pub or bar for cocktails or music.
-        Benitses nightlife is not overly intense, but there are some nice places:
-      </p>
-      <ul>
-        <li><strong>Ether</strong> – Cozy bar</li>
-        <li><strong>Lotza</strong> – Popular gathering spot</li>
-        <li><strong>Marina Bar</strong> – Chill drinks by the sea</li>
-        <li><strong>Angsana Hotel</strong> – For premium cocktails and breathtaking views</li>
+    </section>
+
+    <section id="entertainment">
+      <h2 class="text-2xl font-semibold mb-4">🎉 Entertainment & Nightlife</h2>
+      <p class="mb-4">In the evening, you can choose from various tavernas and enjoy a cocktail at a seaside bar. While Benitses doesn't have intense nightlife, it offers some stylish bars:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Ether</strong>, <strong>Loza</strong>, and the bar at the <strong>Marina</strong></li>
+        <li><strong>Agsana Hotel:</strong> For upscale drinks and breathtaking views</li>
       </ul>
-    </div>
-    <div class="section">
-      <h2>💡 Local Tips</h2>
-      <ul>
-        <li>It’s common for locals to greet you or even ask about Sonia (my mother), Sofia (my sister), or me – don’t be surprised!</li>
-        <li>Park your car at the municipal parking lot 150m uphill near the basketball court (locals call it “Drafo”).</li>
-        <li>That’s also where trash is collected daily – keep it clean.</li>
-        <li><strong>Leave the ducks alone.</strong></li>
-        <li>From the house, past the court, you can start a 4.5 km hiking loop with amazing views. Do it early in the morning, not at midday!</li>
-        <li>Coffee? Everywhere. And it's good.</li>
+    </section>
+
+    <section id="tips">
+      <h2 class="text-2xl font-semibold mb-4">💡 Local Tips</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Locals might greet you or even walk into the yard to say "kalimera" – it's normal! 😊</li>
+        <li>You can park at the free municipal lot ("Drafo") ~150m uphill, next to the basketball court.</li>
+        <li>Garbage collection happens daily near the same parking spot.</li>
+        <li><strong>Don’t disturb the ducks.</strong> 🦆</li>
+        <li>Behind the basketball court starts a beautiful 4.5 km hiking trail with panoramic views.</li>
+        <li>Prefer morning walks to avoid midday sun.</li>
+        <li>Excellent coffee is available everywhere!</li>
       </ul>
-    </div>
-    <div class="section">
-      <h2>📸 Views from Benitses</h2>
-      <div class="gallery">
-        <img src="images/beaches/Benitses House.jpg" alt="Traditional house" />
-        <img src="images/beaches/Benitses 2.jpg" alt="Room with a view" />
-        <img src="images/beaches/Benitses 3.jpg" alt="Balcony with chairs" />
-        <img src="images/beaches/Benitses 4.jpg" alt="Street view" />
+    </section>
+
+    <section id="stay" class="py-8">
+      <h2 class="text-2xl font-semibold mb-4">🏠 Where to Stay</h2>
+      <p class="mb-6">Some glimpses of where you might stay in Benitses:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="shadow-md">
+          <img src="images/beaches/benitses_house.jpg" alt="Benitses House" class="w-full h-auto rounded">
+          <p class="text-center mt-2">Traditional Benitses House</p>
+        </div>
+        <div class="shadow-md">
+          <img src="images/beaches/benitses_2.jpg" alt="Benitses 2" class="w-full h-auto rounded">
+          <p class="text-center mt-2">Alleyway View</p>
+        </div>
+        <div class="shadow-md">
+          <img src="images/beaches/benitses_3.jpg" alt="Benitses 3" class="w-full h-auto rounded">
+          <p class="text-center mt-2">Inner Courtyard</p>
+        </div>
+        <div class="shadow-md">
+          <img src="images/beaches/benitses_4.jpg" alt="Benitses 4" class="w-full h-auto rounded">
+          <p class="text-center mt-2">Everyday Life in the Village</p>
+        </div>
       </div>
+    </section>
+
+    <div class="text-center mt-10">
+      <a href="index.html" class="inline-block px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700">← Back to Main Page</a>
     </div>
+
   </main>
+
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600 mt-10">
+    &copy; 2025 Corfu Guide – Benitses Edition
+  </footer>
+
 </body>
 </html>
