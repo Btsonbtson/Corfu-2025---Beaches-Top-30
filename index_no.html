@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Korfu 2025 Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #fdfdfd;
+    }
+    header {
+      background-color: #0077b6;
+      color: white; padding: 1rem; text-align: center;
+      position: relative;
+    }
+    .lang-switcher {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    .lang-switcher a {
+      margin: 0 5px;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #023e8a;
+    }
+    nav button {
+      background: none; border: none; color: white;
+      padding: 1rem; font-size: 1rem; cursor: pointer;
+    }
+    nav button.active {
+      background-color: #0096c7;
+    }
+    section { display: none; padding: 2rem; }
+    section.active { display: block; }
+
+    .beach-gallery {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: center;
+    }
+    .beach-item {
+      width: 200px;
+      cursor: pointer;
+    }
+    .beach-item img {
+      width: 100%; border-radius: 5px;
+    }
+    .modal {
+      display: none; position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center; align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white; padding: 1rem;
+      border-radius: 8px; max-width: 600px;
+      max-height: 90vh; overflow-y: auto;
+      position: relative;
+    }
+    .close-btn {
+      position: absolute; top: 10px; right: 15px;
+      font-size: 1.2rem; cursor: pointer; color: #555;
+    }
+    iframe { width: 100%; height: 315px; border: none; }
+    img.benitses-photo {
+      width: 100%; max-width: 500px; margin: 1rem auto;
+      display: block; border-radius: 8px;
+    }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    Korfu Guide 2025
+    <div class="lang-switcher">
+      <a href="index.html">🇬🇷</a>
+      <a href="index_en.html">🇬🇧</a>
+      <a href="index_no.html">🇳🇴</a>
+    </div>
+  </header>
+  <nav>
+    <button onclick="showTab('town')" id="tab-town" class="active">Korfu by</button>
+    <button onclick="showTab('benitses')" id="tab-benitses">Benitses</button>
+    <button onclick="showTab('beaches')" id="tab-beaches">Strender</button>
+  </nav>
+
+  <section id="town" class="active">
+    <h2>Korfu by</h2>
+    <p>Korfu by, hovedstaden på øya, er en vakker blanding av venetiansk, britisk og fransk innflytelse. Det historiske sentrum er på UNESCOs verdensarvliste og byr på trange brosteinsgater, skjulte smug og pittoreske torg.</p>
+    <ul>
+      <li><strong>Gamle festning:</strong> Imponerende utsikt over byen og havet.</li>
+      <li><strong>Liston:</strong> Inspirert av Rue de Rivoli i Paris, perfekt for kaffe.</li>
+      <li><strong>Spianada-plassen:</strong> Den største i Hellas, ideell for spaserturer.</li>
+      <li><strong>Museet for asiatisk kunst:</strong> Huser sjeldne skatter.</li>
+      <li><strong>Lokale butikker:</strong> Perfekt for håndlagde suvenirer og lokale delikatesser.</li>
+    </ul>
+  </section>
+  <section id="benitses">
+    <h2>Benitses</h2>
+    <p>Benitses er en sjarmerende fiskerlandsby på østkysten av Korfu. Her kombineres tradisjonell gresk atmosfære med moderne bekvemmeligheter.</p>
+    
+    <h3>🍽️ Hvor du kan spise</h3>
+    <ul>
+      <li><strong>Pizza Kavouras:</strong> Spør etter Spyros eller Gregory</li>
+      <li><strong>Oraies Benitses:</strong> Spør etter Dimitris</li>
+      <li><strong>Paxinos:</strong> Spesialiserer seg på fersk fisk</li>
+      <li><strong>Klimataria:</strong> Prøv retten Bianco</li>
+      <li><strong>GyrosLeague:</strong> Takeaway souvlaki</li>
+    </ul>
+
+    <h3>🏛️ Attraksjoner</h3>
+    <ul>
+      <li><strong>Achilleion:</strong> Bare 4 km unna, besøk tidlig før turistene kommer</li>
+      <li><strong>Lokale utflukter:</strong> Turkontorer tilbyr turer til huler og skjulte perler</li>
+      <li><strong>Dagstur til Erikoussa:</strong> Et paradis verdt besøket</li>
+    </ul>
+
+    <h3>🎶 Natteliv</h3>
+    <p>Et utvalg av puber og barer, som Ether, Lotza og marina-baren. For luksus, besøk Agsana Hotel med utsikt i verdensklasse.</p>
+
+    <h3>✨ Tips</h3>
+    <ul>
+      <li>Forvent at lokalbefolkningen hilser og spør etter familien din – en sjarmerende del av kulturen!</li>
+      <li>Parkering er tilgjengelig 150m fra huset ved basketballbanen – kalt "Drafo".</li>
+      <li>Gå ikke glipp av turstien bak huset: 4.5 km med panoramautsikt over havet.</li>
+      <li>Unngå å forstyrre endene!</li>
+      <li>Kaffen er alltid god i Benitses.</li>
+    </ul>
+
+    <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
+  </section>
+
+  <section id="beaches">
+    <h2>Strender</h2>
+    <div class="beach-gallery" id="beachGallery"></div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImage" src="" alt="" style="width:100%; border-radius:8px;">
+      <p id="modalDescription"></p>
+      <p id="modalDistance"></p>
+      <p id="modalFeatures"></p>
+      <p id="modalCrowd"></p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll("nav button");
+    function showTab(tabId) {
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      tabs.forEach(btn => btn.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      document.getElementById("tab-" + tabId).classList.add("active");
+    }
+
+    const beaches = [
+      {"id":1,"name":"Pelekas","image":"images/beaches/pelekas.jpg","description":"Gylden sand og solnedganger.","distance":"13 km","features":"Organisert, solsenger","crowd":"Moderat"},
+      {"id":2,"name":"Glyfada","image":"images/beaches/glyfada.jpg","description":"En av Korfus mest populære.","distance":"16 km","features":"Beach bar, parkering","crowd":"Travel"},
+      {"id":3,"name":"Myrtiotissa","image":"images/beaches/myrtiotissa.jpg","description":"Skjult perle, nudistvennlig.","distance":"17 km","features":"Avsidesliggende","crowd":"Lite"}
+      // ... legg til de resterende 28 her som tidligere
+    ];
+
+    const gallery = document.getElementById("beachGallery");
+    beaches.forEach(beach => {
+      const div = document.createElement("div");
+      div.className = "beach-item";
+      div.innerHTML = `<img src="${beach.image}" alt="${beach.name}"><p>${beach.name}</p>`;
+      div.onclick = () => {
+        document.getElementById("modalTitle").innerText = beach.name;
+        document.getElementById("modalImage").src = beach.image;
+        document.getElementById("modalDescription").innerText = beach.description;
+        document.getElementById("modalDistance").innerText = "📍 Avstand: " + beach.distance;
+        document.getElementById("modalFeatures").innerText = "⭐ Egenskaper: " + beach.features;
+        document.getElementById("modalCrowd").innerText = "👥 Mengde: " + beach.crowd;
+        document.getElementById("modal").style.display = "flex";
+      };
+      gallery.appendChild(div);
+    });
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
