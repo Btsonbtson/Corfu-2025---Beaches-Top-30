@@ -100,13 +100,6 @@
       "food": "Anemos Cafe",
       "image": "images/beaches/porto_timoni.jpg"
     },
-
-    // ... θα συνεχίσουμε στις επόμενες 20 παραλίες στο επόμενο βήμα (2/2)
-
-  ]
-}
-{
-  "beaches": [
     {
       "id": 21,
       "name": "Γυαλισκάρι",
