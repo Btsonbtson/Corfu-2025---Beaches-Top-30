@@ -5,12 +5,13 @@
   <title>Corfu 2025</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      padding: 0;
+      background: #f4f4f4;
     }
     header {
-      background-color: #024059;
+      background: #026;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -18,20 +19,20 @@
     .tabs {
       display: flex;
       justify-content: center;
-      background-color: #eee;
+      background: #ddd;
     }
     .tab {
       padding: 1rem;
       cursor: pointer;
-      border-bottom: 3px solid transparent;
     }
     .tab.active {
-      border-bottom: 3px solid #024059;
-      background-color: white;
+      background: white;
+      border-bottom: 2px solid white;
     }
     .content {
       display: none;
       padding: 2rem;
+      background: white;
     }
     .content.active {
       display: block;
@@ -39,37 +40,37 @@
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 1rem;
+      gap: 1rem;
     }
     .gallery img {
       width: 300px;
-      height: auto;
-      border-radius: 8px;
       cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
     .modal {
       display: none;
       position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      z-index: 100;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.7);
     }
     .modal-content {
       background-color: #fff;
-      margin: 10% auto;
+      margin: auto;
       padding: 2rem;
+      border: 1px solid #888;
       width: 90%;
-      max-width: 600px;
-      border-radius: 8px;
+      max-width: 700px;
+      border-radius: 10px;
     }
     .close {
+      color: #aaa;
       float: right;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       cursor: pointer;
     }
@@ -78,9 +79,8 @@
 <body>
   <header>
     <h1>Corfu 2025</h1>
-    <p>Ο απόλυτος ταξιδιωτικός οδηγός για την Κέρκυρα</p>
+    <p>Ένας διαδραστικός ταξιδιωτικός οδηγός για την Κέρκυρα</p>
   </header>
-
   <div class="tabs">
     <div class="tab active" onclick="showTab('corfu-town')">Πόλη της Κέρκυρας</div>
     <div class="tab" onclick="showTab('benitses')">Μπενίτσες</div>
@@ -89,118 +89,23 @@
 
   <div id="corfu-town" class="content active">
     <h2>Πόλη της Κέρκυρας</h2>
-    <p>Η Παλιά Πόλη της Κέρκυρας, προστατευόμενη από την UNESCO, αποτελεί ένα ζωντανό μουσείο με ιταλικές, γαλλικές και βρετανικές επιρροές.</p>
+    <p>Η Πόλη της Κέρκυρας, γνωστή για την αρχοντιά της, είναι μνημείο παγκόσμιας πολιτιστικής κληρονομιάς της UNESCO.</p>
+    <img src="images/beaches/corfu_old_fortress.jpg" alt="Παλαιό Φρούριο Κέρκυρας" style="width:100%; max-width:600px;">
+    <p>Το Παλαιό Φρούριο, σύμβολο της πόλης, προσφέρει θέα σε όλο το Ιόνιο και στην παλιά πόλη.</p>
 
-    <h3>Λιστόν και Σπιανάδα</h3>
-    <p>Το Λιστόν, εμπνευσμένο από τη Rue de Rivoli στο Παρίσι, είναι το πιο κοσμοπολίτικο σημείο της πόλης. Καφέ, εστιατόρια και βόλτες κάτω από τις καμάρες.</p>
-    <img src="images/corfu/Liston.jpg" alt="Λιστόν Κέρκυρας">
+    <h3>Πλατεία Σπιανάδα</h3>
+    <img src="images/beaches/spianada_square.jpg" alt="Πλατεία Σπιανάδα" style="width:100%; max-width:600px;">
+    <p>Η μεγαλύτερη πλατεία των Βαλκανίων, τόπος περιπάτου και κοινωνικών εκδηλώσεων.</p>
 
-    <h3>Φρούρια και παλιές συνοικίες</h3>
-    <p>Η Παλιά Πόλη φιλοξενεί δύο εντυπωσιακά φρούρια – το Παλαιό και το Νέο – που προσφέρουν μοναδική θέα και ιστορική βαρύτητα. Γραφικά καντούνια, χρωματιστά παραθυρόφυλλα και βενετσιάνικη αύρα.</p>
-    <img src="images/corfu/Old_Fortress.jpg" alt="Παλαιό Φρούριο Κέρκυρας">
-    
-    <h3>Αξιοθέατα</h3>
-    <ul>
-      <li>Μουσείο Ασιατικής Τέχνης</li>
-      <li>Ανάκτορα Αγίων Μιχαήλ και Γεωργίου</li>
-      <li>Καμπαναριό του Αγίου Σπυρίδωνα</li>
-    </ul>
-
-    <h3>Νυχτερινή Ζωή & Πολιτισμός</h3>
-    <p>Η Κέρκυρα προσφέρει πολιτιστικές εκδηλώσεις, φεστιβάλ, όπερα και νυχτερινή ζωή με στυλ. Ο πολιτισμός παντρεύεται με το μεσογειακό lifestyle.</p>
-    <img src="images/corfu/Nightlife.jpg" alt="Νυχτερινή ζωή Κέρκυρας">
-  </div>
-  <div id="benitses" class="content">
-    <h2>Μπενίτσες</h2>
-    <p>Ένα γραφικό παραθαλάσσιο χωριό με ιστορία και αυθεντική φιλοξενία. Ιδανικό για χαλάρωση, εξερεύνηση και τοπικές γεύσεις.</p>
-
-    <h3>Ιστορία και Πολιτισμός</h3>
-    <p>Οι Μπενίτσες είναι ένα από τα παλαιότερα ψαροχώρια της Κέρκυρας, με ιστορία που χάνεται στους αιώνες. Η τοποθεσία τους προσφέρει άμεση πρόσβαση στο Ιόνιο, ενώ η παράδοση παραμένει ζωντανή μέσα από τη μουσική, τα φεστιβάλ και την τοπική κουζίνα.</p>
-
-    <h3>Που θα μείνεις</h3>
-    <div class="gallery">
-      <img src="images/beaches/Benitses.jpg" alt="Παραθαλάστιο σπίτι στις Μπενίτσες">
-      <img src="images/beaches/benitses_2.jpg" alt="Καλαίσθητο δωμάτιο στις Μπενίτσες">
-      <img src="images/beaches/benitses_3.jpg" alt="Εσωτερική αυλή σπιτιού στις Μπενίτσες">
-    </div>
+    <h3>Λιστόν</h3>
+    <img src="images/beaches/liston.jpg" alt="Λιστόν" style="width:100%; max-width:600px;">
+    <p>Το Λιστόν, εμπνευσμένο από τη Rue de Rivoli του Παρισιού, φιλοξενεί καφέ και αρμονική αρχιτεκτονική.</p>
 
     <h3>Δραστηριότητες</h3>
     <ul>
-      <li>Περίπατος στο μικρό λιμάνι</li>
-      <li>Επίσκεψη στο Μουσείο Θαλάσσης</li>
-      <li>Ημερήσια εκδρομή με βάρκα</li>
+      <li>Περιπλάνηση στα καντούνια</li>
+      <li>Επίσκεψη στο Αρχαιολογικό και Βυζαντινό Μουσείο</li>
+      <li>Βόλτα στον παραλιακό δρόμο Γαρίτσας</li>
+      <li>Γεύμα στην παλιά πόλη με τοπικές σπεσιαλιτέ</li>
     </ul>
-
-    <h3>Γαστρονομία</h3>
-    <p>Δοκιμάστε φρέσκο ψάρι, παστιτσάδα, σοφρίτο και τοπικά κρασιά στις παραθαλάσσιες ταβέρνες. Η φιλοξενία των κατοίκων απογειώνει την εμπειρία.</p>
-
-    <h3>Βίντεο</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
   </div>
-
-  <div id="beaches" class="content">
-    <h2>Παραλίες</h2>
-    <p>Ανακαλύψτε 31 μοναδικές παραλίες της Κέρκυρας. Κάντε κλικ σε κάθε εικόνα για περισσότερες πληροφορίες.</p>
-    <div id="beach-gallery" class="gallery"></div>
-  </div>
-
-  <div id="beachModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <img id="modalImage" src="" alt="" style="width:100%; height:auto; border-radius:8px; margin-bottom:1rem;">
-      <p><strong>Περιγραφή:</strong> <span id="modalDescription"></span></p>
-      <p><strong>Τοποθεσία:</strong> <span id="modalLocation"></span></p>
-      <p><strong>Τύπος:</strong> <span id="modalType"></span></p>
-      <p><strong>Πρόσβαση:</strong> <span id="modalAccess"></span></p>
-    </div>
-  </div>
-  <script>
-    function showTab(id) {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(c => c.classList.remove('active'));
-
-      const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(t => t.classList.remove('active'));
-
-      document.getElementById(id).classList.add('active');
-      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
-    }
-
-    function closeModal() {
-      document.getElementById('beachModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('beachModal');
-      if (event.target == modal) {
-        closeModal();
-      }
-    }
-
-    fetch('data/beachDetails.json')
-      .then(response => response.json())
-      .then(data => {
-        const gallery = document.getElementById('beach-gallery');
-        data.forEach(beach => {
-          const img = document.createElement('img');
-          img.src = 'images/beaches/' + beach.image;
-          img.alt = beach.name;
-          img.onclick = () => showModal(beach);
-          gallery.appendChild(img);
-        });
-      });
-
-    function showModal(beach) {
-      document.getElementById('modalTitle').innerText = beach.name;
-      document.getElementById('modalImage').src = 'images/beaches/' + beach.image;
-      document.getElementById('modalImage').alt = beach.name;
-      document.getElementById('modalDescription').innerText = beach.description;
-      document.getElementById('modalLocation').innerText = beach.location;
-      document.getElementById('modalType').innerText = beach.type;
-      document.getElementById('modalAccess').innerText = beach.access;
-      document.getElementById('beachModal').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
