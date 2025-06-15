@@ -4,96 +4,140 @@
   <meta charset="UTF-8">
   <title>Corfu 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; }
-    .tabs { display: flex; background: #004d40; color: white; }
-    .tab { flex: 1; padding: 1em; text-align: center; cursor: pointer; }
-    .tab:hover, .tab.active { background: #00695c; }
-    .content { display: none; padding: 2em; }
-    .content.active { display: block; }
-    h2 { color: #004d40; }
-    h3 { margin-top: 1.5em; }
-    p { line-height: 1.6; }
-    img { max-width: 100%; margin: 10px 0 20px; border-radius: 8px; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-    .gallery img { width: 100%; max-width: 300px; border-radius: 10px; cursor: pointer; }
-    .modal { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
-             background-color: rgba(0,0,0,0.8); }
-    .modal-content { background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 10px; max-width: 600px; }
-    .close { float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-    ul { margin-left: 1.5em; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      background: #eee;
+    }
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      cursor: pointer;
+      background: #ccc;
+      border-right: 1px solid #bbb;
+    }
+    .tab:last-child {
+      border-right: none;
+    }
+    .tab.active {
+      background: #fff;
+      font-weight: bold;
+    }
+    .content {
+      display: none;
+      padding: 2rem;
+    }
+    .content.active {
+      display: block;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
+<header>
+  <h1>Οδηγός Κέρκυρας 2025</h1>
+</header>
+
 <div class="tabs">
-  <div class="tab active" onclick="showTab('corfu')">Πόλη της Κέρκυρας</div>
+  <div class="tab active" onclick="showTab('corfuTown')">Πόλη της Κέρκυρας</div>
   <div class="tab" onclick="showTab('benitses')">Μπενίτσες</div>
   <div class="tab" onclick="showTab('beaches')">Παραλίες</div>
 </div>
 
-<div id="corfu" class="content active">
-  <h2>Πόλη της Κέρκυρας (Corfu Town)</h2>
-  <p>Είστε πλέον σε μια πόλη παγκόσμιας πολιτιστικής κληρονομιάς (UNESCO).</p>
-  <p>Η Κέρκυρα φιλοξενεί δύο φρούρια, με το παλιό να είναι από τα μεγαλύτερα στην Ευρώπη (1567 – 85.000m²).</p>
+<div id="corfuTown" class="content active">
+  <h2>Πόλη της Κέρκυρας</h2>
 
-  <h3>Spianada & Liston</h3>
-  <p>Η μεγαλύτερη πλατεία στα Βαλκάνια. Στο δυτικό άκρο της είναι το Liston, εμπνευσμένο από τη Rue de Rivoli στο Παρίσι.</p>
-  <img src="images/corfu_town/spianada.jpg" alt="Spianada και Liston">
+  <p>Η πόλη της Κέρκυρας είναι ένας ζωντανός καμβάς ιστορίας και πολιτισμού που μαγεύει κάθε επισκέπτη. Οι γραφικοί πεζόδρομοι, τα καντούνια και οι βενετσιάνικες προσόψεις δίνουν στην πόλη έναν ξεχωριστό χαρακτήρα.</p>
 
-  <h3>Άγιος Σπυρίδωνας</h3>
-  <p>Ο πολιούχος του νησιού. Ο ναός του δεσπόζει στο κέντρο της πόλης με το χαρακτηριστικό καμπαναριό.</p>
-  <img src="images/corfu_town/agios_spyridonas.jpg" alt="Ναός Αγίου Σπυρίδωνα">
+  <h3>Σπιανάδα & Λιστόν</h3>
+  <img src="images/corfu_town/spianada.jpg" alt="Πλατεία Σπιανάδα και Λιστόν">
 
-  <h3>Ιόνιος Βουλή</h3>
-  <p>Οδός Μουστοξύδη – το σημείο όπου ψηφίστηκε η ένωση των Επτανήσων με την Ελλάδα.</p>
-  <img src="images/corfu_town/ionios_vouli.jpg" alt="Κτήριο Ιονίου Βουλής">
-
-  <h3>Δημαρχείο & Πλατεία San Giacomo</h3>
-  <p>Παλαιό αρχοντικό, σημερινό δημαρχείο. Η πλατεία είναι γεμάτη ιστορία και αρχιτεκτονική κομψότητα.</p>
-  <img src="images/corfu_town/san_giacomo.jpg" alt="Πλατεία San Giacomo και Δημαρχείο">
-
-  <h3>Casa Parlante</h3>
-  <p>Μουσείο που αναπαριστά τη ζωή της αριστοκρατίας του 19ου αιώνα με ήχο, άρωμα και ρομποτική!</p>
-  <img src="images/corfu_town/casa_parlante.jpg" alt="Casa Parlante Museum">
-
-  <h3>Παλαιό Φρούριο</h3>
-  <p>Ανατολικά της παλιάς πόλης. Χτίστηκε αρχικά από τους Βυζαντινούς και αναδομήθηκε από τους Ενετούς.</p>
-  <img src="images/corfu_town/palaio_frourio.jpg" alt="Παλαιό Φρούριο Κέρκυρας">
-
-  <h3>Κήποι Boschetto & Κήπος του Λαού</h3>
-  <p>Σημεία ιδανικά για χαλαρό περίπατο και θέα στο πέλαγος. Κρυμμένα διαμάντια της πόλης.</p>
-  <img src="images/corfu_town/kipos_lao.jpg" alt="Κήπος του Λαού και Boschetto">
+  <h3>Παλιά Φρούρια</h3>
+  <p>Το παλαιό φρούριο δεσπόζει στο ανατολικό άκρο της πόλης προσφέροντας πανοραμική θέα και μια βουτιά στην ιστορία.</p>
+  <img src="images/corfu_town/palaio_froyrio.jpg" alt="Παλαιό φρούριο Κέρκυρας">
 
   <h3>Ποντικονήσι</h3>
-  <p>Μικρό νησάκι με το μοναστήρι της Παναγίας Βλαχέρνας. Σύμβολο της Κέρκυρας.</p>
-  <img src="images/corfu_town/pontikonisi.jpg" alt="Ποντικονήσι">
+  <p>Ένα από τα πιο φωτογραφημένα αξιοθέατα της Κέρκυρας, συνδεδεμένο με τη μυθολογία και την παράδοση.</p>
+  <img src="images/corfu_town/pontikonisi.jpg" alt="Ποντικονήσι Κέρκυρας">
 
-  <h3>Μον Ρεπό</h3>
-  <p>Πρώην βασιλική έπαυλη, κοντά στην πηγή του Καρδάκι. Περιβάλλεται από καταπράσινο πάρκο.</p>
-  <img src="images/corfu_town/mon_repo.jpg" alt="Μον Ρεπό και Καρδάκι">
+  <h3>Άγιος Σπυρίδωνας</h3>
+  <p>Ο ναός του Αγίου Σπυρίδωνα με το εντυπωσιακό καμπαναριό του αποτελεί πνευματικό και ιστορικό σύμβολο του νησιού.</p>
+  <img src="images/corfu_town/agios_spyridonas.jpg" alt="Ναός Αγίου Σπυρίδωνα">
 
-  <h3>Προτάσεις για καφέ</h3>
+  <h3>Κρυμμένοι Καφέ & Γλυκίσματα</h3>
   <ul>
-    <li>Micro Caffe</li>
-    <li>Στάζει Μέλι – γλυκές γεύσεις με ελληνική δημιουργικότητα</li>
-    <li>Skyview – παρακολούθησε απογειώσεις/προσγειώσεις</li>
-    <li>Πλούς – Βιβλιοκαφέ με άρωμα ντόπιο</li>
+    <li><strong>Micro Caffe</strong>: Στην καρδιά των καντουνιών.</li>
+    <li><strong>Stazei Meli</strong>: Παραδοσιακά γλυκά με μέλι.</li>
+    <li><strong>Landing Coffee</strong>: Μοντέρνος χώρος κοντά στο λιμάνι.</li>
+    <li><strong>Bookstore Cafe</strong>: Για τους λάτρεις του καφέ και του βιβλίου.</li>
   </ul>
-  <img src="images/corfu_town/micro_caffe.jpg" alt="Micro Caffe">
-  <img src="images/corfu_town/stazei_meli.jpg" alt="Stazei Meli">
-  <img src="images/corfu_town/landing_coffee.jpg" alt="Skyview Café">
-  <img src="images/corfu_town/bookstore_cafe.jpg" alt="Βιβλιοκαφέ Πλούς">
+  <div class="gallery">
+    <img src="images/corfu_town/micro_caffe.jpg" alt="Micro Caffe">
+    <img src="images/corfu_town/stazei_meli.jpg" alt="Stazei Meli">
+    <img src="images/corfu_town/landing_coffee.jpg" alt="Landing Coffee">
+    <img src="images/corfu_town/bookstore_cafe.jpg" alt="Bookstore Cafe">
+  </div>
 
-  <h3>Γλυκά & Παγωτά</h3>
+  <h3>Παγωτά & Γλυκά</h3>
   <ul>
-    <li>Papagiorgis – διάσημα παγωτά</li>
-    <li>Periklis Alexis – γιαούρτι & παραδοσιακά γλυκά</li>
+    <li><strong>Παπαγιώργης</strong>: Κλασικά παραδοσιακά γλυκίσματα</li>
+    <li><strong>Periklis Alexis</strong>: Σύγχρονη πατισερί με τοπικές επιρροές</li>
   </ul>
-  <img src="images/corfu_town/papagiorgis.jpg" alt="Παγωτά Papagiorgis">
-  <img src="images/corfu_town/periklis_alexis.jpg" alt="Periklis Alexis Sweets">
-
-  <h3>Tips</h3>
-  <p>Όλα είναι περπατήσιμα. Απόφυγε τουριστικά εστιατόρια και ψάξε πού τρώνε οι ντόπιοι.</p>
+  <div class="gallery">
+    <img src="images/corfu_town/papagiorgis.jpg" alt="Ζαχαροπλαστείο Παπαγιώργης">
+    <img src="images/corfu_town/periklis_alexis.jpg" alt="Patisserie Periklis Alexis">
+  </div>
 </div>
 <div id="benitses" class="content">
   <h2>Μπενίτσες</h2>
@@ -126,16 +170,16 @@
   <div id="beach-gallery" class="gallery"></div>
 </div>
 
-<!-- Modal -->
+<!-- Modal για τις παραλίες -->
 <div id="beachModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <h3 id="modalTitle"></h3>
     <img id="modalImage" src="" alt="" style="width:100%; margin-bottom:10px;">
     <p id="modalDescription"></p>
-    <p><strong>Location:</strong> <span id="modalLocation"></span></p>
-    <p><strong>Type:</strong> <span id="modalType"></span></p>
-    <p><strong>Access:</strong> <span id="modalAccess"></span></p>
+    <p><strong>Τοποθεσία:</strong> <span id="modalLocation"></span></p>
+    <p><strong>Τύπος:</strong> <span id="modalType"></span></p>
+    <p><strong>Πρόσβαση:</strong> <span id="modalAccess"></span></p>
   </div>
 </div>
 <script>
