@@ -42,10 +42,33 @@
       border: none;
     }
 
-    /* Modal */
-    .modal { display: none; position: fixed; z-index: 999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
-    .modal-content { background-color: #fff; margin: auto; padding: 20px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; text-align: left; }
-    .close { color: #aaa; position: absolute; top: 12px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 100px;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      text-align: left;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
     .close:hover { color: red; }
   </style>
 </head>
@@ -55,8 +78,8 @@
 
 <nav>
   <button class="tab-button" data-tab="corfu">🏛️ Corfu Town</button>
-  <button class="tab-button" data-tab="benitses">🏡 Benitses</button>
-  <button class="tab-button active" data-tab="beaches">🏖️ Beaches</button>
+  <button class="tab-button active" data-tab="benitses">🏡 Benitses</button>
+  <button class="tab-button" data-tab="beaches">🏖️ Beaches</button>
 </nav>
 
 <div id="corfu" class="tab-content">
@@ -64,7 +87,7 @@
   <p>Η Πόλη της Κέρκυρας είναι ένα μωσαϊκό ιστορίας, πολιτισμού και σύγχρονης ζωής...</p>
 </div>
 
-<div id="benitses" class="tab-content">
+<div id="benitses" class="tab-content active">
   <h2>Μπενίτσες</h2>
   <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
 
@@ -121,8 +144,7 @@
   <h3>🎥 Βίντεο</h3>
   <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
 </div>
-
-<div id="beaches" class="tab-content active">
+<div id="beaches" class="tab-content">
   <h2>🏖️ Παραλίες της Κέρκυρας</h2>
   <div class="cards-container" id="beach-container"></div>
 </div>
@@ -139,8 +161,8 @@
     <p><b>🏖️ Χαρακτηριστικά:</b> <span id="modalFeatures"></span></p>
   </div>
 </div>
+
 <script>
-  // Tab switching
   const tabs = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
 
@@ -153,7 +175,6 @@
     });
   });
 
-  // Modal DOM elements
   const container = document.getElementById("beach-container");
   const modal = document.getElementById("beachModal");
   const modalClose = document.getElementById("modalClose");
@@ -166,11 +187,10 @@
   const modalFeatures = document.getElementById("modalFeatures");
 
   modalClose.onclick = () => modal.style.display = "none";
-  window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; };
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
-  // Load beach details
   fetch("data/beachDetails.json")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
       data.beaches.forEach(beach => {
         const card = document.createElement("div");
@@ -191,9 +211,9 @@
         container.appendChild(card);
       });
     })
-    .catch(error => {
-      console.error("⚠️ Σφάλμα φόρτωσης beachDetails.json:", error);
-      container.innerHTML = "<p>Δεν φορτώθηκαν οι παραλίες.</p>";
+    .catch(err => {
+      console.error("⚠️ Σφάλμα φόρτωσης beachDetails.json:", err);
+      container.innerHTML = "<p>⚠️ Δεν φορτώθηκαν οι παραλίες.</p>";
     });
 </script>
 
