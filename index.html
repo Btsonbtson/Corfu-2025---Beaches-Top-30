@@ -1,137 +1,198 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Corfu 2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Οδηγός Κέρκυρας 2025</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f6f6f6;
     }
     header {
-      background: #2c3e50;
+      background-color: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
+      font-size: 1.8rem;
     }
     nav {
       display: flex;
       justify-content: center;
-      background: #34495e;
+      background-color: #34495e;
     }
     nav button {
       background: none;
       border: none;
       color: white;
-      padding: 14px 20px;
+      padding: 1rem;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 1rem;
     }
-    nav button:hover, nav button.active {
-      background: #1abc9c;
+    nav button.active {
+      background-color: #1abc9c;
     }
-    section {
+    .tab-content {
       display: none;
-      padding: 20px;
-      background: white;
+      padding: 2rem;
     }
-    section.active {
+    .tab-content.active {
       display: block;
     }
-    h2 {
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 5px;
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      width: 250px;
     }
-    .gallery {
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .cards-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border: 1px solid #ccc;
+      justify-content: center;
     }
     iframe {
-      max-width: 100%;
+      width: 100%;
+      height: 360px;
+      margin-top: 2rem;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Οδηγός Κέρκυρας 2025</h1>
-  </header>
-  <nav>
-    <button onclick="showTab('corfu')" id="btn-corfu">Πόλη της Κέρκυρας</button>
-    <button onclick="showTab('benitses')" id="btn-benitses" class="active">Μπενίτσες</button>
-    <button onclick="showTab('beaches')" id="btn-beaches">Παραλίες</button>
-  </nav>
 
-  <section id="corfu">
-    <h2>Πόλη της Κέρκυρας</h2>
-    <p>Περιεχόμενο εδώ… (θα προστεθεί)</p>
-  </section>
+<header>Οδηγός Κέρκυρας 2025</header>
 
-  <section id="benitses" class="active">
-    <h2>Μπενίτσες</h2>
-    <p>Το παραδοσιακό χωριό των Μπενιτσών βρίσκεται στη νοτιοανατολική ακτή της Κέρκυρας και προσφέρει έναν ιδανικό συνδυασμό ησυχίας, παράδοσης και πρόσβασης στη φύση.</p>
+<nav>
+  <button class="tab-button" data-tab="corfu">🏛️ Corfu Town</button>
+  <button class="tab-button" data-tab="benitses">🏡 Benitses</button>
+  <button class="tab-button active" data-tab="beaches">🏖️ Beaches</button>
+</nav>
 
-    <h3>🍽️ Πού να Φάτε</h3>
-    <ul>
-      <li>Pizza Kavouras – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
-      <li>Ωραίες Μπενίτσες – Ζητήστε τον Δημήτρη</li>
-      <li>Παξινός – Εξειδίκευση στο φρέσκο ψάρι</li>
-      <li>Κληματαριά – Σπεσιαλιτέ το Μπιάνκο</li>
-      <li>GyrosLeague – Σουβλάκι στο χέρι</li>
-    </ul>
+<div id="corfu" class="tab-content">
+  <h2>Πόλη της Κέρκυρας</h2>
+  <p>Η Πόλη της Κέρκυρας είναι ένα μωσαϊκό ιστορίας, πολιτισμού και σύγχρονης ζωής...</p>
+  <!-- (Εδώ προσθέτουμε όταν είστε έτοιμος το περιεχόμενο από Corfu Town.docx) -->
+</div>
 
-    <h3>🏛️ Αξιοθέατα</h3>
-    <ul>
-      <li>Αχίλλειο – Περίπου 4χλμ, καλύτερα να πάτε πρωί πριν μαζευτούν οι τουρίστες.</li>
-      <li>Τοπικά γραφεία εκδρομών προσφέρουν επιλογές όπως επισκέψεις σε σπήλαια.</li>
-      <li>Πρόταση: Εκδρομή στην Ερείκουσα – Παράδεισος!</li>
-    </ul>
+<div id="benitses" class="tab-content">
+  <h2>Μπενίτσες</h2>
+  <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
 
-    <h3>🍹 Νυχτερινή Ζωή</h3>
-    <p>Το βράδυ μπορείτε να επιλέξετε ανάμεσα σε εστιατόρια και μπαρ για μουσική ή κοκτέιλ. Η ζωή δεν είναι έντονη, αλλά υπάρχουν επιλογές όπως το Ether, η Λότζα, το μπαρ στη μαρίνα και το Agsana Hotel με μαγευτική θέα.</p>
-
-    <h3>💡 Tips</h3>
-    <ul>
-      <li>Οι περαστικοί θα σας χαιρετούν και μπορεί να ρωτήσουν για μέλη της οικογένειας!</li>
-      <li>Πάρκινγκ: 150μ από το σπίτι προς το βουνό, στο "Ντράφο", δίπλα από το γήπεδο μπάσκετ.</li>
-      <li>Εκεί θα βρείτε και κάδους απορριμμάτων.</li>
-      <li>Μην πειράξετε τις πάπιες.</li>
-      <li>Μονοπάτι hiking 4.5χλμ με θέα – ξεκινήστε πρωί!</li>
-      <li>Πολύ καλός καφές σχεδόν παντού.</li>
-    </ul>
-
-    <h3>📷 Πού θα μείνεις</h3>
-    <div class="gallery">
-      <img src="images/beaches/Benitses House.jpg" alt="Benitses House">
-      <img src="images/beaches/Benitses 2.jpg" alt="Benitses View">
-      <img src="images/beaches/Benitses 3.jpg" alt="Benitses Relax">
-      <img src="images/beaches/Benitses 4.jpg" alt="Benitses Accommodation">
+  <h3>Πού θα μείνετε</h3>
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/beaches/Benitses.jpg" alt="Παραδοσιακό σπίτι">
+      <p>Παραδοσιακό σπίτι</p>
     </div>
+    <div class="card">
+      <img src="images/beaches/benitses_2.jpg" alt="Δωμάτιο με θέα">
+      <p>Δωμάτιο με θέα</p>
+    </div>
+    <div class="card">
+      <img src="images/beaches/benitses_3.jpg" alt="Μπαλκόνι με καρέκλες">
+      <p>Μπαλκόνι με καρέκλες</p>
+    </div>
+  </div>
 
-    <h3>🎥 Video</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" title="Benitses video" frameborder="0" allowfullscreen></iframe>
-  </section>
+  <h3>🍽️ Πού να φάτε</h3>
+  <p>Οι Μπενίτσες διαθέτουν πολλές επιλογές: από ελληνική κουζίνα μέχρι διεθνείς γεύσεις.</p>
+  <ul>
+    <li><b>Pizza Kavouras</b> – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
+    <li><b>Oraies Benitses</b> – Μιλήστε με τον Δημήτρη</li>
+    <li><b>Paxinos</b> – Φρέσκα ψάρια</li>
+    <li><b>Klimataria</b> – Δοκιμάστε το Bianco</li>
+    <li><b>GyrosLeague</b> – Σουβλάκι στο χέρι</li>
+  </ul>
+  <h3>🎯 Αξιοθέατα</h3>
+  <ul>
+    <li>🏛️ Επισκεφτείτε το <b>Αχίλλειο</b> (4 χλμ). Καλύτερα νωρίς το πρωί για να αποφύγετε τα γκρουπ.</li>
+    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές (π.χ. σπηλιές, βόλτες κλπ.)</li>
+    <li>⛵ Εάν έχετε χρόνο, προτείνεται ημερήσια εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
+  </ul>
 
-  <section id="beaches">
-    <h2>Παραλίες</h2>
-    <p>Το περιεχόμενο με τις 31 παραλίες εμφανίζεται εδώ με modal εμφάνιση…</p>
-  </section>
+  <h3>🌙 Νυχτερινή Ζωή</h3>
+  <p>Η διασκέδαση στις Μπενίτσες είναι χαλαρή και αυθεντική:</p>
+  <ul>
+    <li>🍹 Για μουσική και ποτό: Ether, Λότζα, μπαρ στη Μαρίνα</li>
+    <li>🍸 Για πολυτελή κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
+  </ul>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      document.getElementById('btn-' + tabId).classList.add('active');
-    }
-  </script>
+  <h3>💡 Tips</h3>
+  <ul>
+    <li>Οι περαστικοί πιθανότατα θα σας χαιρετήσουν και μπορεί να ρωτήσουν για τη Σόνια ή τη Σοφία – είναι η τοπική ατμόσφαιρα 😄</li>
+    <li>Παρκάρετε στο “Ντράφο”, 150μ από το σπίτι, κοντά στο γήπεδο μπάσκετ</li>
+    <li>🚮 Τα σκουπίδια απομακρύνονται καθημερινά από τον Δήμο</li>
+    <li>🦆 <b>Μην ενοχλείτε τις πάπιες!</b></li>
+    <li>🥾 Ξεκινάει μονοπάτι για hiking μετά το πάρκινγκ – 4.5 χλμ κυκλική διαδρομή με θέα και σκιά. Ιδανικά το πρωί!</li>
+    <li>☕ Πολύ καλός καφές σε όλα τα café του χωριού</li>
+  </ul>
+
+  <h3>🎥 Βίντεο</h3>
+  <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
+</div>
+
+<div id="beaches" class="tab-content active">
+  <h2>🏖️ Beaches of Corfu</h2>
+  <div class="cards-container" id="beach-container"></div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+
+  const beaches = [
+    { name: "Moraitika", image: "moraitika.jpg" },
+    { name: "Benitses", image: "benitses.jpg" },
+    { name: "Agios Gordios", image: "agios_gordios.jpg" },
+    { name: "Kardaki", image: "kardaki.jpg" },
+    { name: "Glyfada", image: "glyfada.jpg" },
+    { name: "Issos", image: "issos.jpg" },
+    { name: "Halikounas", image: "halikounas.jpg" },
+    { name: "Palaiokastritsa", image: "palaiokastritsa.jpg" },
+    { name: "Myrtiotissa", image: "myrtiotissa.jpg" },
+    { name: "Porto Timoni", image: "porto_timoni.jpg" },
+    { name: "Agios Stefanos (North)", image: "agios_stefanos_north.jpg" },
+    { name: "Roda", image: "roda.jpg" },
+    { name: "Acharavi", image: "acharavi.jpg" },
+    { name: "Sidari", image: "sidari.jpg" },
+    { name: "Canal d'Amour", image: "canal_erotas.jpg" },
+    { name: "Agios Georgios Pagon", image: "agios_georgios_pagon.jpg" },
+    { name: "Agni", image: "agni.jpg" },
+    { name: "Kouloura", image: "kouloura.jpg" },
+    { name: "Kalami", image: "kalami.jpg" },
+    { name: "Barbati", image: "barmpati.jpg" }
+  ];
+
+  const container = document.getElementById("beach-container");
+  beaches.forEach(beach => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="images/beaches/${beach.image}" alt="${beach.name}">
+      <p><b>${beach.name}</b></p>
+    `;
+    container.appendChild(card);
+  });
+</script>
+
 </body>
 </html>
