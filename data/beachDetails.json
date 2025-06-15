@@ -5,11 +5,7 @@
       "name": "Μωραΐτικα",
       "distance_km": 5,
       "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
+      "features": ["Αμμώδης", "Ρηχή", "Κατάλληλη για οικογένειες"],
       "crowd": "Τουρίστες",
       "food": "The Village Taverna",
       "image": "images/beaches/moraitika.jpg"
@@ -19,13 +15,9 @@
       "name": "Μπενίτσες",
       "distance_km": 0,
       "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
+      "features": ["Βότσαλο", "Καθαρά νερά (Posidonia Valleys)", "Μικρό λιμανάκι"],
       "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
+      "food": "Klimataria, Paxinos, Pizza Kavouras, Oraies Benitses, Mitsis",
       "image": "images/beaches/benitses.jpg"
     },
     {
@@ -33,11 +25,7 @@
       "name": "Άγιος Γόρδιος",
       "distance_km": 14,
       "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
+      "features": ["Αμμώδης", "Βραχώδης γύρω περιοχή", "Οργανωμένη"],
       "crowd": "Τουρίστες",
       "food": "Sebastian's Taverna",
       "image": "images/beaches/agios_gordios.jpg"
@@ -47,11 +35,7 @@
       "name": "Καρδάκι",
       "distance_km": 12,
       "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
+      "features": ["Βότσαλο", "Σκιά από δέντρα", "Ήσυχη"],
       "crowd": "Ντόπιοι",
       "food": "Avli Restaurant",
       "image": "images/beaches/kardaki.jpg"
@@ -61,364 +45,167 @@
       "name": "Γλυφάδα",
       "distance_km": 18,
       "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
+      "features": ["Αμμώδης", "Beach Bars", "Οργανωμένη"],
       "crowd": "Νεολαία & οικογένειες",
       "food": "Pazuzu",
       "image": "images/beaches/glyfada.jpg"
     },
     {
       "id": 6,
-      "name": "Γλυφάδα 6",
-      "distance_km": 18,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Pazuzu",
-      "image": "images/beaches/sample6.jpg"
+      "name": "Ίσσος",
+      "distance_km": 28,
+      "location": "Νότια",
+      "features": ["Αμμώδης", "Αμμόλοφοι", "Λίμνη Κορισσίων"],
+      "crowd": "Φυσιολάτρες",
+      "food": "Taverna Alonaki",
+      "image": "images/beaches/issos.jpg"
     },
     {
       "id": 7,
-      "name": "Μωραΐτικα 7",
-      "distance_km": 5,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "The Village Taverna",
-      "image": "images/beaches/sample7.jpg"
+      "name": "Χαλικούνας",
+      "distance_km": 27,
+      "location": "Νότια",
+      "features": ["Αμμώδης", "Άγρια φυσική ομορφιά", "Μακριά"],
+      "crowd": "Ήσυχοι παραθεριστές",
+      "food": "Taverna Nikolas",
+      "image": "images/beaches/halikounas.jpg"
     },
     {
       "id": 8,
-      "name": "Μπενίτσες 8",
-      "distance_km": 0,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
-      "image": "images/beaches/sample8.jpg"
+      "name": "Παλαιοκαστρίτσα",
+      "distance_km": 24,
+      "location": "Βορειοδυτικά",
+      "features": ["Βραχώδης", "Σπήλαια", "Κατάλληλη για καταδύσεις"],
+      "crowd": "Τουρίστες",
+      "food": "Akron Seaside",
+      "image": "images/beaches/palaiokastritsa.jpg"
     },
     {
       "id": 9,
-      "name": "Άγιος Γόρδιος 9",
-      "distance_km": 14,
+      "name": "Μυρτιώτισσα",
+      "distance_km": 20,
       "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "Sebastian's Taverna",
-      "image": "images/beaches/sample9.jpg"
+      "features": ["Αμμώδης", "Απομονωμένη", "Γυμνιστών"],
+      "crowd": "Ντόπιοι & εναλλακτικοί ταξιδιώτες",
+      "food": "Δεν διαθέτει κοντά",
+      "image": "images/beaches/myrtiotissa.jpg"
     },
     {
       "id": 10,
-      "name": "Καρδάκι 10",
-      "distance_km": 12,
-      "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
-      "crowd": "Ντόπιοι",
-      "food": "Avli Restaurant",
-      "image": "images/beaches/sample10.jpg"
+      "name": "Πόρτο Τιμόνι",
+      "distance_km": 35,
+      "location": "Βορειοδυτικά",
+      "features": ["Διπλή παραλία", "Μόνο με πεζοπορία", "Γαλαζοπράσινα νερά"],
+      "crowd": "Περιπετειώδεις ταξιδιώτες",
+      "food": "Anemos Cafe",
+      "image": "images/beaches/porto_timoni.jpg"
     },
-    {
-      "id": 11,
-      "name": "Γλυφάδα 11",
-      "distance_km": 18,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Pazuzu",
-      "image": "images/beaches/sample11.jpg"
-    },
-    {
-      "id": 12,
-      "name": "Μωραΐτικα 12",
-      "distance_km": 5,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "The Village Taverna",
-      "image": "images/beaches/sample12.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Μπενίτσες 13",
-      "distance_km": 0,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
-      "image": "images/beaches/sample13.jpg"
-    },
-    {
-      "id": 14,
-      "name": "Άγιος Γόρδιος 14",
-      "distance_km": 14,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "Sebastian's Taverna",
-      "image": "images/beaches/sample14.jpg"
-    },
-    {
-      "id": 15,
-      "name": "Καρδάκι 15",
-      "distance_km": 12,
-      "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
-      "crowd": "Ντόπιοι",
-      "food": "Avli Restaurant",
-      "image": "images/beaches/sample15.jpg"
-    },
-    {
-      "id": 16,
-      "name": "Γλυφάδα 16",
-      "distance_km": 18,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Pazuzu",
-      "image": "images/beaches/sample16.jpg"
-    },
-    {
-      "id": 17,
-      "name": "Μωραΐτικα 17",
-      "distance_km": 5,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "The Village Taverna",
-      "image": "images/beaches/sample17.jpg"
-    },
-    {
-      "id": 18,
-      "name": "Μπενίτσες 18",
-      "distance_km": 0,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
-      "image": "images/beaches/sample18.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Άγιος Γόρδιος 19",
-      "distance_km": 14,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "Sebastian's Taverna",
-      "image": "images/beaches/sample19.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Καρδάκι 20",
-      "distance_km": 12,
-      "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
-      "crowd": "Ντόπιοι",
-      "food": "Avli Restaurant",
-      "image": "images/beaches/sample20.jpg"
-    },
+
+    // ... θα συνεχίσουμε στις επόμενες 20 παραλίες στο επόμενο βήμα (2/2)
+
+  ]
+}
+{
+  "beaches": [
     {
       "id": 21,
-      "name": "Γλυφάδα 21",
+      "name": "Γυαλισκάρι",
       "distance_km": 18,
       "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Pazuzu",
-      "image": "images/beaches/sample21.jpg"
+      "features": ["Αμμώδης", "Πεύκα", "Ήσυχη"],
+      "crowd": "Ντόπιοι",
+      "food": "Nausica Tavern",
+      "image": "images/beaches/gialiskari.jpg"
     },
     {
       "id": 22,
-      "name": "Μωραΐτικα 22",
-      "distance_km": 5,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "The Village Taverna",
-      "image": "images/beaches/sample22.jpg"
+      "name": "Κερασιά",
+      "distance_km": 30,
+      "location": "Ανατολικά",
+      "features": ["Βότσαλο", "Καθαρά νερά", "Ήσυχη"],
+      "crowd": "Ζευγάρια",
+      "food": "Kerasia Taverna",
+      "image": "images/beaches/kerasia.jpg"
     },
     {
       "id": 23,
-      "name": "Μπενίτσες 23",
-      "distance_km": 0,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
-      "image": "images/beaches/sample23.jpg"
+      "name": "Πελεκάς (Κοντογιαλός)",
+      "distance_km": 14,
+      "location": "Δυτικά",
+      "features": ["Αμμώδης", "Beach bar", "Ηλιοβασίλεμα"],
+      "crowd": "Τουρίστες",
+      "food": "Pink Panther Restaurant",
+      "image": "images/beaches/kontogialos.jpg"
     },
     {
       "id": 24,
-      "name": "Άγιος Γόρδιος 24",
-      "distance_km": 14,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "Sebastian's Taverna",
-      "image": "images/beaches/sample24.jpg"
+      "name": "Νησάκι",
+      "distance_km": 25,
+      "location": "Ανατολικά",
+      "features": ["Βότσαλο", "Σκάφη", "Καταδύσεις"],
+      "crowd": "Ντόπιοι & τουρίστες",
+      "food": "Vitamins Taverna",
+      "image": "images/beaches/nisaki.jpg"
     },
     {
       "id": 25,
-      "name": "Καρδάκι 25",
-      "distance_km": 12,
-      "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
-      "crowd": "Ντόπιοι",
-      "food": "Avli Restaurant",
-      "image": "images/beaches/sample25.jpg"
+      "name": "Αλυκές Λευκίμμης",
+      "distance_km": 38,
+      "location": "Νότια",
+      "features": ["Αμμώδης", "Φυσικό τοπίο", "Ήσυχη"],
+      "crowd": "Φυσιολάτρες",
+      "food": "Alykes Family Tavern",
+      "image": "images/beaches/alykes.jpg"
     },
     {
       "id": 26,
-      "name": "Γλυφάδα 26",
-      "distance_km": 18,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Beach Bars",
-        "Οργανωμένη"
-      ],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Pazuzu",
-      "image": "images/beaches/sample26.jpg"
+      "name": "Μπουκάρι",
+      "distance_km": 30,
+      "location": "Νοτιοανατολικά",
+      "features": ["Βότσαλο", "Ψαροταβέρνες", "Ήσυχη"],
+      "crowd": "Ντόπιοι",
+      "food": "Spiros Karidis",
+      "image": "images/beaches/boukari.jpg"
     },
     {
       "id": 27,
-      "name": "Μωραΐτικα 27",
-      "distance_km": 5,
+      "name": "Μεσογγή",
+      "distance_km": 4,
       "location": "Νοτιοανατολικά",
-      "features": [
-        "Αμμώδης",
-        "Ρηχή",
-        "Κατάλληλη για οικογένειες"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "The Village Taverna",
-      "image": "images/beaches/sample27.jpg"
+      "features": ["Αμμώδης", "Οικογενειακή", "Ρηχά νερά"],
+      "crowd": "Οικογένειες",
+      "food": "Mermaid Restaurant",
+      "image": "images/beaches/messonghi.jpg"
     },
     {
       "id": 28,
-      "name": "Μπενίτσες 28",
-      "distance_km": 0,
-      "location": "Νοτιοανατολικά",
-      "features": [
-        "Βότσαλο",
-        "Καθαρά νερά (Posidonia Valleys)",
-        "Μικρό λιμανάκι"
-      ],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses, Mitsis",
-      "image": "images/beaches/sample28.jpg"
+      "name": "Λογγάς",
+      "distance_km": 35,
+      "location": "Βορειοδυτικά",
+      "features": ["Αμμώδης", "Απόκρημνα βράχια", "Ηλιοβασίλεμα"],
+      "crowd": "Ρομαντικά ζευγάρια",
+      "food": "Panorama",
+      "image": "images/beaches/loggas.jpg"
     },
     {
       "id": 29,
-      "name": "Άγιος Γόρδιος 29",
-      "distance_km": 14,
-      "location": "Δυτικά",
-      "features": [
-        "Αμμώδης",
-        "Βραχώδης γύρω περιοχή",
-        "Οργανωμένη"
-      ],
-      "crowd": "Τουρίστες",
-      "food": "Sebastian's Taverna",
-      "image": "images/beaches/sample29.jpg"
+      "name": "Πυργί",
+      "distance_km": 18,
+      "location": "Ανατολικά",
+      "features": ["Βότσαλο", "Οργανωμένη", "Θαλάσσια σπορ"],
+      "crowd": "Νεολαία & οικογένειες",
+      "food": "Akrogiali Restaurant",
+      "image": "images/beaches/pyrgi.jpg"
     },
     {
       "id": 30,
-      "name": "Καρδάκι 30",
-      "distance_km": 12,
-      "location": "Ανατολικά (Μον Ρεπό)",
-      "features": [
-        "Βότσαλο",
-        "Σκιά από δέντρα",
-        "Ήσυχη"
-      ],
-      "crowd": "Ντόπιοι",
-      "food": "Avli Restaurant",
-      "image": "images/beaches/sample30.jpg"
+      "name": "Κασσιόπη",
+      "distance_km": 33,
+      "location": "Βορειοανατολικά",
+      "features": ["Βραχώδης", "Σπήλαια", "Βότσαλο"],
+      "crowd": "Τουρίστες",
+      "food": "Janis Taverna",
+      "image": "images/beaches/kassiopi.jpg"
     }
   ]
 }
