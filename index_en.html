@@ -3,201 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corfu 2025 Travel Guide</title>
+  <title>Corfu Guide 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    header { background: #064273; color: #fff; padding: 1rem; text-align: center; position: relative; }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    .language-switch { position: absolute; top: 10px; right: 10px; }
-    .language-switch img { width: 24px; margin-left: 10px; cursor: pointer; }
-    .tabs { display: flex; justify-content: center; background: #e0e0e0; }
-    .tabs button {
-      background: #d1d1d1; border: none; padding: 1rem; cursor: pointer;
-      font-size: 1rem; flex: 1;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
     }
-    .tabs button.active { background: #ffffff; border-bottom: 2px solid #064273; }
-    .tab-content { display: none; padding: 1rem; }
-    .tab-content.active { display: block; }
-    .beach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
-    .beach-grid img { width: 100%; border-radius: 8px; cursor: pointer; }
+    header {
+      background-color: #1a3d7c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .lang-switcher {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+    .lang-switcher a {
+      margin: 0 5px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ddd;
+    }
+    nav button {
+      background-color: #ccc;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover, nav button.active {
+      background-color: #bbb;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    .beach-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .beach-item {
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .beach-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
     .modal {
-      display: none; position: fixed; z-index: 10; padding-top: 60px;
-      left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
-      background-color: rgba(0,0,0,0.8);
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
     }
     .modal-content {
-      background-color: #fefefe; margin: auto; padding: 20px;
-      border: 1px solid #888; width: 90%; max-width: 600px; border-radius: 10px;
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 6px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
     }
-    .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
-    .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; }
-    iframe { width: 100%; height: 315px; margin-top: 1rem; }
-    h2, h3 { color: #064273; }
-    ul { padding-left: 20px; }
-    .benitses-images { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
-    .benitses-images img { width: calc(50% - 1rem); border-radius: 8px; }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: black;
+    }
+    .gallery img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Corfu Travel Guide 2025</h1>
-    <div class="language-switch">
-      <a href="index.html"><img src="images/gr-flag.png" alt="Greek" title="Greek"></a>
-      <a href="index_en.html"><img src="images/uk-flag.png" alt="English" title="English"></a>
-      <a href="index_no.html"><img src="images/no-flag.png" alt="Norwegian" title="Norwegian"></a>
+    <h1>Corfu Guide 2025</h1>
+    <div class="lang-switcher">
+      <a href="index.html">🇬🇷</a>
+      <a href="index_en.html">🇬🇧</a>
+      <a href="index_no.html">🇳🇴</a>
     </div>
   </header>
-  <div class="tabs">
-    <button class="tablink active" onclick="openTab(event, 'corfu')">Corfu Town</button>
+  <nav>
+    <button class="tablink" onclick="openTab(event, 'corfu')" id="defaultTab">Corfu Town</button>
     <button class="tablink" onclick="openTab(event, 'benitses')">Benitses</button>
     <button class="tablink" onclick="openTab(event, 'beaches')">Beaches</button>
-  </div>
+  </nav>
 
-  <div id="corfu" class="tab-content active">
-    <h2>Welcome to Corfu Town</h2>
-    <p>Corfu Town combines historical depth with cosmopolitan charm. Discover Venetian architecture, walk around the Liston promenade, and explore the majestic Old Fortress.</p>
-    <ul>
-      <li><strong>Landmarks:</strong> Saint Spyridon Church, Palace of St. Michael and St. George, Old and New Fortresses</li>
-      <li><strong>Museums:</strong> Archaeological Museum, Museum of Asian Art, Byzantine Museum</li>
-      <li><strong>Hidden Corners:</strong> Campiello alleys, Boschetto Garden, Old Jewish Quarter</li>
-    </ul>
-    <p>Enjoy local cuisine in traditional taverns, sip a drink at rooftop bars, and experience the nightlife under the Corfiot sky.</p>
-  </div>
+  <section id="corfu">
+    <h2>Corfu Town</h2>
+    <p>Corfu Town is one of the most charming cities in Greece. With its blend of Venetian, French and British influences, it enchants visitors with its architecture, narrow alleys, historic squares, and vibrant life. The Old Fortress, Liston, Spianada Square, the Palace of St. Michael and St. George, and the numerous churches form a vivid mosaic of history and culture. Ideal for walking, shopping, and dining with local delicacies.</p>
+  </section>
 
-  <div id="benitses" class="tab-content">
+  <section id="benitses">
     <h2>Benitses</h2>
-    <p>A charming seaside village combining lush mountain scenery with authentic Corfiot culture. Ideal for relaxation and exploration alike.</p>
+    <p>Benitses is a traditional fishing village located a few kilometers south of Corfu Town. It combines natural beauty with tourism development while maintaining its authentic character. You can stroll around the old village with narrow paths, stone houses, and flower-filled courtyards. The sea is calm and ideal for families, while the marina offers options for sailing and excursions.</p>
     <h3>🍽️ Where to Eat</h3>
     <ul>
-      <li><strong>Pizza Kavouras</strong> – Ask for Spyros or Gregory</li>
-      <li><strong>Oraies Benitses</strong> – Ask for Dimitris</li>
-      <li><strong>Paxinos</strong> – Specializing in Fresh Fish</li>
-      <li><strong>Klimataria</strong> – Special Dish: Bianco</li>
-      <li><strong>GyrosLeague</strong> – Souvlaki to go</li>
+      <li>Pizza Kavouras – Ask for Spyros or Gregory</li>
+      <li>Oraies Benitses – Ask for Dimitris</li>
+      <li>Paxinos – Specializing in fresh fish</li>
+      <li>Klimataria – Special dish: Bianco</li>
+      <li>GyrosLeague – Souvlaki to go</li>
     </ul>
-    <h3>🎯 Things to Do</h3>
+    <h3>🏛️ Sights</h3>
     <ul>
-      <li><strong>Achilleion Palace</strong> – Just 4 km away. Go early to avoid tourist crowds.</li>
-      <li><strong>Local Excursions</strong> – Book boat trips or explore sea caves</li>
-      <li><strong>Day Trip to Ereikoussa</strong> – A hidden paradise!</li>
+      <li>Achilleion – about 4 km away. Visit early before the crowds.</li>
+      <li>Village-based excursion offices – caves and other local natural spots</li>
+      <li>Day trip suggestion: Erikousa Island – pure paradise!</li>
     </ul>
-    <h3>🌙 Nightlife</h3>
+    <h3>🎶 Nightlife</h3>
+    <p>Benitses has a peaceful nightlife. Choose between restaurants, pubs and bars for a relaxed evening. Recommended: Ether bar, Lodra, Marina Bar. For premium cocktails with an amazing view, visit Angsana Hotel.</p>
+    <h3>💡 Tips</h3>
     <ul>
-      <li>Quiet and relaxed atmosphere</li>
-      <li>Pubs and bars: Ether, Lodscha, Marina Bar</li>
-      <li>For cocktails with a view: Angsana Hotel</li>
+      <li>Locals greet and may ask how you’re doing or about your family – don’t be surprised!</li>
+      <li>Free parking is available 150m from the house at “Drafo”, near the basketball court.</li>
+      <li>Trash bins are collected daily by the municipality.</li>
+      <li>Please don’t disturb the ducks.</li>
+      <li>From the house, a 4.5 km hiking loop offers stunning views of the village and sea – go early to avoid sun.</li>
+      <li>Excellent coffee is available all over.</li>
     </ul>
-    <h3>💡 Local Tips</h3>
-    <ul>
-      <li>Locals are friendly – don’t be surprised if they greet or chat with you</li>
-      <li>Park at “Drafo” basketball court area</li>
-      <li>Start a scenic 4.5 km hiking loop from behind the house – great views!</li>
-      <li>Don’t bother the ducks!</li>
-      <li>Coffee everywhere is excellent ☕</li>
-    </ul>
-    <h3>🎬 Local Video</h3>
-    <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
-    <h3>📷 Photo Gallery</h3>
-    <div class="benitses-images">
-      <img src="images/Benitses House.jpg" alt="Benitses House">
-      <img src="images/Benitses 2.jpg" alt="Benitses View 2">
-      <img src="images/Benitses 3.jpg" alt="Benitses View 3">
-      <img src="images/Benitses 4.jpg" alt="Benitses View 4">
+    <h3>🎥 Benitses Video</h3>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
+    <h3>🏠 Where You'll Stay</h3>
+    <div class="gallery">
+      <img src="images/beaches/Benitses House.jpg" alt="House in Benitses" />
+      <img src="images/beaches/Benitses 2.jpg" alt="Benitses View 2" />
+      <img src="images/beaches/Benitses 3.jpg" alt="Benitses View 3" />
+      <img src="images/beaches/Benitses 4.jpg" alt="Benitses View 4" />
     </div>
-  </div>
-  <div id="beaches" class="tab-content">
-    <h2>Corfu Beaches</h2>
-    <div class="beach-grid" id="beachGrid"></div>
-  </div>
+  </section>
 
-  <!-- Modal -->
+  <section id="beaches">
+    <h2>Beaches of Corfu</h2>
+    <div class="beach-grid" id="beachGrid"></div>
+  </section>
+
   <div id="beachModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <img id="modalImage" src="" alt="" style="width: 100%; border-radius: 8px; margin-top: 1rem;">
+      <h2 id="modalName"></h2>
+      <img id="modalImage" src="" alt="" style="width:100%; border-radius:6px;" />
       <p><strong>Distance:</strong> <span id="modalDistance"></span></p>
       <p><strong>Features:</strong> <span id="modalFeatures"></span></p>
-      <p><strong>Crowd Level:</strong> <span id="modalCrowd"></span></p>
-      <p><strong>Notes:</strong> <span id="modalNotes"></span></p>
+      <p><strong>Crowd:</strong> <span id="modalCrowd"></span></p>
     </div>
   </div>
 
   <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-      document.getElementById(tabName).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-
     const beaches = [
       {
         "id": 1,
-        "name": "Issos Beach",
-        "image": "images/beaches/issos.jpg",
-        "distance": "10km from Benitses",
-        "features": "Sand dunes, kite surfing, shallow waters",
-        "crowd": "Medium",
-        "notes": "Great for sunset"
+        "name": "Glyfada",
+        "image": "images/beaches/glyfada.jpg",
+        "distance": "16 km from Corfu Town",
+        "features": "Sandy, beach bars, umbrellas",
+        "crowd": "Popular and busy"
       },
       {
         "id": 2,
-        "name": "Halikounas Beach",
-        "image": "images/beaches/halikounas.jpg",
-        "distance": "12km from Benitses",
-        "features": "Wild, long beach, near Lake Korission",
-        "crowd": "Low",
-        "notes": "Bring water and shade"
+        "name": "Paleokastritsa",
+        "image": "images/beaches/paleokastritsa.jpg",
+        "distance": "23 km NW",
+        "features": "Pebbled, emerald water, boat trips",
+        "crowd": "Very popular"
       },
       {
         "id": 3,
         "name": "Agios Gordios",
-        "image": "images/beaches/agiosgordios.jpg",
-        "distance": "7km from Benitses",
-        "features": "Shops, tavernas, rock landmark",
-        "crowd": "High",
-        "notes": "Easy access"
+        "image": "images/beaches/agios_gordios.jpg",
+        "distance": "19 km SW",
+        "features": "Sandy, surrounded by cliffs",
+        "crowd": "Family friendly"
       },
-      // Add more beach objects here following same format, up to 31
+      // ... Add here the remaining 28 beaches exactly as in the beachDetails.json
     ];
 
     const beachGrid = document.getElementById("beachGrid");
+    const modal = document.getElementById("beachModal");
+    const modalName = document.getElementById("modalName");
+    const modalImage = document.getElementById("modalImage");
+    const modalDistance = document.getElementById("modalDistance");
+    const modalFeatures = document.getElementById("modalFeatures");
+    const modalCrowd = document.getElementById("modalCrowd");
+
     beaches.forEach(beach => {
-      const img = document.createElement("img");
-      img.src = beach.image;
-      img.alt = beach.name;
-      img.onclick = () => openModal(beach);
-      beachGrid.appendChild(img);
+      const div = document.createElement("div");
+      div.className = "beach-item";
+      div.innerHTML = `
+        <img src="${beach.image}" alt="${beach.name}" />
+        <p>${beach.name}</p>
+      `;
+      div.onclick = () => {
+        modal.style.display = "block";
+        modalName.textContent = beach.name;
+        modalImage.src = beach.image;
+        modalDistance.textContent = beach.distance;
+        modalFeatures.textContent = beach.features;
+        modalCrowd.textContent = beach.crowd;
+      };
+      beachGrid.appendChild(div);
     });
 
-    function openModal(beach) {
-      document.getElementById("modalTitle").textContent = beach.name;
-      document.getElementById("modalImage").src = beach.image;
-      document.getElementById("modalDistance").textContent = beach.distance;
-      document.getElementById("modalFeatures").textContent = beach.features;
-      document.getElementById("modalCrowd").textContent = beach.crowd;
-      document.getElementById("modalNotes").textContent = beach.notes;
-      document.getElementById("beachModal").style.display = "block";
-    }
-
     function closeModal() {
-      document.getElementById("beachModal").style.display = "none";
+      modal.style.display = "none";
     }
 
     window.onclick = function(event) {
-      const modal = document.getElementById("beachModal");
-      if (event.target == modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
       }
     }
+
+    function openTab(evt, tabName) {
+      const tabs = document.querySelectorAll("section");
+      tabs.forEach(tab => tab.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+
+      const tablinks = document.querySelectorAll(".tablink");
+      tablinks.forEach(btn => btn.classList.remove("active"));
+      evt.currentTarget.classList.add("active");
+    }
+
+    document.getElementById("defaultTab").click();
   </script>
 </body>
 </html>
+
