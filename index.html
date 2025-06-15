@@ -12,63 +12,13 @@
     nav button.active { background-color: #1abc9c; }
     .tab-content { display: none; padding: 2rem; }
     .tab-content.active { display: block; }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin: 1rem;
-      padding: 1rem;
-      text-align: center;
-      width: 250px;
-      cursor: pointer;
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      height: 180px;
-      object-fit: cover;
-    }
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    iframe {
-      width: 100%;
-      height: 360px;
-      margin-top: 2rem;
-      border: none;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 100px;
-      left: 0; top: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.6);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      position: relative;
-      text-align: left;
-    }
-    .close {
-      color: #aaa;
-      position: absolute;
-      top: 12px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 1rem; padding: 1rem; text-align: center; width: 250px; cursor: pointer; }
+    .card img { max-width: 100%; border-radius: 10px; height: 180px; object-fit: cover; }
+    .cards-container { display: flex; flex-wrap: wrap; justify-content: center; }
+    iframe { width: 100%; height: 360px; margin-top: 2rem; border: none; }
+    .modal { display: none; position: fixed; z-index: 999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); }
+    .modal-content { background-color: #fff; margin: auto; padding: 20px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; text-align: left; }
+    .close { color: #aaa; position: absolute; top: 12px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; }
     .close:hover { color: red; }
   </style>
 </head>
@@ -108,7 +58,6 @@
   </div>
 
   <h3>🍽️ Πού να φάτε</h3>
-  <p>Οι Μπενίτσες διαθέτουν πολλές επιλογές: από ελληνική κουζίνα μέχρι διεθνείς γεύσεις.</p>
   <ul>
     <li><b>Pizza Kavouras</b> – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
     <li><b>Oraies Benitses</b> – Μιλήστε με τον Δημήτρη</li>
@@ -120,24 +69,21 @@
   <h3>🎯 Αξιοθέατα</h3>
   <ul>
     <li>🏛️ Επισκεφτείτε το <b>Αχίλλειο</b> (4 χλμ). Καλύτερα νωρίς το πρωί για να αποφύγετε τα γκρουπ.</li>
-    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές (π.χ. σπηλιές, βόλτες κλπ.)</li>
-    <li>⛵ Εάν έχετε χρόνο, προτείνεται ημερήσια εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
+    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές</li>
+    <li>⛵ Εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
   </ul>
 
   <h3>🌙 Νυχτερινή Ζωή</h3>
-  <p>Η διασκέδαση στις Μπενίτσες είναι χαλαρή και αυθεντική:</p>
   <ul>
     <li>🍹 Για μουσική και ποτό: Ether, Λότζα, μπαρ στη Μαρίνα</li>
-    <li>🍸 Για πολυτελή κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
+    <li>🍸 Για κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
   </ul>
 
   <h3>💡 Tips</h3>
   <ul>
-    <li>Οι περαστικοί πιθανότατα θα σας χαιρετήσουν και μπορεί να ρωτήσουν για τη Σόνια ή τη Σοφία – είναι η τοπική ατμόσφαιρα 😄</li>
-    <li>Παρκάρετε στο “Ντράφο”, 150μ από το σπίτι, κοντά στο γήπεδο μπάσκετ</li>
-    <li>🚮 Τα σκουπίδια απομακρύνονται καθημερινά από τον Δήμο</li>
+    <li>Χαιρετήστε τους ντόπιους (θα σας ρωτήσουν για τη Σόνια 😄)</li>
+    <li>Παρκάρετε στο “Ντράφο” κοντά στο γήπεδο</li>
     <li>🦆 <b>Μην ενοχλείτε τις πάπιες!</b></li>
-    <li>🥾 Ξεκινάει μονοπάτι για hiking μετά το πάρκινγκ – 4.5 χλμ κυκλική διαδρομή με θέα και σκιά. Ιδανικά το πρωί!</li>
     <li>☕ Πολύ καλός καφές σε όλα τα café του χωριού</li>
   </ul>
 
