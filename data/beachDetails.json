@@ -1,111 +1,162 @@
-<!DOCTYPE html>
-<html lang="el">
-<head>
-  <meta charset="UTF-8">
-  <title>Corfu 2025</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #026;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      background: #ddd;
-    }
-    .tab {
-      padding: 1rem;
-      cursor: pointer;
-    }
-    .tab.active {
-      background: white;
-      border-bottom: 2px solid white;
-    }
-    .content {
-      display: none;
-      padding: 2rem;
-      background: white;
-    }
-    .content.active {
-      display: block;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .gallery img {
-      width: 300px;
-      cursor: pointer;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      padding-top: 60px;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.7);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: auto;
-      padding: 2rem;
-      border: 1px solid #888;
-      width: 90%;
-      max-width: 700px;
-      border-radius: 10px;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Corfu 2025</h1>
-    <p>Ένας διαδραστικός ταξιδιωτικός οδηγός για την Κέρκυρα</p>
-  </header>
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('corfu-town')">Πόλη της Κέρκυρας</div>
-    <div class="tab" onclick="showTab('benitses')">Μπενίτσες</div>
-    <div class="tab" onclick="showTab('beaches')">Παραλίες</div>
-  </div>
-
-  <div id="corfu-town" class="content active">
-    <h2>Πόλη της Κέρκυρας</h2>
-    <p>Η Πόλη της Κέρκυρας, γνωστή για την αρχοντιά της, είναι μνημείο παγκόσμιας πολιτιστικής κληρονομιάς της UNESCO.</p>
-    <img src="images/beaches/corfu_old_fortress.jpg" alt="Παλαιό Φρούριο Κέρκυρας" style="width:100%; max-width:600px;">
-    <p>Το Παλαιό Φρούριο, σύμβολο της πόλης, προσφέρει θέα σε όλο το Ιόνιο και στην παλιά πόλη.</p>
-
-    <h3>Πλατεία Σπιανάδα</h3>
-    <img src="images/beaches/spianada_square.jpg" alt="Πλατεία Σπιανάδα" style="width:100%; max-width:600px;">
-    <p>Η μεγαλύτερη πλατεία των Βαλκανίων, τόπος περιπάτου και κοινωνικών εκδηλώσεων.</p>
-
-    <h3>Λιστόν</h3>
-    <img src="images/beaches/liston.jpg" alt="Λιστόν" style="width:100%; max-width:600px;">
-    <p>Το Λιστόν, εμπνευσμένο από τη Rue de Rivoli του Παρισιού, φιλοξενεί καφέ και αρμονική αρχιτεκτονική.</p>
-
-    <h3>Δραστηριότητες</h3>
-    <ul>
-      <li>Περιπλάνηση στα καντούνια</li>
-      <li>Επίσκεψη στο Αρχαιολογικό και Βυζαντινό Μουσείο</li>
-      <li>Βόλτα στον παραλιακό δρόμο Γαρίτσας</li>
-      <li>Γεύμα στην παλιά πόλη με τοπικές σπεσιαλιτέ</li>
-    </ul>
-  </div>
+[
+  {
+    "name": "Μυρτιώτισσα",
+    "description": "Μια από τις πιο γραφικές και ήσυχες παραλίες, ιδανική για χαλάρωση και γυμνισμό.",
+    "location": "Δυτικά της Κέρκυρας",
+    "type": "Αμμώδης",
+    "access": "Μέσω μονοπατιού",
+    "image": "mirtiotissa.jpg"
+  },
+  {
+    "name": "Γλυφάδα",
+    "description": "Οργανωμένη παραλία με χρυσή άμμο και beach bars.",
+    "location": "Κεντρική Κέρκυρα",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "glyfada.jpg"
+  },
+  {
+    "name": "Παλαιοκαστρίτσα",
+    "description": "Φημισμένη για τα κρυστάλλινα νερά και τις σπηλιές.",
+    "location": "Βορειοδυτικά της Κέρκυρας",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς",
+    "image": "paleokastritsa.jpg"
+  },
+  {
+    "name": "Μπάρμπατι",
+    "description": "Παραλία με καθαρά νερά, ιδανική για θαλάσσια σπορ.",
+    "location": "Βορειοανατολικά",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς",
+    "image": "barbati.jpg"
+  },
+  {
+    "name": "Άγιος Γεώργιος Πάγων",
+    "description": "Μακριά αμμώδης παραλία, κατάλληλη για οικογένειες.",
+    "location": "Βόρεια Κέρκυρα",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "agios_georgios_pagon.jpg"
+  },
+  {
+    "name": "Κανάλ ντ'Αμούρ",
+    "description": "Φυσικοί σχηματισμοί βράχων και ρομαντική ατμόσφαιρα.",
+    "location": "Σιδάρι",
+    "type": "Βραχώδης",
+    "access": "Οδικώς",
+    "image": "canal_damour.jpg"
+  },
+  {
+    "name": "Άγιος Στέφανος",
+    "description": "Ήσυχη παραλία με όμορφο ηλιοβασίλεμα.",
+    "location": "Βορειοδυτικά",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "agios_stefanos.jpg"
+  },
+  {
+    "name": "Αρίλλας",
+    "description": "Οικογενειακή παραλία με ρηχά νερά.",
+    "location": "Βόρεια",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "arillas.jpg"
+  },
+  {
+    "name": "Μπέλα Βράκα",
+    "description": "Προσβάσιμη με τα πόδια μέσα από τη θάλασσα. Γραφική και ξεχωριστή.",
+    "location": "Νότια",
+    "type": "Μικτή",
+    "access": "Με τα πόδια/Σκάφος",
+    "image": "bella_vraka.jpg"
+  },
+  {
+    "name": "Μπαταριά",
+    "description": "Καθαρά νερά, υπέροχο τοπίο και θέα στην Αλβανία.",
+    "location": "Βορειοανατολικά",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς",
+    "image": "bataria.jpg"
+  },
+  {
+    "name": "Αλυκές Λευκίμμης",
+    "description": "Ήρεμη και απομονωμένη παραλία.",
+    "location": "Νότια",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "alykes.jpg"
+  },
+  {
+    "name": "Ύψος",
+    "description": "Πολυσύχναστη, με τουριστική ανάπτυξη και επιλογές φαγητού.",
+    "location": "Ανατολικά",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς",
+    "image": "ipsos.jpg"
+  },
+  {
+    "name": "Νησάκι",
+    "description": "Καταγάλανη θάλασσα, ήρεμη ατμόσφαιρα, ιδανική για χαλάρωση.",
+    "location": "Ανατολικά",
+    "type": "Βραχώδης",
+    "access": "Οδικώς",
+    "image": "nisaki.jpg"
+  },
+  {
+    "name": "Καλάμι",
+    "description": "Ιστορικό χωριό, αγαπημένο του Λόρενς Ντάρελ, με υπέροχη παραλία.",
+    "location": "Ανατολικά",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς",
+    "image": "kalami.jpg"
+  },
+  {
+    "name": "Αγνή",
+    "description": "Ήσυχη, με παραδοσιακές ταβέρνες δίπλα στο κύμα.",
+    "location": "Ανατολικά",
+    "type": "Βοτσαλωτή",
+    "access": "Οδικώς/Σκάφος",
+    "image": "agni.jpg"
+  },
+  {
+    "name": "Κασσιόπη",
+    "description": "Γραφικό ψαροχώρι με μικρούς κολπίσκους.",
+    "location": "Βορειοανατολικά",
+    "type": "Μικτή",
+    "access": "Οδικώς",
+    "image": "kassiopi.jpg"
+  },
+  {
+    "name": "Δράστης",
+    "description": "Εντυπωσιακά βράχια, παρθένο τοπίο και πρόσβαση μόνο από θάλασσα.",
+    "location": "Βόρεια",
+    "type": "Βραχώδης",
+    "access": "Σκάφος",
+    "image": "drastis.jpg"
+  },
+  {
+    "name": "Περίουλαδες",
+    "description": "Μοναδικά ηλιοβασιλέματα και γεωλογικοί σχηματισμοί.",
+    "location": "Βορειοδυτικά",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "peroulades.jpg"
+  },
+  {
+    "name": "Αχαράβη",
+    "description": "Μεγάλη παραλία με ρηχά νερά, ιδανική για παιδιά.",
+    "location": "Βόρεια",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "acharavi.jpg"
+  },
+  {
+    "name": "Ρόδα",
+    "description": "Δίπλα στην Αχαράβη, επίσης φιλική προς οικογένειες.",
+    "location": "Βόρεια",
+    "type": "Αμμώδης",
+    "access": "Οδικώς",
+    "image": "roda.jpg"
+  }
+]
