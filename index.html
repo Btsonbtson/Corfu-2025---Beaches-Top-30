@@ -2,139 +2,192 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Corfu 2025 Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corfu 2025 – Διαδραστικός Οδηγός</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f0f4f8; }
-    h2 { margin-top: 0; }
-    header { background: #004080; color: white; padding: 1em; text-align: center; }
-    .tabs { display: flex; justify-content: center; background: #e0e0e0; }
-    .tabs button {
-      background: none; border: none; padding: 1em; cursor: pointer;
-      font-weight: bold; transition: background 0.3s;
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f0f4f8;
     }
-    .tabs button:hover, .tabs button.active { background: #c0c0c0; }
-    .section { display: none; padding: 2em; }
-    .section.active { display: block; }
-    .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    header {
+      background-color: #0a3975;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background: #ddd;
+      padding: 10px;
+    }
+    nav button {
+      padding: 10px 20px;
+      border: none;
+      background: #bbb;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button.active {
+      background: #0a3975;
+      color: white;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
     .card {
-      width: 220px; background: white; border-radius: 8px; overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
-    .card:hover { transform: scale(1.03); }
-    .card img { width: 100%; height: 150px; object-fit: cover; }
-    .card h3 { padding: 0.5em; font-size: 1.1em; }
-
-    /* Modal */
-    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%;
-      height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .card h4 {
+      margin: 0;
+      padding: 10px;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      z-index: 9999;
+    }
+    .modal.active {
+      display: flex;
+    }
     .modal-content {
-      background: white; padding: 1.5em; border-radius: 8px; max-width: 500px;
+      background: white;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 8px;
       position: relative;
     }
-    .modal-content h3 { margin-top: 0; }
-    .close-modal {
-      position: absolute; top: 10px; right: 15px; font-size: 20px;
-      background: none; border: none; cursor: pointer;
+    .modal-content h3 {
+      margin-top: 0;
     }
-
-    @media (max-width: 600px) {
-      .card { width: 90%; }
+    .close-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: #eee;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 4px 8px;
     }
   </style>
 </head>
 <body>
-  <header><h1>Corfu 2025 – Διαδραστικός Οδηγός</h1></header>
+  <header>
+    <h1>Corfu 2025 – Διαδραστικός Οδηγός</h1>
+  </header>
 
-  <div class="tabs">
-    <button class="tab-btn active" data-section="corfu-town">Πόλη της Κέρκυρας</button>
-    <button class="tab-btn" data-section="benitses">Μπενίτσες</button>
-    <button class="tab-btn" data-section="beaches">Παραλίες</button>
-  </div>
+  <nav>
+    <button onclick="showSection('town')" id="btn-town">Πόλη της Κέρκυρας</button>
+    <button onclick="showSection('benitses')" id="btn-benitses">Μπενίτσες</button>
+    <button onclick="showSection('beaches')" id="btn-beaches">Παραλίες</button>
+  </nav>
 
-  <div id="corfu-town" class="section active">
+  <section id="town" class="active">
     <h2>Πόλη της Κέρκυρας</h2>
-    <div id="corfu-town-content">Φόρτωση περιεχομένου...</div>
-  </div>
+    <div id="townContent"></div>
+  </section>
 
-  <div id="benitses" class="section">
+  <section id="benitses">
     <h2>Μπενίτσες</h2>
-    <div id="benitses-content">Φόρτωση περιεχομένου...</div>
-  </div>
+    <div id="benitsesContent"></div>
+  </section>
 
-  <div id="beaches" class="section">
+  <section id="beaches">
     <h2>Παραλίες</h2>
-    <div class="card-container" id="beach-gallery">Φόρτωση...</div>
-  </div>
+    <div class="grid" id="beachGrid"></div>
+  </section>
 
-  <!-- Modal -->
-  <div class="modal" id="beach-modal">
+  <div class="modal" id="modal">
     <div class="modal-content">
-      <button class="close-modal" id="close-modal">&times;</button>
+      <button class="close-btn" onclick="closeModal()">×</button>
       <h3 id="modal-title"></h3>
       <p id="modal-desc"></p>
+      <p id="modal-extra"></p>
     </div>
   </div>
 
   <script>
-    // Tabs
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const sections = document.querySelectorAll(".section");
-    tabButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        tabButtons.forEach(b => b.classList.remove("active"));
-        sections.forEach(s => s.classList.remove("active"));
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.section).classList.add("active");
+    const sections = ['town', 'benitses', 'beaches'];
+    function showSection(id) {
+      sections.forEach(sec => {
+        document.getElementById(sec).classList.remove('active');
+        document.getElementById(`btn-${sec}`).classList.remove('active');
       });
-    });
+      document.getElementById(id).classList.add('active');
+      document.getElementById(`btn-${id}`).classList.add('active');
+    }
 
-    // Load Benitses
-    fetch("data/Mpenitses.json")
-      .then(res => res.json())
-      .then(data => {
-        const el = document.getElementById("benitses-content");
-        el.innerHTML = data.description;
+    async function loadBeaches() {
+      const res = await fetch('data/beachDetails.json');
+      const data = await res.json();
+      const grid = document.getElementById('beachGrid');
+      data.forEach(beach => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<img src="${beach.image}" alt=""><h4>${beach.name}</h4>`;
+        card.onclick = () => showModal(beach);
+        grid.appendChild(card);
       });
+    }
 
-    // Load Corfu Town
-    fetch("data/corfuTown.json")
-      .then(res => res.json())
-      .then(data => {
-        const el = document.getElementById("corfu-town-content");
-        el.innerHTML = data.description;
+    function showModal(data) {
+      document.getElementById('modal-title').innerText = data.name;
+      document.getElementById('modal-desc').innerText = data.description;
+      document.getElementById('modal-extra').innerText = 
+        `Τοποθεσία: ${data.location}\nΑπόσταση από Μπενίτσες: ${data.distance}\nΧαρακτηριστικά: ${data.features.join(', ')}`;
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+
+    window.onclick = function(e) {
+      if (e.target.id === 'modal') closeModal();
+    }
+
+    async function loadSection(id, file) {
+      const res = await fetch(file);
+      const data = await res.json();
+      const container = document.getElementById(id + 'Content');
+      container.innerHTML = '';
+      data.forEach(item => {
+        const div = document.createElement('div');
+        div.innerHTML = `<h3>${item.title}</h3><p>${item.description}</p>`;
+        container.appendChild(div);
       });
+    }
 
-    // Load Beaches
-    fetch("data/beachDetails.json")
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("beach-gallery");
-        container.innerHTML = "";
-        data.beaches.forEach(beach => {
-          const card = document.createElement("div");
-          card.className = "card";
-          card.innerHTML = `
-            <img src="${beach.image}" alt="${beach.name}">
-            <h3>${beach.name}</h3>`;
-          card.addEventListener("click", () => {
-            document.getElementById("modal-title").innerText = beach.name;
-            document.getElementById("modal-desc").innerText = beach.description;
-            document.getElementById("beach-modal").style.display = "flex";
-          });
-          container.appendChild(card);
-        });
-      });
-
-    // Modal close
-    document.getElementById("close-modal").onclick = () => {
-      document.getElementById("beach-modal").style.display = "none";
-    };
-    window.onclick = e => {
-      if (e.target == document.getElementById("beach-modal")) {
-        document.getElementById("beach-modal").style.display = "none";
-      }
-    };
+    loadBeaches();
+    loadSection('benitses', 'data/Mpenitses.json');
+    loadSection('town', 'data/corfuTown.json');
   </script>
 </body>
 </html>
