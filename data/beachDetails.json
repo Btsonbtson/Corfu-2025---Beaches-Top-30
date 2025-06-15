@@ -1,283 +1,407 @@
 {
   "beaches": [
     {
+      "id": 1,
       "name": "Περαμά",
       "image": "images/beaches/Perama.png",
-      "id": 1,
       "distance_km": 2,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 2,
       "name": "Αχαράβη",
       "image": "images/beaches/acharavi.jpg",
-      "id": 2,
       "distance_km": 4,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 3,
       "name": "Άγιος Γεώργιος Πάγων",
       "image": "images/beaches/agios_georgios_pagon.jpg",
-      "id": 3,
       "distance_km": 6,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 4,
       "name": "Άγιος Γόρδιος",
       "image": "images/beaches/agios_gordios.jpg",
-      "id": 4,
       "distance_km": 8,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 5,
       "name": "Άγιος Ιωάννης",
       "image": "images/beaches/agios_ioannis.jpg",
-      "id": 5,
       "distance_km": 10,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 6,
       "name": "Άγιος Στέφανος",
       "image": "images/beaches/agios_stefanos.jpg",
-      "id": 6,
       "distance_km": 12,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 7,
       "name": "Άγιος Στέφανος (Βορράς)",
       "image": "images/beaches/agios_stefanos_north.jpg",
-      "id": 7,
       "distance_km": 14,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 8,
       "name": "Άγιος Στέφανος Πάγοι",
       "image": "images/beaches/agios_stefanos_pagi.jpg",
-      "id": 8,
       "distance_km": 16,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 9,
       "name": "Άγνι",
       "image": "images/beaches/agni.jpg",
-      "id": 9,
       "distance_km": 18,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 10,
       "name": "Αρίλλας",
       "image": "images/beaches/arillas.jpg",
-      "id": 10,
       "distance_km": 20,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 11,
       "name": "Μπαρμπάτι",
       "image": "images/beaches/barmpati.jpg",
-      "id": 11,
       "distance_km": 22,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 12,
       "name": "Μπενίτσες",
       "image": "images/beaches/benitses.jpg",
-      "id": 12,
       "distance_km": 24,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 13,
       "name": "Canal d'Amour",
       "image": "images/beaches/canal_damour.jpg",
-      "id": 13,
       "distance_km": 26,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 14,
       "name": "Κανάλι του Έρωτα",
       "image": "images/beaches/canal_erotas.jpg",
-      "id": 14,
       "distance_km": 28,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 15,
       "name": "Δασσιά",
       "image": "images/beaches/dassia.jpg",
-      "id": 15,
       "distance_km": 30,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 16,
       "name": "Γλυφάδα",
       "image": "images/beaches/glyfada.jpg",
-      "id": 16,
       "distance_km": 32,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 17,
       "name": "Χαλικούνας",
       "image": "images/beaches/halikounas.jpg",
-      "id": 17,
       "distance_km": 34,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 18,
       "name": "Ίσσος",
       "image": "images/beaches/issos.jpg",
-      "id": 18,
       "distance_km": 36,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 19,
       "name": "Καλάμι",
       "image": "images/beaches/kalami.jpg",
-      "id": 19,
       "distance_km": 38,
       "location": "Βόρεια",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Ντόπιοι"
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 20,
       "name": "Καρδάκι",
       "image": "images/beaches/kardaki.jpg",
-      "id": 20,
       "distance_km": 40,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"],
-      "crowd": "Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
-      "name": "Κομμένο",
-      "image": "images/beaches/kommeno.jpg",
       "id": 21,
-      "distance_km": 42,
-      "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Ήσυχη", "Οικογενειακή"],
-      "crowd": "Ντόπιοι"
-    },
-    {
       "name": "Κοντόκαλι",
       "image": "images/beaches/kontokali.jpg",
-      "id": 22,
-      "distance_km": 44,
-      "location": "Δυτικά",
-      "features": ["Αμμώδης", "Οργανωμένη", "Προσβάσιμη"],
-      "crowd": "Τουρίστες"
+      "distance_km": 42,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 22,
       "name": "Κουλούρα",
       "image": "images/beaches/kouloura.jpg",
-      "id": 23,
-      "distance_km": 46,
-      "location": "Νοτιοανατολικά",
-      "features": ["Πέτρινη", "Καθαρά νερά", "Γραφική"],
-      "crowd": "Ντόπιοι"
-    },
-    {
-      "name": "Λογγάς",
-      "image": "images/beaches/loggas.jpg",
-      "id": 24,
-      "distance_km": 48,
-      "location": "Βόρεια",
-      "features": ["Γκρεμός", "Ηλιοβασίλεμα", "Θέα"],
-      "crowd": "Ρομαντικοί επισκέπτες"
-    },
-    {
-      "name": "Μαραθιάς",
-      "image": "images/beaches/marathias.jpg",
-      "id": 25,
-      "distance_km": 50,
-      "location": "Νότια",
-      "features": ["Αμμουδιά", "Μεγάλο μήκος", "Ησυχία"],
-      "crowd": "Λίγοι"
-    },
-    {
-      "name": "Μεσογγή",
-      "image": "images/beaches/messonghi.jpg",
-      "id": 26,
-      "distance_km": 52,
-      "location": "Νοτιοανατολικά",
-      "features": ["Οικογενειακή", "Οργανωμένη", "Ρηχά νερά"],
-      "crowd": "Οικογένειες"
-    },
-    {
-      "name": "Μυρτιώτισσα",
-      "image": "images/beaches/myrtiotissa.jpg",
-      "id": 27,
-      "distance_km": 54,
+      "distance_km": 44,
       "location": "Δυτικά",
-      "features": ["Γυμνιστών", "Απόκρημνη", "Αυθεντική"],
-      "crowd": "Εναλλακτικοί"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
-      "name": "Παραμόνα",
-      "image": "images/beaches/paramona.jpg",
-      "id": 28,
-      "distance_km": 56,
-      "location": "Νοτιοδυτικά",
-      "features": ["Απομονωμένη", "Πευκόφυτη", "Αμμουδιά"],
-      "crowd": "Ζευγάρια"
+      "id": 23,
+      "name": "Μιρτιώτισσα",
+      "image": "images/beaches/mirtiotissa.jpg",
+      "distance_km": 46,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 24,
+      "name": "Μωραΐτικα",
+      "image": "images/beaches/moraitika.jpg",
+      "distance_km": 48,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Νησάκι",
+      "image": "images/beaches/nissaki.jpeg",
+      "distance_km": 52,
+      "location": "Δυτικά",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
+    },
+    {
+      "id": 26,
       "name": "Παλαιοκαστρίτσα",
       "image": "images/beaches/palaiokastritsa.jpg",
-      "id": 29,
-      "distance_km": 58,
-      "location": "Δυτικά",
-      "features": ["Γραφική", "Διαυγή νερά", "Μοναστήρι"],
-      "crowd": "Όλοι"
+      "distance_km": 54,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 27,
+      "name": "Πόρτο Τιμόνι",
+      "image": "images/beaches/porto_timoni.jpg",
+      "distance_km": 56,
+      "location": "Δυτικά",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
+    },
+    {
+      "id": 28,
       "name": "Ρόδα",
       "image": "images/beaches/roda.jpg",
-      "id": 30,
-      "distance_km": 60,
+      "distance_km": 58,
       "location": "Βόρεια",
-      "features": ["Οργανωμένη", "Μικρά κύματα", "Ανάμεικτο κοινό"],
-      "crowd": "Ντόπιοι & Τουρίστες"
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     },
     {
+      "id": 29,
+      "name": "Ροβινιά",
+      "image": "images/beaches/rovienia.jpg",
+      "distance_km": 60,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
+    },
+    {
+      "id": 30,
       "name": "Σιδάρι",
       "image": "images/beaches/sidari.jpg",
-      "id": 31,
       "distance_km": 62,
-      "location": "Βορειοδυτικά",
-      "features": ["Γνωστό θέρετρο", "Αμμουδιά", "Ζωντάνια"],
-      "crowd": "Πολύς κόσμος"
+      "location": "Βόρεια",
+      "crowd": "Ντόπιοι",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Μπατάρια",
+      "image": "images/beaches/bataria.jpg",
+      "distance_km": 64,
+      "location": "Βορειοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": [
+        "Αμμώδης",
+        "Καθαρά νερά",
+        "Οργανωμένη"
+      ]
     }
   ]
 }
