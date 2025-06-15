@@ -12,11 +12,37 @@
     nav button.active { background-color: #1abc9c; }
     .tab-content { display: none; padding: 2rem; }
     .tab-content.active { display: block; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 1rem; padding: 1rem; text-align: center; width: 250px; cursor: pointer; }
-    .card img { max-width: 100%; border-radius: 10px; height: 180px; object-fit: cover; }
-    .cards-container { display: flex; flex-wrap: wrap; justify-content: center; }
 
-    /* Modal styles */
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      width: 250px;
+      cursor: pointer;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      margin-top: 2rem;
+      border: none;
+    }
+
+    /* Modal */
     .modal { display: none; position: fixed; z-index: 999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
     .modal-content { background-color: #fff; margin: auto; padding: 20px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; text-align: left; }
     .close { color: #aaa; position: absolute; top: 12px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; }
@@ -40,7 +66,60 @@
 
 <div id="benitses" class="tab-content">
   <h2>Μπενίτσες</h2>
-  <p>(Το περιεχόμενο των Μπενιτσών συνεχίζεται...)</p>
+  <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
+
+  <h3>Πού θα μείνετε</h3>
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/beaches/benitses_house.jpg" alt="Παραδοσιακό σπίτι">
+      <p>Παραδοσιακό σπίτι</p>
+    </div>
+    <div class="card">
+      <img src="images/beaches/benitses_2.jpg" alt="Δωμάτιο με θέα">
+      <p>Δωμάτιο με θέα</p>
+    </div>
+    <div class="card">
+      <img src="images/beaches/benitses_3.jpg" alt="Μπαλκόνι με καρέκλες">
+      <p>Μπαλκόνι με καρέκλες</p>
+    </div>
+  </div>
+
+  <h3>🍽️ Πού να φάτε</h3>
+  <p>Οι Μπενίτσες διαθέτουν πολλές επιλογές: από ελληνική κουζίνα μέχρι διεθνείς γεύσεις.</p>
+  <ul>
+    <li><b>Pizza Kavouras</b> – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
+    <li><b>Oraies Benitses</b> – Μιλήστε με τον Δημήτρη</li>
+    <li><b>Paxinos</b> – Φρέσκα ψάρια</li>
+    <li><b>Klimataria</b> – Δοκιμάστε το Bianco</li>
+    <li><b>GyrosLeague</b> – Σουβλάκι στο χέρι</li>
+  </ul>
+
+  <h3>🎯 Αξιοθέατα</h3>
+  <ul>
+    <li>🏛️ Επισκεφτείτε το <b>Αχίλλειο</b> (4 χλμ). Καλύτερα νωρίς το πρωί για να αποφύγετε τα γκρουπ.</li>
+    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές (π.χ. σπηλιές, βόλτες κλπ.)</li>
+    <li>⛵ Εάν έχετε χρόνο, προτείνεται ημερήσια εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
+  </ul>
+
+  <h3>🌙 Νυχτερινή Ζωή</h3>
+  <p>Η διασκέδαση στις Μπενίτσες είναι χαλαρή και αυθεντική:</p>
+  <ul>
+    <li>🍹 Για μουσική και ποτό: Ether, Λότζα, μπαρ στη Μαρίνα</li>
+    <li>🍸 Για πολυτελή κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
+  </ul>
+
+  <h3>💡 Tips</h3>
+  <ul>
+    <li>Οι περαστικοί πιθανότατα θα σας χαιρετήσουν και μπορεί να ρωτήσουν για τη Σόνια ή τη Σοφία – είναι η τοπική ατμόσφαιρα 😄</li>
+    <li>Παρκάρετε στο “Ντράφο”, 150μ από το σπίτι, κοντά στο γήπεδο μπάσκετ</li>
+    <li>🚮 Τα σκουπίδια απομακρύνονται καθημερινά από τον Δήμο</li>
+    <li>🦆 <b>Μην ενοχλείτε τις πάπιες!</b></li>
+    <li>🥾 Ξεκινάει μονοπάτι για hiking μετά το πάρκινγκ – 4.5 χλμ κυκλική διαδρομή με θέα και σκιά. Ιδανικά το πρωί!</li>
+    <li>☕ Πολύ καλός καφές σε όλα τα café του χωριού</li>
+  </ul>
+
+  <h3>🎥 Βίντεο</h3>
+  <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
 </div>
 
 <div id="beaches" class="tab-content active">
@@ -48,7 +127,7 @@
   <div class="cards-container" id="beach-container"></div>
 </div>
 
-<!-- Modal για λεπτομέρειες παραλίας -->
+<!-- Modal -->
 <div id="beachModal" class="modal">
   <div class="modal-content">
     <span class="close" id="modalClose">&times;</span>
@@ -60,8 +139,8 @@
     <p><b>🏖️ Χαρακτηριστικά:</b> <span id="modalFeatures"></span></p>
   </div>
 </div>
-
 <script>
+  // Tab switching
   const tabs = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
 
@@ -74,6 +153,7 @@
     });
   });
 
+  // Modal DOM elements
   const container = document.getElementById("beach-container");
   const modal = document.getElementById("beachModal");
   const modalClose = document.getElementById("modalClose");
@@ -88,6 +168,7 @@
   modalClose.onclick = () => modal.style.display = "none";
   window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; };
 
+  // Load beach details
   fetch("data/beachDetails.json")
     .then(response => response.json())
     .then(data => {
