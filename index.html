@@ -2,211 +2,139 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Οδηγός Κέρκυρας 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek&display=swap" rel="stylesheet">
+  <title>Corfu 2025 Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Noto Sans Greek', sans-serif;
-      margin: 0;
-      background-color: #f3f7f5;
+    body { font-family: Arial, sans-serif; margin: 0; background: #f0f4f8; }
+    h2 { margin-top: 0; }
+    header { background: #004080; color: white; padding: 1em; text-align: center; }
+    .tabs { display: flex; justify-content: center; background: #e0e0e0; }
+    .tabs button {
+      background: none; border: none; padding: 1em; cursor: pointer;
+      font-weight: bold; transition: background 0.3s;
     }
-
-    header {
-      background-color: #023020;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-
-    .section-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .section-buttons button {
-      margin: 5px;
-      padding: 10px 18px;
-      font-size: 16px;
-      background-color: #02675b;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .section {
-      display: none;
-      padding: 20px;
-    }
-
-    .section.active {
-      display: block;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
+    .tabs button:hover, .tabs button.active { background: #c0c0c0; }
+    .section { display: none; padding: 2em; }
+    .section.active { display: block; }
+    .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      cursor: pointer;
+      width: 220px; background: white; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s;
     }
+    .card:hover { transform: scale(1.03); }
+    .card img { width: 100%; height: 150px; object-fit: cover; }
+    .card h3 { padding: 0.5em; font-size: 1.1em; }
 
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      margin: 10px;
-      font-size: 1.1em;
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.7);
-    }
-
+    /* Modal */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%;
+      height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
     .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 600px;
+      background: white; padding: 1.5em; border-radius: 8px; max-width: 500px;
       position: relative;
     }
-
-    .close {
-      color: #aaa;
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      font-size: 24px;
-      cursor: pointer;
+    .modal-content h3 { margin-top: 0; }
+    .close-modal {
+      position: absolute; top: 10px; right: 15px; font-size: 20px;
+      background: none; border: none; cursor: pointer;
     }
 
-    .modal img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .modal h3 {
-      margin-top: 0;
+    @media (max-width: 600px) {
+      .card { width: 90%; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Οδηγός Κέρκυρας 2025</h1>
-    <p>Ανακαλύψτε τις καλύτερες εμπειρίες στο νησί</p>
-  </header>
+  <header><h1>Corfu 2025 – Διαδραστικός Οδηγός</h1></header>
 
-  <div class="section-buttons">
-    <button onclick="showSection('benitses')">Μπενίτσες</button>
-    <button onclick="showSection('beaches')">Παραλίες</button>
+  <div class="tabs">
+    <button class="tab-btn active" data-section="corfu-town">Πόλη της Κέρκυρας</button>
+    <button class="tab-btn" data-section="benitses">Μπενίτσες</button>
+    <button class="tab-btn" data-section="beaches">Παραλίες</button>
+  </div>
+
+  <div id="corfu-town" class="section active">
+    <h2>Πόλη της Κέρκυρας</h2>
+    <div id="corfu-town-content">Φόρτωση περιεχομένου...</div>
   </div>
 
   <div id="benitses" class="section">
     <h2>Μπενίτσες</h2>
-    <div id="benitses-container"></div>
+    <div id="benitses-content">Φόρτωση περιεχομένου...</div>
   </div>
 
-  <div id="beaches" class="section active">
+  <div id="beaches" class="section">
     <h2>Παραλίες</h2>
-    <div class="grid" id="beach-grid"></div>
+    <div class="card-container" id="beach-gallery">Φόρτωση...</div>
   </div>
 
-  <div id="modal" class="modal" onclick="closeModal(event)">
+  <!-- Modal -->
+  <div class="modal" id="beach-modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal(event)">&times;</span>
-      <img id="modal-img" src="" alt="">
+      <button class="close-modal" id="close-modal">&times;</button>
       <h3 id="modal-title"></h3>
       <p id="modal-desc"></p>
-      <p id="modal-location"></p>
-      <p id="modal-distance"></p>
-      <p id="modal-amenities"></p>
-      <p id="modal-food"></p>
     </div>
   </div>
+
   <script>
-    // Εναλλαγή sections (Benitses / Παραλίες)
-    function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(sectionId).classList.add('active');
-    }
+    // Tabs
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const sections = document.querySelectorAll(".section");
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        sections.forEach(s => s.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.section).classList.add("active");
+      });
+    });
 
-    // Άνοιγμα Modal
-    function openModal(data) {
-      document.getElementById('modal-img').src = data.image;
-      document.getElementById('modal-title').textContent = data.name;
-      document.getElementById('modal-desc').textContent = data.description;
-      document.getElementById('modal-location').textContent = "Τοποθεσία: " + (data.location || "-");
-      document.getElementById('modal-distance').textContent = "Απόσταση από Μπενίτσες: " + (data.distance || "-");
-      document.getElementById('modal-amenities').textContent = "Χαρακτηριστικά: " + (data.features || "-");
-      document.getElementById('modal-food').textContent = "Προτάσεις φαγητού: " + (data.food || "-");
-      document.getElementById('modal').style.display = 'block';
-    }
-
-    // Κλείσιμο Modal
-    function closeModal(event) {
-      if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
-        document.getElementById('modal').style.display = 'none';
-      }
-    }
-
-    // Φόρτωμα δεδομένων beachDetails.json
-    fetch('data/beachDetails.json')
-      .then(response => response.json())
+    // Load Benitses
+    fetch("data/Mpenitses.json")
+      .then(res => res.json())
       .then(data => {
-        const grid = document.getElementById('beach-grid');
+        const el = document.getElementById("benitses-content");
+        el.innerHTML = data.description;
+      });
+
+    // Load Corfu Town
+    fetch("data/corfuTown.json")
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById("corfu-town-content");
+        el.innerHTML = data.description;
+      });
+
+    // Load Beaches
+    fetch("data/beachDetails.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("beach-gallery");
+        container.innerHTML = "";
         data.beaches.forEach(beach => {
-          const card = document.createElement('div');
-          card.className = 'card';
+          const card = document.createElement("div");
+          card.className = "card";
           card.innerHTML = `
             <img src="${beach.image}" alt="${beach.name}">
-            <h3>${beach.name}</h3>
-          `;
-          card.onclick = () => openModal(beach);
-          grid.appendChild(card);
+            <h3>${beach.name}</h3>`;
+          card.addEventListener("click", () => {
+            document.getElementById("modal-title").innerText = beach.name;
+            document.getElementById("modal-desc").innerText = beach.description;
+            document.getElementById("beach-modal").style.display = "flex";
+          });
+          container.appendChild(card);
         });
       });
 
-    // Φόρτωμα δεδομένων benitses.json
-    fetch('data/benitses.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('benitses-container');
-        container.innerHTML = `
-          <p><strong>Ιστορία:</strong> ${data.history}</p>
-          <p><strong>Διαδρομές:</strong> ${data.routes}</p>
-          <p><strong>Εκκλησίες:</strong> ${data.churches.join(', ')}</p>
-          <p><strong>Εστιατόρια:</strong> ${data.food.map(f => `<li>${f}</li>`).join('')}</p>
-        `;
-      });
+    // Modal close
+    document.getElementById("close-modal").onclick = () => {
+      document.getElementById("beach-modal").style.display = "none";
+    };
+    window.onclick = e => {
+      if (e.target == document.getElementById("beach-modal")) {
+        document.getElementById("beach-modal").style.display = "none";
+      }
+    };
   </script>
 </body>
 </html>
-
