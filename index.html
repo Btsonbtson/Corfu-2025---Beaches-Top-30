@@ -1,232 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Corfu Guide 2025</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Οδηγός Κέρκυρας 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
-    .tabs { display: flex; background: #2c3e50; color: white; }
-    .tab-button {
-      flex: 1; padding: 15px; cursor: pointer; text-align: center;
-      border: none; background: #2c3e50; color: white; font-weight: bold;
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; }
+    header { background: #2c3e50; padding: 1rem; text-align: center; color: white; font-size: 1.8rem; }
+    nav { display: flex; justify-content: center; background: #34495e; }
+    nav button {
+      background: none; border: none; color: white; padding: 1rem 2rem; cursor: pointer;
+      font-weight: bold; font-size: 1rem;
     }
-    .tab-button.active { background: #34495e; }
-    .tab-content { display: none; padding: 20px; }
-    .tab-content.active { display: block; }
+    nav button.active { background: #1abc9c; }
+    .section { display: none; padding: 2rem; }
+    .section.active { display: block; }
 
-    .section-title { font-size: 22px; margin-top: 30px; color: #2c3e50; }
-    .house-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
-    .house-grid img { width: 100%; height: auto; border-radius: 8px; }
-
-    .guide-button {
-      margin-top: 25px;
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #2980b9;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    .grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .card {
+      background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 260px; overflow: hidden; text-align: center; cursor: pointer;
     }
+    .card img {
+      width: 100%; height: 180px; object-fit: cover;
+    }
+    .card p { margin: 1rem; font-weight: bold; }
 
-    /* Beach card styles will go in part 2 */
+    /* Modal */
+    .modal {
+      display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+      width: 100%; height: 100%; overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fff; margin: 10% auto; padding: 20px;
+      border-radius: 10px; width: 90%; max-width: 500px;
+    }
+    .close {
+      color: #aaa; float: right; font-size: 28px; font-weight: bold;
+    }
+    .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; }
+    .link-button {
+      display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
+      background: #3498db; color: white; border-radius: 5px; text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
-<div class="tabs">
-  <button class="tab-button active" onclick="showTab('corfu')">🏛️ Corfu Town</button>
-  <button class="tab-button" onclick="showTab('benitses')">🏘️ Benitses</button>
-  <button class="tab-button" onclick="showTab('beaches')">🏖️ Beaches</button>
+<header>Οδηγός Κέρκυρας 2025</header>
+<nav>
+  <button onclick="showTab('corfu')" id="btn-corfu">🏛️ Corfu Town</button>
+  <button onclick="showTab('benitses')" id="btn-benitses">🏡 Benitses</button>
+  <button onclick="showTab('beaches')" id="btn-beaches" class="active">🏖️ Beaches</button>
+</nav>
+
+<div id="corfu" class="section">
+  <h2>Πόλη της Κέρκυρας</h2>
+  <p>Εδώ θα μπουν πληροφορίες για την Πόλη της Κέρκυρας σύντομα.</p>
 </div>
 
-<div id="corfu" class="tab-content active">
-  <h2>🏛️ Corfu Town</h2>
-  <p>This section will include historic highlights, museums, and tips for exploring the old town.</p>
-</div>
+<div id="benitses" class="section">
+  <h2>Μπενίτσες</h2>
+  <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
 
-<div id="benitses" class="tab-content">
-  <h2>🏘️ Benitses</h2>
-  <p>Benitses is a charming seaside village just 12 km south of Corfu Town, combining tradition with modern amenities.</p>
-
-  <h3 class="section-title">🍽️ Where to Eat</h3>
-  <p>The village has many restaurants and tavernas serving everything from traditional Greek cuisine to Chinese and Mexican dishes.</p>
-  <ul>
-    <li><b>Pizza Kavouras</b> – Ask for Spyros or Gregory</li>
-    <li><b>Oraies Benitses</b> – Ask for Dimitris</li>
-    <li><b>Paxinos</b> – Specializing in Fresh Fish</li>
-    <li><b>Klimataria</b> – Special Dish: Bianco</li>
-    <li><b>GyrosLeague</b> – Souvlaki to go</li>
-  </ul>
-
-  <h3 class="section-title">🗺️ Sights & Excursions</h3>
-  <ul>
-    <li><b>Achilleion Palace</b> – 4km away, go early to avoid crowds.</li>
-    <li><b>Boat Tours</b> – Explore caves and coastal treasures.</li>
-    <li><b>Day trip to Erikousa Island</b> – A true paradise!</li>
-  </ul>
-
-  <h3 class="section-title">🌙 Nightlife</h3>
-  <p>
-    The nightlife in Benitses is relaxed. Choose from seaside restaurants, small pubs, and cocktail bars. Visit:
-  </p>
-  <ul>
-    <li>Ether</li>
-    <li>Lodja</li>
-    <li>The Marina Bar</li>
-    <li><b>Angsana Hotel Bar</b> – Top cocktails and stunning view</li>
-  </ul>
-
-  <h3 class="section-title">💡 Tips</h3>
-  <ul>
-    <li>Locals might greet you or ask about your family — it’s part of the charm!</li>
-    <li>Park at “Drafo”, near the basketball court (150m uphill).</li>
-    <li>The path behind the court leads to a 4.5km hiking loop with amazing views.</li>
-    <li>Excellent coffee available everywhere.</li>
-  </ul>
-
-  <h3 class="section-title">📷 Where to Stay</h3>
-  <div class="house-grid">
-    <img src="images/beaches/benitses_house.jpg" alt="Benitses House">
-    <img src="images/beaches/benitses_2.jpg" alt="Benitses View 2">
-    <img src="images/beaches/benitses_3.jpg" alt="Benitses View 3">
-    <img src="images/beaches/benitses_4.jpg" alt="Benitses View 4">
+  <h3>Πού θα μείνεις</h3>
+  <div class="grid">
+    <div class="card"><img src="images/beaches/Benitses House.jpg" alt="House"/><p>Παραδοσιακό σπίτι</p></div>
+    <div class="card"><img src="images/beaches/Benitses 2.jpg" alt="Room 1"/><p>Δωμάτιο με θέα</p></div>
+    <div class="card"><img src="images/beaches/Benitses 3.jpg" alt="Room 2"/><p>Μπαλκόνι με καρέκλες</p></div>
+    <div class="card"><img src="images/beaches/Benitses 4.jpg" alt="Street"/><p>Γραφικό στενό</p></div>
   </div>
-
-  <a href="benitses.html" class="guide-button">📄 Open Detailed Guide</a>
-</div>
-
-<!-- Part 2 with beaches section and modals continues next -->
-<script>
-  function showTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
-    document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('active');
-  }
-</script>
-<div id="beaches" class="tab-content">
-  <h2>🏖️ Beaches of Corfu</h2>
-  <div class="beach-grid">
-    <!-- Οι παραλίες προστίθενται εδώ -->
+  <div style="text-align:center;margin-top:1rem">
+    <a href="benitses.html" class="link-button" target="_blank">Δες περισσότερα για τις Μπενίτσες →</a>
   </div>
 </div>
 
-<!-- Modal -->
-<div id="beachModal" class="modal" style="display:none;">
-  <div class="modal-content" onclick="event.stopPropagation()">
+<div id="beaches" class="section active">
+  <h2>Beaches of Corfu</h2>
+  <div id="beach-grid" class="grid"></div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <h3 id="modalName"></h3>
-    <img id="modalImage" src="" alt="" style="width:100%;max-height:300px;object-fit:cover;border-radius:8px;">
-    <p id="modalDescription"></p>
-    <ul>
-      <li><strong>Distance:</strong> <span id="modalDistance"></span></li>
-      <li><strong>Features:</strong> <span id="modalFeatures"></span></li>
-      <li><strong>Crowd:</strong> <span id="modalCrowd"></span></li>
-    </ul>
+    <h3 id="modal-name"></h3>
+    <p><strong>📍 Τοποθεσία:</strong> <span id="modal-location"></span></p>
+    <p><strong>📏 Απόσταση από Μπενίτσες:</strong> <span id="modal-distance"></span> χλμ</p>
+    <p><strong>📝 Χαρακτηριστικά:</strong> <span id="modal-features"></span></p>
+    <p><strong>👥 Κοινό:</strong> <span id="modal-crowd"></span></p>
   </div>
 </div>
 
-<style>
-  .beach-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .beach-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  .beach-card:hover { transform: scale(1.02); }
-  .beach-card img { width: 100%; height: 150px; object-fit: cover; }
-  .beach-card h4 { margin: 10px; }
-
-  .modal {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center;
-    z-index: 9999;
-  }
-  .modal-content {
-    background: white; padding: 20px; border-radius: 10px; width: 90%; max-width: 500px;
-    max-height: 90vh; overflow-y: auto; position: relative;
-  }
-  .close {
-    position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer;
-  }
-</style>
-
 <script>
-  const beaches = [
-    {
-      id: 1,
-      name: "Agios Gordios",
-      image: "images/beaches/agios_gordios.jpg",
-      description: "A scenic beach surrounded by green cliffs, perfect for sunsets.",
-      distance: "14 km from Benitses",
-      features: "Sunbeds, Watersports, Restaurants",
-      crowd: "Medium"
-    },
-    {
-      id: 2,
-      name: "Glyfada",
-      image: "images/beaches/glyfada.jpg",
-      description: "One of the most famous beaches in Corfu with golden sand.",
-      distance: "17 km from Corfu Town",
-      features: "Sunbeds, Bars, Watersports",
-      crowd: "High"
-    },
-    {
-      id: 3,
-      name: "Barbati",
-      image: "images/beaches/barbati.jpg",
-      description: "Pebbled beach with crystal waters and mountain backdrop.",
-      distance: "20 km from Corfu Town",
-      features: "Clear water, Beach bars",
-      crowd: "Medium"
-    },
-    // ... Add all remaining 28 beaches here ...
-  ];
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('btn-' + id).classList.add('active');
+}
 
-  const beachGrid = document.querySelector('.beach-grid');
-  beaches.forEach(beach => {
-    const card = document.createElement('div');
-    card.className = 'beach-card';
-    card.innerHTML = `
-      <img src="${beach.image}" alt="${beach.name}">
-      <h4>${beach.name}</h4>
-    `;
-    card.onclick = () => openModal(beach);
-    beachGrid.appendChild(card);
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+function openModal(beach) {
+  document.getElementById('modal-name').textContent = beach.name;
+  document.getElementById('modal-location').textContent = beach.location;
+  document.getElementById('modal-distance').textContent = beach.distance_km;
+  document.getElementById('modal-features').textContent = beach.features.join(', ');
+  document.getElementById('modal-crowd').textContent = beach.crowd;
+  document.getElementById('modal').style.display = 'block';
+}
+</script>
+<script>
+fetch('data/beachDetails.json')
+  .then(response => response.json())
+  .then(data => {
+    const beachGrid = document.getElementById('beach-grid');
+    data.beaches.forEach(beach => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${beach.image}" alt="${beach.name}">
+        <p>${beach.name}</p>
+      `;
+      card.addEventListener('click', () => openModal(beach));
+      beachGrid.appendChild(card);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading beach data:', error);
+    document.getElementById('beach-grid').innerHTML = "<p>❌ Σφάλμα φόρτωσης παραλιών.</p>";
   });
 
-  function openModal(beach) {
-    document.getElementById('modalName').textContent = beach.name;
-    document.getElementById('modalImage').src = beach.image;
-    document.getElementById('modalDescription').textContent = beach.description;
-    document.getElementById('modalDistance').textContent = beach.distance;
-    document.getElementById('modalFeatures').textContent = beach.features;
-    document.getElementById('modalCrowd').textContent = beach.crowd;
-    document.getElementById('beachModal').style.display = 'flex';
+// Κλείσιμο modal με click εκτός περιεχομένου
+window.onclick = function(event) {
+  const modal = document.getElementById('modal');
+  if (event.target === modal) {
+    closeModal();
   }
-
-  function closeModal() {
-    document.getElementById('beachModal').style.display = 'none';
-  }
-
-  window.onclick = function(event) {
-    if (event.target == document.getElementById('beachModal')) {
-      closeModal();
-    }
-  }
+};
 </script>
 </body>
 </html>
