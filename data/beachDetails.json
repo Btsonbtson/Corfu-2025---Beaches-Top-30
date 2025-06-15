@@ -5,7 +5,11 @@
       "name": "Μωραΐτικα",
       "distance_km": 5,
       "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Ρηχή", "Κατάλληλη για οικογένειες"],
+      "features": [
+        "Αμμώδης",
+        "Ρηχή",
+        "Κατάλληλη για οικογένειες"
+      ],
       "crowd": "Τουρίστες",
       "food": "The Village Taverna",
       "image": "images/beaches/moraitika.jpg"
@@ -15,9 +19,13 @@
       "name": "Μπενίτσες",
       "distance_km": 0,
       "location": "Νοτιοανατολικά",
-      "features": ["Βότσαλο", "Καθαρά νερά (Posidonia Valleys)", "Μικρό λιμανάκι"],
+      "features": [
+        "Βότσαλο",
+        "Καθαρά νερά (Posidonia Valleys)",
+        "Μικρό λιμανάκι"
+      ],
       "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Klimataria, Paxinos, Pizza Kavouras, Oraies Benitses, Mitsis",
+      "food": "Klimataria (Bianco), Paxinos (Fish), Pizza Kavouras, Oraies Benitses (Modern Cuisine), Mitsis (Souvlaki)",
       "image": "images/beaches/benitses.jpg"
     },
     {
@@ -25,7 +33,11 @@
       "name": "Άγιος Γόρδιος",
       "distance_km": 14,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Βραχώδης γύρω περιοχή", "Οργανωμένη"],
+      "features": [
+        "Αμμώδης",
+        "Βραχώδης γύρω περιοχή",
+        "Οργανωμένη"
+      ],
       "crowd": "Τουρίστες",
       "food": "Sebastian's Taverna",
       "image": "images/beaches/agios_gordios.jpg"
@@ -35,7 +47,11 @@
       "name": "Καρδάκι",
       "distance_km": 12,
       "location": "Ανατολικά (Μον Ρεπό)",
-      "features": ["Βότσαλο", "Σκιά από δέντρα", "Ήσυχη"],
+      "features": [
+        "Βότσαλο",
+        "Σκιά από δέντρα",
+        "Ήσυχη"
+      ],
       "crowd": "Ντόπιοι",
       "food": "Avli Restaurant",
       "image": "images/beaches/kardaki.jpg"
@@ -45,160 +61,364 @@
       "name": "Γλυφάδα",
       "distance_km": 18,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Beach Bars", "Οργανωμένη"],
+      "features": [
+        "Αμμώδης",
+        "Beach Bars",
+        "Οργανωμένη"
+      ],
       "crowd": "Νεολαία & οικογένειες",
       "food": "Pazuzu",
       "image": "images/beaches/glyfada.jpg"
     },
     {
       "id": 6,
-      "name": "Ίσσος",
-      "distance_km": 28,
-      "location": "Νότια",
-      "features": ["Αμμώδης", "Αμμόλοφοι", "Λίμνη Κορισσίων"],
-      "crowd": "Φυσιολάτρες",
-      "food": "Taverna Alonaki",
-      "image": "images/beaches/issos.jpg"
+      "name": "Παραλία 6",
+      "distance_km": 16,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 6",
+      "image": "images/beaches/beach_6.jpg"
     },
     {
       "id": 7,
-      "name": "Χαλικούνας",
-      "distance_km": 27,
-      "location": "Νότια",
-      "features": ["Αμμώδης", "Άγρια φυσική ομορφιά", "Μακριά"],
-      "crowd": "Ήσυχοι παραθεριστές",
-      "food": "Taverna Nikolas",
-      "image": "images/beaches/halikounas.jpg"
+      "name": "Παραλία 7",
+      "distance_km": 17,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 7",
+      "image": "images/beaches/beach_7.jpg"
     },
     {
       "id": 8,
-      "name": "Παλαιοκαστρίτσα",
-      "distance_km": 24,
-      "location": "Βορειοδυτικά",
-      "features": ["Βραχώδης", "Σπήλαια", "Κατάλληλη για καταδύσεις"],
+      "name": "Παραλία 8",
+      "distance_km": 18,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
       "crowd": "Τουρίστες",
-      "food": "Akron Seaside",
-      "image": "images/beaches/palaiokastritsa.jpg"
+      "food": "Taverna 8",
+      "image": "images/beaches/beach_8.jpg"
     },
     {
       "id": 9,
-      "name": "Μυρτιώτισσα",
-      "distance_km": 20,
+      "name": "Παραλία 9",
+      "distance_km": 19,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Απομονωμένη", "Γυμνιστών"],
-      "crowd": "Ντόπιοι & εναλλακτικοί ταξιδιώτες",
-      "food": "Δεν διαθέτει κοντά",
-      "image": "images/beaches/myrtiotissa.jpg"
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 9",
+      "image": "images/beaches/beach_9.jpg"
     },
     {
       "id": 10,
-      "name": "Πόρτο Τιμόνι",
-      "distance_km": 35,
-      "location": "Βορειοδυτικά",
-      "features": ["Διπλή παραλία", "Μόνο με πεζοπορία", "Γαλαζοπράσινα νερά"],
-      "crowd": "Περιπετειώδεις ταξιδιώτες",
-      "food": "Anemos Cafe",
-      "image": "images/beaches/porto_timoni.jpg"
+      "name": "Παραλία 10",
+      "distance_km": 20,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 10",
+      "image": "images/beaches/beach_10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Παραλία 11",
+      "distance_km": 21,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 11",
+      "image": "images/beaches/beach_11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Παραλία 12",
+      "distance_km": 22,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 12",
+      "image": "images/beaches/beach_12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Παραλία 13",
+      "distance_km": 23,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 13",
+      "image": "images/beaches/beach_13.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Παραλία 14",
+      "distance_km": 24,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 14",
+      "image": "images/beaches/beach_14.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Παραλία 15",
+      "distance_km": 25,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 15",
+      "image": "images/beaches/beach_15.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Παραλία 16",
+      "distance_km": 26,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 16",
+      "image": "images/beaches/beach_16.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Παραλία 17",
+      "distance_km": 27,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 17",
+      "image": "images/beaches/beach_17.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Παραλία 18",
+      "distance_km": 28,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 18",
+      "image": "images/beaches/beach_18.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Παραλία 19",
+      "distance_km": 29,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 19",
+      "image": "images/beaches/beach_19.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Παραλία 20",
+      "distance_km": 30,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 20",
+      "image": "images/beaches/beach_20.jpg"
     },
     {
       "id": 21,
-      "name": "Γυαλισκάρι",
-      "distance_km": 18,
+      "name": "Παραλία 21",
+      "distance_km": 31,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Πεύκα", "Ήσυχη"],
-      "crowd": "Ντόπιοι",
-      "food": "Nausica Tavern",
-      "image": "images/beaches/gialiskari.jpg"
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 21",
+      "image": "images/beaches/beach_21.jpg"
     },
     {
       "id": 22,
-      "name": "Κερασιά",
-      "distance_km": 30,
-      "location": "Ανατολικά",
-      "features": ["Βότσαλο", "Καθαρά νερά", "Ήσυχη"],
-      "crowd": "Ζευγάρια",
-      "food": "Kerasia Taverna",
-      "image": "images/beaches/kerasia.jpg"
+      "name": "Παραλία 22",
+      "distance_km": 32,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 22",
+      "image": "images/beaches/beach_22.jpg"
     },
     {
       "id": 23,
-      "name": "Πελεκάς (Κοντογιαλός)",
-      "distance_km": 14,
+      "name": "Παραλία 23",
+      "distance_km": 33,
       "location": "Δυτικά",
-      "features": ["Αμμώδης", "Beach bar", "Ηλιοβασίλεμα"],
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
       "crowd": "Τουρίστες",
-      "food": "Pink Panther Restaurant",
-      "image": "images/beaches/kontogialos.jpg"
+      "food": "Taverna 23",
+      "image": "images/beaches/beach_23.jpg"
     },
     {
       "id": 24,
-      "name": "Νησάκι",
-      "distance_km": 25,
-      "location": "Ανατολικά",
-      "features": ["Βότσαλο", "Σκάφη", "Καταδύσεις"],
-      "crowd": "Ντόπιοι & τουρίστες",
-      "food": "Vitamins Taverna",
-      "image": "images/beaches/nisaki.jpg"
+      "name": "Παραλία 24",
+      "distance_km": 34,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 24",
+      "image": "images/beaches/beach_24.jpg"
     },
     {
       "id": 25,
-      "name": "Αλυκές Λευκίμμης",
-      "distance_km": 38,
-      "location": "Νότια",
-      "features": ["Αμμώδης", "Φυσικό τοπίο", "Ήσυχη"],
-      "crowd": "Φυσιολάτρες",
-      "food": "Alykes Family Tavern",
-      "image": "images/beaches/alykes.jpg"
+      "name": "Παραλία 25",
+      "distance_km": 35,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 25",
+      "image": "images/beaches/beach_25.jpg"
     },
     {
       "id": 26,
-      "name": "Μπουκάρι",
-      "distance_km": 30,
-      "location": "Νοτιοανατολικά",
-      "features": ["Βότσαλο", "Ψαροταβέρνες", "Ήσυχη"],
-      "crowd": "Ντόπιοι",
-      "food": "Spiros Karidis",
-      "image": "images/beaches/boukari.jpg"
+      "name": "Παραλία 26",
+      "distance_km": 36,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 26",
+      "image": "images/beaches/beach_26.jpg"
     },
     {
       "id": 27,
-      "name": "Μεσογγή",
-      "distance_km": 4,
-      "location": "Νοτιοανατολικά",
-      "features": ["Αμμώδης", "Οικογενειακή", "Ρηχά νερά"],
-      "crowd": "Οικογένειες",
-      "food": "Mermaid Restaurant",
-      "image": "images/beaches/messonghi.jpg"
+      "name": "Παραλία 27",
+      "distance_km": 37,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 27",
+      "image": "images/beaches/beach_27.jpg"
     },
     {
       "id": 28,
-      "name": "Λογγάς",
-      "distance_km": 35,
-      "location": "Βορειοδυτικά",
-      "features": ["Αμμώδης", "Απόκρημνα βράχια", "Ηλιοβασίλεμα"],
-      "crowd": "Ρομαντικά ζευγάρια",
-      "food": "Panorama",
-      "image": "images/beaches/loggas.jpg"
+      "name": "Παραλία 28",
+      "distance_km": 38,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 28",
+      "image": "images/beaches/beach_28.jpg"
     },
     {
       "id": 29,
-      "name": "Πυργί",
-      "distance_km": 18,
-      "location": "Ανατολικά",
-      "features": ["Βότσαλο", "Οργανωμένη", "Θαλάσσια σπορ"],
-      "crowd": "Νεολαία & οικογένειες",
-      "food": "Akrogiali Restaurant",
-      "image": "images/beaches/pyrgi.jpg"
+      "name": "Παραλία 29",
+      "distance_km": 39,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
+      "crowd": "Τουρίστες",
+      "food": "Taverna 29",
+      "image": "images/beaches/beach_29.jpg"
     },
     {
       "id": 30,
-      "name": "Κασσιόπη",
-      "distance_km": 33,
-      "location": "Βορειοανατολικά",
-      "features": ["Βραχώδης", "Σπήλαια", "Βότσαλο"],
+      "name": "Παραλία 30",
+      "distance_km": 40,
+      "location": "Δυτικά",
+      "features": [
+        "Αμμώδης",
+        "Ήσυχη",
+        "Καθαρά νερά"
+      ],
       "crowd": "Τουρίστες",
-      "food": "Janis Taverna",
-      "image": "images/beaches/kassiopi.jpg"
+      "food": "Taverna 30",
+      "image": "images/beaches/beach_30.jpg"
     }
   ]
 }
