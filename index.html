@@ -1,165 +1,191 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Οδηγός Κέρκυρας 2025</title>
+  <meta charset="UTF-8">
+  <title>Corfu 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f6f6f6; }
-    header { background-color: #2c3e50; color: white; padding: 1rem; text-align: center; font-size: 1.8rem; }
-    nav { display: flex; justify-content: center; background-color: #34495e; }
-    nav button { background: none; border: none; color: white; padding: 1rem; cursor: pointer; font-size: 1rem; }
-    nav button.active { background-color: #1abc9c; }
-    .tab-content { display: none; padding: 2rem; }
-    .tab-content.active { display: block; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 1rem; padding: 1rem; text-align: center; width: 250px; cursor: pointer; }
-    .card img { max-width: 100%; border-radius: 10px; height: 180px; object-fit: cover; }
-    .cards-container { display: flex; flex-wrap: wrap; justify-content: center; }
-    iframe { width: 100%; height: 360px; margin-top: 2rem; border: none; }
-    .modal { display: none; position: fixed; z-index: 999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); }
-    .modal-content { background-color: #fff; margin: auto; padding: 20px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; text-align: left; }
-    .close { color: #aaa; position: absolute; top: 12px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; }
-    .close:hover { color: red; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; }
+    .tabs { display: flex; background: #004d40; color: white; }
+    .tab { flex: 1; padding: 1em; text-align: center; cursor: pointer; }
+    .tab:hover, .tab.active { background: #00695c; }
+    .content { display: none; padding: 2em; }
+    .content.active { display: block; }
+    h2 { color: #004d40; }
+    h3 { margin-top: 1.5em; }
+    p { line-height: 1.6; }
+    img { max-width: 100%; margin: 10px 0 20px; border-radius: 8px; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .gallery img { width: 100%; max-width: 300px; border-radius: 10px; cursor: pointer; }
+    .modal { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+             background-color: rgba(0,0,0,0.8); }
+    .modal-content { background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 10px; max-width: 600px; }
+    .close { float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+    ul { margin-left: 1.5em; }
   </style>
 </head>
 <body>
 
-<header>Οδηγός Κέρκυρας 2025</header>
-
-<nav>
-  <button class="tab-button" data-tab="corfu">🏛️ Corfu Town</button>
-  <button class="tab-button active" data-tab="benitses">🏡 Benitses</button>
-  <button class="tab-button" data-tab="beaches">🏖️ Beaches</button>
-</nav>
-
-<div id="corfu" class="tab-content">
-  <h2>Πόλη της Κέρκυρας</h2>
-  <p>Η Πόλη της Κέρκυρας είναι ένα μωσαϊκό ιστορίας, πολιτισμού και σύγχρονης ζωής...</p>
+<div class="tabs">
+  <div class="tab active" onclick="showTab('corfu')">Πόλη της Κέρκυρας</div>
+  <div class="tab" onclick="showTab('benitses')">Μπενίτσες</div>
+  <div class="tab" onclick="showTab('beaches')">Παραλίες</div>
 </div>
 
-<div id="benitses" class="tab-content active">
+<div id="corfu" class="content active">
+  <h2>Πόλη της Κέρκυρας (Corfu Town)</h2>
+  <p>Είστε πλέον σε μια πόλη παγκόσμιας πολιτιστικής κληρονομιάς (UNESCO).</p>
+  <p>Η Κέρκυρα φιλοξενεί δύο φρούρια, με το παλιό να είναι από τα μεγαλύτερα στην Ευρώπη (1567 – 85.000m²).</p>
+
+  <h3>Spianada & Liston</h3>
+  <p>Η μεγαλύτερη πλατεία στα Βαλκάνια. Στο δυτικό άκρο της είναι το Liston, εμπνευσμένο από τη Rue de Rivoli στο Παρίσι.</p>
+  <img src="images/corfu_town/spianada.jpg" alt="Spianada και Liston">
+
+  <h3>Άγιος Σπυρίδωνας</h3>
+  <p>Ο πολιούχος του νησιού. Ο ναός του δεσπόζει στο κέντρο της πόλης με το χαρακτηριστικό καμπαναριό.</p>
+  <img src="images/corfu_town/agios_spyridonas.jpg" alt="Ναός Αγίου Σπυρίδωνα">
+
+  <h3>Ιόνιος Βουλή</h3>
+  <p>Οδός Μουστοξύδη – το σημείο όπου ψηφίστηκε η ένωση των Επτανήσων με την Ελλάδα.</p>
+  <img src="images/corfu_town/ionios_vouli.jpg" alt="Κτήριο Ιονίου Βουλής">
+
+  <h3>Δημαρχείο & Πλατεία San Giacomo</h3>
+  <p>Παλαιό αρχοντικό, σημερινό δημαρχείο. Η πλατεία είναι γεμάτη ιστορία και αρχιτεκτονική κομψότητα.</p>
+  <img src="images/corfu_town/san_giacomo.jpg" alt="Πλατεία San Giacomo και Δημαρχείο">
+
+  <h3>Casa Parlante</h3>
+  <p>Μουσείο που αναπαριστά τη ζωή της αριστοκρατίας του 19ου αιώνα με ήχο, άρωμα και ρομποτική!</p>
+  <img src="images/corfu_town/casa_parlante.jpg" alt="Casa Parlante Museum">
+
+  <h3>Παλαιό Φρούριο</h3>
+  <p>Ανατολικά της παλιάς πόλης. Χτίστηκε αρχικά από τους Βυζαντινούς και αναδομήθηκε από τους Ενετούς.</p>
+  <img src="images/corfu_town/palaio_frourio.jpg" alt="Παλαιό Φρούριο Κέρκυρας">
+
+  <h3>Κήποι Boschetto & Κήπος του Λαού</h3>
+  <p>Σημεία ιδανικά για χαλαρό περίπατο και θέα στο πέλαγος. Κρυμμένα διαμάντια της πόλης.</p>
+  <img src="images/corfu_town/kipos_lao.jpg" alt="Κήπος του Λαού και Boschetto">
+
+  <h3>Ποντικονήσι</h3>
+  <p>Μικρό νησάκι με το μοναστήρι της Παναγίας Βλαχέρνας. Σύμβολο της Κέρκυρας.</p>
+  <img src="images/corfu_town/pontikonisi.jpg" alt="Ποντικονήσι">
+
+  <h3>Μον Ρεπό</h3>
+  <p>Πρώην βασιλική έπαυλη, κοντά στην πηγή του Καρδάκι. Περιβάλλεται από καταπράσινο πάρκο.</p>
+  <img src="images/corfu_town/mon_repo.jpg" alt="Μον Ρεπό και Καρδάκι">
+
+  <h3>Προτάσεις για καφέ</h3>
+  <ul>
+    <li>Micro Caffe</li>
+    <li>Στάζει Μέλι – γλυκές γεύσεις με ελληνική δημιουργικότητα</li>
+    <li>Skyview – παρακολούθησε απογειώσεις/προσγειώσεις</li>
+    <li>Πλούς – Βιβλιοκαφέ με άρωμα ντόπιο</li>
+  </ul>
+  <img src="images/corfu_town/micro_caffe.jpg" alt="Micro Caffe">
+  <img src="images/corfu_town/stazei_meli.jpg" alt="Stazei Meli">
+  <img src="images/corfu_town/landing_coffee.jpg" alt="Skyview Café">
+  <img src="images/corfu_town/bookstore_cafe.jpg" alt="Βιβλιοκαφέ Πλούς">
+
+  <h3>Γλυκά & Παγωτά</h3>
+  <ul>
+    <li>Papagiorgis – διάσημα παγωτά</li>
+    <li>Periklis Alexis – γιαούρτι & παραδοσιακά γλυκά</li>
+  </ul>
+  <img src="images/corfu_town/papagiorgis.jpg" alt="Παγωτά Papagiorgis">
+  <img src="images/corfu_town/periklis_alexis.jpg" alt="Periklis Alexis Sweets">
+
+  <h3>Tips</h3>
+  <p>Όλα είναι περπατήσιμα. Απόφυγε τουριστικά εστιατόρια και ψάξε πού τρώνε οι ντόπιοι.</p>
+</div>
+<div id="benitses" class="content">
   <h2>Μπενίτσες</h2>
-  <p>Ένα παραδοσιακό παραθαλάσσιο ψαροχώρι με ιστορία, ζωντανή παράδοση και όμορφη φύση. Οι Μπενίτσες προσφέρουν πολιτισμό, ηρεμία και εμπειρίες αυθεντικής Κέρκυρας.</p>
+  <p>Ένας αυθεντικός παραθαλάσσιος οικισμός, ιδανικός για να εξερευνήσετε την Κέρκυρα μακριά από την πολυκοσμία της πόλης.</p>
 
-  <h3>Πού θα μείνετε</h3>
-  <div class="cards-container">
-    <div class="card">
-      <img src="images/beaches/benitses_house.jpg" alt="Παραδοσιακό σπίτι">
-      <p>Παραδοσιακό σπίτι</p>
-    </div>
-    <div class="card">
-      <img src="images/beaches/benitses_2.jpg" alt="Δωμάτιο με θέα">
-      <p>Δωμάτιο με θέα</p>
-    </div>
-    <div class="card">
-      <img src="images/beaches/benitses_3.jpg" alt="Μπαλκόνι με καρέκλες">
-      <p>Μπαλκόνι με καρέκλες</p>
-    </div>
+  <h3>Ιστορία</h3>
+  <p>Η ιστορία των Μπενιτσών ξεκινά από την αρχαιότητα και το όνομα του χωριού προέρχεται πιθανότατα από τη βυζαντινή λέξη “μπενίτσα” που σημαίνει “μικρός πύργος”. Οι Μπενίτσες υπήρξαν σημαντικό ψαροχώρι, και μέχρι και σήμερα διατηρούν παραδοσιακά στοιχεία στον πυρήνα τους.</p>
+
+  <h3>Δραστηριότητες</h3>
+  <ul>
+    <li>Περιπλανηθείτε στα σοκάκια του παλιού οικισμού</li>
+    <li>Δοκιμάστε ντόπια κουζίνα στις ταβέρνες</li>
+    <li>Επισκεφθείτε το μικρό λαογραφικό μουσείο</li>
+    <li>Κολυμπήστε στην παραλία του χωριού ή εξερευνήστε μικρούς κολπίσκους</li>
+  </ul>
+
+  <h3>YouTube: Βόλτα στις Μπενίτσες</h3>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
+
+  <h3>Που να μείνετε</h3>
+  <div class="gallery">
+    <img src="images/benitses/Benitses.jpg" alt="Παραδοσιακό κατάλυμα στην καρδιά του χωριού">
+    <img src="images/benitses/benitses_2.jpg" alt="Μπαλκόνι με θέα τη θάλασσα">
+    <img src="images/benitses/benitses_3.jpg" alt="Δωμάτιο με κήπο και αυλή">
   </div>
-
-  <h3>🍽️ Πού να φάτε</h3>
-  <ul>
-    <li><b>Pizza Kavouras</b> – Ρωτήστε για τον Σπύρο ή τον Γρηγόρη</li>
-    <li><b>Oraies Benitses</b> – Μιλήστε με τον Δημήτρη</li>
-    <li><b>Paxinos</b> – Φρέσκα ψάρια</li>
-    <li><b>Klimataria</b> – Δοκιμάστε το Bianco</li>
-    <li><b>GyrosLeague</b> – Σουβλάκι στο χέρι</li>
-  </ul>
-
-  <h3>🎯 Αξιοθέατα</h3>
-  <ul>
-    <li>🏛️ Επισκεφτείτε το <b>Αχίλλειο</b> (4 χλμ). Καλύτερα νωρίς το πρωί για να αποφύγετε τα γκρουπ.</li>
-    <li>🚌 Υπάρχουν γραφεία στο χωριό που οργανώνουν εκδρομές</li>
-    <li>⛵ Εκδρομή στην <b>Ερείκουσα</b> – παράδεισος!</li>
-  </ul>
-
-  <h3>🌙 Νυχτερινή Ζωή</h3>
-  <ul>
-    <li>🍹 Για μουσική και ποτό: Ether, Λότζα, μπαρ στη Μαρίνα</li>
-    <li>🍸 Για κοκτέιλ: rooftop bar στο <b>Agsana Hotel</b></li>
-  </ul>
-
-  <h3>💡 Tips</h3>
-  <ul>
-    <li>Χαιρετήστε τους ντόπιους (θα σας ρωτήσουν για τη Σόνια 😄)</li>
-    <li>Παρκάρετε στο “Ντράφο” κοντά στο γήπεδο</li>
-    <li>🦆 <b>Μην ενοχλείτε τις πάπιες!</b></li>
-    <li>☕ Πολύ καλός καφές σε όλα τα café του χωριού</li>
-  </ul>
-
-  <h3>🎥 Βίντεο</h3>
-  <iframe src="https://www.youtube.com/embed/KWFHOFjXKUA" allowfullscreen></iframe>
 </div>
-<div id="beaches" class="tab-content">
-  <h2>🏖️ Παραλίες της Κέρκυρας</h2>
-  <div class="cards-container" id="beach-container"></div>
+
+<div id="beaches" class="content">
+  <h2>Παραλίες</h2>
+  <div id="beach-gallery" class="gallery"></div>
 </div>
 
 <!-- Modal -->
 <div id="beachModal" class="modal">
   <div class="modal-content">
-    <span class="close" id="modalClose">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p><b>📍 Τοποθεσία:</b> <span id="modalLocation"></span></p>
-    <p><b>📏 Απόσταση:</b> <span id="modalDistance"></span> χλμ</p>
-    <p><b>👥 Επισκέπτες:</b> <span id="modalCrowd"></span></p>
-    <p><b>🍽️ Φαγητό:</b> <span id="modalFood"></span></p>
-    <p><b>🏖️ Χαρακτηριστικά:</b> <span id="modalFeatures"></span></p>
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <img id="modalImage" src="" alt="" style="width:100%; margin-bottom:10px;">
+    <p id="modalDescription"></p>
+    <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+    <p><strong>Type:</strong> <span id="modalType"></span></p>
+    <p><strong>Access:</strong> <span id="modalAccess"></span></p>
   </div>
 </div>
-
 <script>
-  const tabs = document.querySelectorAll(".tab-button");
-  const contents = document.querySelectorAll(".tab-content");
+  // Tab switching
+  function showTab(id) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      contents.forEach(c => c.classList.remove("active"));
-      tab.classList.add("active");
-      document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-  });
+  // Modal functionality
+  function showModal(beach) {
+    document.getElementById('modalTitle').textContent = beach.name;
+    document.getElementById('modalImage').src = `images/beaches/${beach.image}`;
+    document.getElementById('modalImage').alt = beach.name;
+    document.getElementById('modalDescription').textContent = beach.description;
+    document.getElementById('modalLocation').textContent = beach.location;
+    document.getElementById('modalType').textContent = beach.type;
+    document.getElementById('modalAccess').textContent = beach.access;
+    document.getElementById('beachModal').style.display = 'block';
+  }
 
-  const container = document.getElementById("beach-container");
-  const modal = document.getElementById("beachModal");
-  const modalClose = document.getElementById("modalClose");
+  function closeModal() {
+    document.getElementById('beachModal').style.display = 'none';
+  }
 
-  const modalTitle = document.getElementById("modalTitle");
-  const modalLocation = document.getElementById("modalLocation");
-  const modalDistance = document.getElementById("modalDistance");
-  const modalCrowd = document.getElementById("modalCrowd");
-  const modalFood = document.getElementById("modalFood");
-  const modalFeatures = document.getElementById("modalFeatures");
+  window.onclick = function(event) {
+    const modal = document.getElementById('beachModal');
+    if (event.target == modal) modal.style.display = 'none';
+  }
 
-  modalClose.onclick = () => modal.style.display = "none";
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
-
-  fetch("data/beachDetails.json")
-    .then(res => res.json())
+  // Load beach data
+  fetch('data/beachDetails.json')
+    .then(response => response.json())
     .then(data => {
-      data.beaches.forEach(beach => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <img src="${beach.image}" alt="${beach.name}">
-          <p><b>${beach.name}</b></p>
-        `;
-        card.addEventListener("click", () => {
-          modalTitle.textContent = beach.name;
-          modalLocation.textContent = beach.location;
-          modalDistance.textContent = beach.distance_km;
-          modalCrowd.textContent = beach.crowd;
-          modalFood.textContent = beach.food;
-          modalFeatures.textContent = beach.features.join(", ");
-          modal.style.display = "block";
-        });
-        container.appendChild(card);
+      const gallery = document.getElementById('beach-gallery');
+      data.forEach(beach => {
+        const img = document.createElement('img');
+        img.src = `images/beaches/${beach.image}`;
+        img.alt = beach.name;
+        img.onclick = () => showModal(beach);
+        gallery.appendChild(img);
       });
     })
-    .catch(err => {
-      console.error("⚠️ Σφάλμα φόρτωσης beachDetails.json:", err);
-      container.innerHTML = "<p>⚠️ Δεν φορτώθηκαν οι παραλίες.</p>";
+    .catch(error => {
+      console.error("Failed to load beach data:", error);
+      document.getElementById('beach-gallery').innerHTML = '<p>Δεν φορτώθηκαν τα δεδομένα των παραλιών.</p>';
     });
 </script>
 
