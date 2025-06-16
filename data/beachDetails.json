@@ -1,162 +1,274 @@
-[
-  {
-    "name": "Μυρτιώτισσα",
-    "description": "Μια από τις πιο γραφικές και ήσυχες παραλίες, ιδανική για χαλάρωση και γυμνισμό.",
-    "location": "Δυτικά της Κέρκυρας",
-    "type": "Αμμώδης",
-    "access": "Μέσω μονοπατιού",
-    "image": "mirtiotissa.jpg"
-  },
-  {
-    "name": "Γλυφάδα",
-    "description": "Οργανωμένη παραλία με χρυσή άμμο και beach bars.",
-    "location": "Κεντρική Κέρκυρα",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "glyfada.jpg"
-  },
-  {
-    "name": "Παλαιοκαστρίτσα",
-    "description": "Φημισμένη για τα κρυστάλλινα νερά και τις σπηλιές.",
-    "location": "Βορειοδυτικά της Κέρκυρας",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς",
-    "image": "paleokastritsa.jpg"
-  },
-  {
-    "name": "Μπάρμπατι",
-    "description": "Παραλία με καθαρά νερά, ιδανική για θαλάσσια σπορ.",
-    "location": "Βορειοανατολικά",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς",
-    "image": "barbati.jpg"
-  },
-  {
-    "name": "Άγιος Γεώργιος Πάγων",
-    "description": "Μακριά αμμώδης παραλία, κατάλληλη για οικογένειες.",
-    "location": "Βόρεια Κέρκυρα",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "agios_georgios_pagon.jpg"
-  },
-  {
-    "name": "Κανάλ ντ'Αμούρ",
-    "description": "Φυσικοί σχηματισμοί βράχων και ρομαντική ατμόσφαιρα.",
-    "location": "Σιδάρι",
-    "type": "Βραχώδης",
-    "access": "Οδικώς",
-    "image": "canal_damour.jpg"
-  },
-  {
-    "name": "Άγιος Στέφανος",
-    "description": "Ήσυχη παραλία με όμορφο ηλιοβασίλεμα.",
-    "location": "Βορειοδυτικά",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "agios_stefanos.jpg"
-  },
-  {
-    "name": "Αρίλλας",
-    "description": "Οικογενειακή παραλία με ρηχά νερά.",
-    "location": "Βόρεια",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "arillas.jpg"
-  },
-  {
-    "name": "Μπέλα Βράκα",
-    "description": "Προσβάσιμη με τα πόδια μέσα από τη θάλασσα. Γραφική και ξεχωριστή.",
-    "location": "Νότια",
-    "type": "Μικτή",
-    "access": "Με τα πόδια/Σκάφος",
-    "image": "bella_vraka.jpg"
-  },
-  {
-    "name": "Μπαταριά",
-    "description": "Καθαρά νερά, υπέροχο τοπίο και θέα στην Αλβανία.",
-    "location": "Βορειοανατολικά",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς",
-    "image": "bataria.jpg"
-  },
-  {
-    "name": "Αλυκές Λευκίμμης",
-    "description": "Ήρεμη και απομονωμένη παραλία.",
-    "location": "Νότια",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "alykes.jpg"
-  },
-  {
-    "name": "Ύψος",
-    "description": "Πολυσύχναστη, με τουριστική ανάπτυξη και επιλογές φαγητού.",
-    "location": "Ανατολικά",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς",
-    "image": "ipsos.jpg"
-  },
-  {
-    "name": "Νησάκι",
-    "description": "Καταγάλανη θάλασσα, ήρεμη ατμόσφαιρα, ιδανική για χαλάρωση.",
-    "location": "Ανατολικά",
-    "type": "Βραχώδης",
-    "access": "Οδικώς",
-    "image": "nisaki.jpg"
-  },
-  {
-    "name": "Καλάμι",
-    "description": "Ιστορικό χωριό, αγαπημένο του Λόρενς Ντάρελ, με υπέροχη παραλία.",
-    "location": "Ανατολικά",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς",
-    "image": "kalami.jpg"
-  },
-  {
-    "name": "Αγνή",
-    "description": "Ήσυχη, με παραδοσιακές ταβέρνες δίπλα στο κύμα.",
-    "location": "Ανατολικά",
-    "type": "Βοτσαλωτή",
-    "access": "Οδικώς/Σκάφος",
-    "image": "agni.jpg"
-  },
-  {
-    "name": "Κασσιόπη",
-    "description": "Γραφικό ψαροχώρι με μικρούς κολπίσκους.",
-    "location": "Βορειοανατολικά",
-    "type": "Μικτή",
-    "access": "Οδικώς",
-    "image": "kassiopi.jpg"
-  },
-  {
-    "name": "Δράστης",
-    "description": "Εντυπωσιακά βράχια, παρθένο τοπίο και πρόσβαση μόνο από θάλασσα.",
-    "location": "Βόρεια",
-    "type": "Βραχώδης",
-    "access": "Σκάφος",
-    "image": "drastis.jpg"
-  },
-  {
-    "name": "Περίουλαδες",
-    "description": "Μοναδικά ηλιοβασιλέματα και γεωλογικοί σχηματισμοί.",
-    "location": "Βορειοδυτικά",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "peroulades.jpg"
-  },
-  {
-    "name": "Αχαράβη",
-    "description": "Μεγάλη παραλία με ρηχά νερά, ιδανική για παιδιά.",
-    "location": "Βόρεια",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "acharavi.jpg"
-  },
-  {
-    "name": "Ρόδα",
-    "description": "Δίπλα στην Αχαράβη, επίσης φιλική προς οικογένειες.",
-    "location": "Βόρεια",
-    "type": "Αμμώδης",
-    "access": "Οδικώς",
-    "image": "roda.jpg"
-  }
-]
+{
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Περαμά",
+      "image": "images/beaches/Perama.png",
+      "distance_km": 2,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 2,
+      "name": "Αχαράβη",
+      "image": "images/beaches/acharavi.jpg",
+      "distance_km": 4,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 3,
+      "name": "Άγιος Γεώργιος Πάγων",
+      "image": "images/beaches/agios_georgios_pagon.jpg",
+      "distance_km": 6,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 4,
+      "name": "Άγιος Γόρδιος",
+      "image": "images/beaches/agios_gordios.jpg",
+      "distance_km": 8,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 5,
+      "name": "Άγιος Ιωάννης",
+      "image": "images/beaches/agios_ioannis.jpg",
+      "distance_km": 10,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 6,
+      "name": "Άγιος Στέφανος",
+      "image": "images/beaches/agios_stefanos.jpg",
+      "distance_km": 12,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 7,
+      "name": "Άγιος Στέφανος (Βορράς)",
+      "image": "images/beaches/agios_stefanos_north.jpg",
+      "distance_km": 14,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 8,
+      "name": "Άγιος Στέφανος Πάγοι",
+      "image": "images/beaches/agios_stefanos_pagi.jpg",
+      "distance_km": 16,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 9,
+      "name": "Άγνι",
+      "image": "images/beaches/agni.jpg",
+      "distance_km": 18,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 10,
+      "name": "Αρίλλας",
+      "image": "images/beaches/arillas.jpg",
+      "distance_km": 20,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 11,
+      "name": "Μπαρμπάτι",
+      "image": "images/beaches/barmpati.jpg",
+      "distance_km": 22,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 12,
+      "name": "Μπενίτσες",
+      "image": "images/beaches/benitses.jpg",
+      "distance_km": 24,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 13,
+      "name": "Canal d'Amour",
+      "image": "images/beaches/canal_damour.jpg",
+      "distance_km": 26,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 14,
+      "name": "Κανάλι του Έρωτα",
+      "image": "images/beaches/canal_erotas.jpg",
+      "distance_km": 28,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 15,
+      "name": "Δασσιά",
+      "image": "images/beaches/dassia.jpg",
+      "distance_km": 30,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 16,
+      "name": "Γλυφάδα",
+      "image": "images/beaches/glyfada.jpg",
+      "distance_km": 32,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 17,
+      "name": "Χαλικούνας",
+      "image": "images/beaches/halikounas.jpg",
+      "distance_km": 34,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 18,
+      "name": "Ίσσος",
+      "image": "images/beaches/issos.jpg",
+      "distance_km": 36,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 19,
+      "name": "Καλάμι",
+      "image": "images/beaches/kalami.jpg",
+      "distance_km": 38,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 20,
+      "name": "Καρδάκι",
+      "image": "images/beaches/kardaki.jpg",
+      "distance_km": 40,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 21,
+      "name": "Κοντόκαλι",
+      "image": "images/beaches/kontokali.jpg",
+      "distance_km": 42,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 22,
+      "name": "Κουλούρα",
+      "image": "images/beaches/kouloura.jpg",
+      "distance_km": 44,
+      "location": "Δυτικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 23,
+      "name": "Μιρτιώτισσα",
+      "image": "images/beaches/mirtiotissa.jpg",
+      "distance_km": 46,
+      "location": "Βόρεια",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 24,
+      "name": "Μωραΐτικα",
+      "image": "images/beaches/moraitika.jpg",
+      "distance_km": 48,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 25,
+      "name": "Νησάκι",
+      "image": "images/beaches/nissaki.jpeg",
+      "distance_km": 52,
+      "location": "Δυτικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 26,
+      "name": "Παλαιοκαστρίτσα",
+      "image": "images/beaches/palaiokastritsa.jpg",
+      "distance_km": 54,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 27,
+      "name": "Πόρτο Τιμόνι",
+      "image": "images/beaches/porto_timoni.jpg",
+      "distance_km": 56,
+      "location": "Δυτικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 28,
+      "name": "Ρόδα",
+      "image": "images/beaches/roda.jpg",
+      "distance_km": 58,
+      "location": "Βόρεια",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 29,
+      "name": "Ροβινιά",
+      "image": "images/beaches/rovienia.jpg",
+      "distance_km": 60,
+      "location": "Νοτιοανατολικά",
+      "crowd": "Τουρίστες",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    },
+    {
+      "id": 30,
+      "name": "Μπατάρια",
+      "image": "images/beaches/bataria.jpg",
+      "distance_km": 64,
+      "location": "Βορειοανατολικά",
+      "crowd": "Ντόπιοι",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+    }
+  ]
+}
