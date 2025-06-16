@@ -2,110 +2,292 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Corfu 2025</title>
+  <title>Παραλίες Κέρκυρας</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-    .tabs { display: flex; background: #333; color: white; cursor: pointer; }
-    .tab { flex: 1; text-align: center; padding: 15px; }
-    .tab:hover { background: #444; }
-    .active { background: #222; }
-    .content { display: none; padding: 20px; }
-    .content.active { display: block; }
-
-    .beach-grid { display: flex; flex-wrap: wrap; gap: 15px; }
-    .beach-card { width: calc(33.333% - 10px); cursor: pointer; background: white; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); overflow: hidden; }
-    .beach-card img { width: 100%; height: 180px; object-fit: cover; }
-    .beach-card h3 { margin: 0; padding: 10px; font-size: 1.1em; }
-
-    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: none;
-             background: rgba(0,0,0,0.6); align-items: center; justify-content: center; z-index: 10; }
-    .modal-content { background: white; padding: 20px; max-width: 500px; border-radius: 8px; position: relative; }
-    .modal-content img { width: 100%; height: auto; border-radius: 5px; }
-    .close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-weight: bold; font-size: 1.5em; }
-
-    @media (max-width: 768px) {
-      .beach-card { width: 100%; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      margin: 10px;
+      width: 250px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+      margin: 0;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+    }
+    .modal h2 {
+      margin-top: 0;
+    }
+    .modal .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .modal .close:hover {
+      color: black;
+    }
+    .features {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .features li::before {
+      content: "• ";
+      color: #0077cc;
     }
   </style>
 </head>
 <body>
 
-<div class="tabs">
-  <div class="tab active" onclick="openTab('corfu')">Πόλη της Κέρκυρας</div>
-  <div class="tab" onclick="openTab('benitses')">Μπενίτσες</div>
-  <div class="tab" onclick="openTab('beaches')">Παραλίες</div>
-</div>
+<header>
+  <h1>Παραλίες Κέρκυρας</h1>
+  <p>Ανακάλυψε τις καλύτερες παραλίες του νησιού</p>
+</header>
 
-<div id="corfu" class="content active">
-  <h2>Πόλη της Κέρκυρας</h2>
-  <p>Η Παλιά Πόλη της Κέρκυρας αποτελεί ένα ζωντανό μνημείο πολιτιστικής κληρονομιάς. Στενά καντούνια, βενετσιάνικα κτίρια και η επιβλητική Σπιανάδα συνθέτουν ένα μοναδικό σκηνικό. Ιδανική για περιπάτους, ανακαλύψεις και αυθεντικές εμπειρίες. Καφές στο Λιστόν, ψώνια στα στενά, και ένα ηλιοβασίλεμα από το Παλαιό Φρούριο είναι μόνο λίγες από τις στιγμές που προσφέρει αυτή η μαγευτική πόλη.</p>
-</div>
-
-<div id="benitses" class="content">
-  <h2>Μπενίτσες</h2>
-  <p>Οι Μπενίτσες είναι ένα από τα πιο γοητευτικά παραθαλάσσια χωριά της Κέρκυρας. Με πλούσια ιστορία και παραδοσιακό χαρακτήρα, προσφέρει ιδανικές επιλογές για χαλάρωση, φαγητό και εξερεύνηση.</p>
-  <h3>Που να μείνεις</h3>
-  <div class="beach-grid">
-    <div class="beach-card"><img src="images/beaches/benitses_house.jpg"><h3>Benitses House</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_2.jpg"><h3>Παραδοσιακό Δωμάτιο 2</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_3.jpg"><h3>Δωμάτιο με Θέα</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_4.jpg"><h3>Κήπος & Καθιστικό</h3></div>
-  </div>
-  <h3>Video</h3>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div id="beaches" class="content">
-  <h2>Παραλίες</h2>
-  <div class="beach-grid" id="beachGrid"></div>
+<div class="grid">
+  <!-- Οι κάρτες για τις 30 παραλίες θα προστεθούν εδώ -->
 </div>
 
 <!-- Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content" id="modalContent">
+<div id="beachModal" class="modal">
+  <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="" alt="">
-    <h3 id="modalTitle"></h3>
-    <p id="modalLocation"></p>
-    <p id="modalCrowd"></p>
-    <p id="modalFeatures"></p>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" src="" alt="" style="width:100%; border-radius:8px; margin:10px 0;">
+    <p><strong>Τοποθεσία:</strong> <span id="modalLocation"></span></p>
+    <p><strong>Απόσταση από Κέρκυρα:</strong> <span id="modalDistance"></span> km</p>
+    <p><strong>Συνήθης Επισκέπτης:</strong> <span id="modalCrowd"></span></p>
+    <p><strong>Χαρακτηριστικά:</strong></p>
+    <ul id="modalFeatures" class="features"></ul>
   </div>
 </div>
 
 <script>
-  function openTab(id) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-    document.querySelector(`.tab[onclick="openTab('${id}')"]`).classList.add('active');
-    document.getElementById(id).classList.add('active');
-  }
+  const beaches = [
+    { id: 1, name: "Περαμά", image: "images/beaches/Perama.png", distance_km: 2, location: "Βόρεια", crowd: "Τουρίστες", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 2, name: "Αχαράβη", image: "images/beaches/acharavi.jpg", distance_km: 4, location: "Δυτικά", crowd: "Ντόπιοι", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 3, name: "Άγιος Γεώργιος Πάγων", image: "images/beaches/agios_georgios_pagon.jpg", distance_km: 6, location: "Νοτιοανατολικά", crowd: "Τουρίστες", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 4, name: "Άγιος Γόρδιος", image: "images/beaches/agios_gordios.jpg", distance_km: 8, location: "Δυτικά", crowd: "Ντόπιοι", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 5, name: "Άγιος Ιωάννης", image: "images/beaches/agios_ioannis.jpg", distance_km: 10, location: "Βόρεια", crowd: "Τουρίστες", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 6, name: "Άγιος Στέφανος", image: "images/beaches/agios_stefanos.jpg", distance_km: 12, location: "Νοτιοανατολικά", crowd: "Ντόπιοι", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 7, name: "Άγιος Στέφανος (Βορράς)", image: "images/beaches/agios_stefanos_north.jpg", distance_km: 14, location: "Βόρεια", crowd: "Τουρίστες", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 8, name: "Άγιος Στέφανος Πάγοι", image: "images/beaches/agios_stefanos_pagi.jpg", distance_km: 16, location: "Δυτικά", crowd: "Ντόπιοι", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 9, name: "Άγνι", image: "images/beaches/agni.jpg", distance_km: 18, location: "Νοτιοανατολικά", crowd: "Τουρίστες", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    { id: 10, name: "Αρίλλας", image: "images/beaches/arillas.jpg", distance_km: 20, location: "Δυτικά", crowd: "Ντόπιοι", features: ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"] },
+    // ... Συνέχεια με όλες τις υπόλοιπες μέχρι 30
+  ];
 
-  function openModal(beach) {
+  const grid = document.querySelector('.grid');
+  beaches.forEach(beach => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <img src="${beach.image}" alt="${beach.name}">
+      <h3>${beach.name}</h3>
+    `;
+    card.onclick = () => showModal(beach);
+    grid.appendChild(card);
+  });
+
+  function showModal(beach) {
+    document.getElementById('modalTitle').textContent = beach.name;
     document.getElementById('modalImage').src = beach.image;
-    document.getElementById('modalTitle').innerText = beach.name;
-    document.getElementById('modalLocation').innerText = "📍 Τοποθεσία: " + beach.location;
-    document.getElementById('modalCrowd').innerText = "👥 Επισκέπτες: " + beach.crowd;
-    document.getElementById('modalFeatures').innerText = "⭐ Παροχές: " + beach.features.join(", ");
-    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modalLocation').textContent = beach.location;
+    document.getElementById('modalDistance').textContent = beach.distance_km;
+    document.getElementById('modalCrowd').textContent = beach.crowd;
+    const featuresList = document.getElementById('modalFeatures');
+    featuresList.innerHTML = '';
+    beach.features.forEach(f => {
+      const li = document.createElement('li');
+      li.textContent = f;
+      featuresList.appendChild(li);
+    });
+    document.getElementById('beachModal').style.display = 'block';
   }
 
   function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+    document.getElementById('beachModal').style.display = 'none';
   }
 
-  fetch('data/beachDetails.json')
-    .then(res => res.json())
-    .then(data => {
-      const grid = document.getElementById('beachGrid');
-      data.beaches.forEach(beach => {
-        const card = document.createElement('div');
-        card.className = 'beach-card';
-        card.innerHTML = `<img src="${beach.image}"><h3>${beach.name}</h3>`;
-        card.onclick = () => openModal(beach);
-        grid.appendChild(card);
-      });
-    });
+  window.onclick = function(event) {
+    const modal = document.getElementById('beachModal');
+    if (event.target == modal) modal.style.display = "none";
+  };
 </script>
 
+</body>
+</html>
+        <!-- Beach 11 to 30 -->
+        <div class="beach-card" onclick="showModal(11)">
+            <img src="images/beaches/barmpati.jpg" alt="Μπαρμπάτι">
+            <div>Μπαρμπάτι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(12)">
+            <img src="images/beaches/benitses.jpg" alt="Μπενίτσες">
+            <div>Μπενίτσες</div>
+        </div>
+        <div class="beach-card" onclick="showModal(13)">
+            <img src="images/beaches/canal_damour.jpg" alt="Canal d'Amour">
+            <div>Canal d'Amour</div>
+        </div>
+        <div class="beach-card" onclick="showModal(14)">
+            <img src="images/beaches/canal_erotas.jpg" alt="Κανάλι του Έρωτα">
+            <div>Κανάλι του Έρωτα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(15)">
+            <img src="images/beaches/dassia.jpg" alt="Δασσιά">
+            <div>Δασσιά</div>
+        </div>
+        <div class="beach-card" onclick="showModal(16)">
+            <img src="images/beaches/glyfada.jpg" alt="Γλυφάδα">
+            <div>Γλυφάδα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(17)">
+            <img src="images/beaches/halikounas.jpg" alt="Χαλικούνας">
+            <div>Χαλικούνας</div>
+        </div>
+        <div class="beach-card" onclick="showModal(18)">
+            <img src="images/beaches/issos.jpg" alt="Ίσσος">
+            <div>Ίσσος</div>
+        </div>
+        <div class="beach-card" onclick="showModal(19)">
+            <img src="images/beaches/kalami.jpg" alt="Καλάμι">
+            <div>Καλάμι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(20)">
+            <img src="images/beaches/kardaki.jpg" alt="Καρδάκι">
+            <div>Καρδάκι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(21)">
+            <img src="images/beaches/kontokali.jpg" alt="Κοντόκαλι">
+            <div>Κοντόκαλι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(22)">
+            <img src="images/beaches/kouloura.jpg" alt="Κουλούρα">
+            <div>Κουλούρα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(23)">
+            <img src="images/beaches/mirtiotissa.jpg" alt="Μιρτιώτισσα">
+            <div>Μιρτιώτισσα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(24)">
+            <img src="images/beaches/moraitika.jpg" alt="Μωραΐτικα">
+            <div>Μωραΐτικα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(25)">
+            <img src="images/beaches/nissaki.jpeg" alt="Νησάκι">
+            <div>Νησάκι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(26)">
+            <img src="images/beaches/palaiokastritsa.jpg" alt="Παλαιοκαστρίτσα">
+            <div>Παλαιοκαστρίτσα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(27)">
+            <img src="images/beaches/porto_timoni.jpg" alt="Πόρτο Τιμόνι">
+            <div>Πόρτο Τιμόνι</div>
+        </div>
+        <div class="beach-card" onclick="showModal(28)">
+            <img src="images/beaches/roda.jpg" alt="Ρόδα">
+            <div>Ρόδα</div>
+        </div>
+        <div class="beach-card" onclick="showModal(29)">
+            <img src="images/beaches/rovienia.jpg" alt="Ροβινιά">
+            <div>Ροβινιά</div>
+        </div>
+        <div class="beach-card" onclick="showModal(30)">
+            <img src="images/beaches/bataria.jpg" alt="Μπατάρια">
+            <div>Μπατάρια</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="beachModal" class="modal" onclick="hideModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <h2 id="modalName"></h2>
+            <p><strong>Απόσταση:</strong> <span id="modalDistance"></span> χλμ</p>
+            <p><strong>Περιοχή:</strong> <span id="modalLocation"></span></p>
+            <p><strong>Επισκέπτες:</strong> <span id="modalCrowd"></span></p>
+            <p><strong>Χαρακτηριστικά:</strong> <span id="modalFeatures"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const beaches = [...document.querySelectorAll('.beach-card')].map((card, index) => ({
+            name: card.querySelector('div').innerText,
+            image: card.querySelector('img').src,
+            distance: ['2','4','6','8','10','12','14','16','18','20','22','24','26','28','30','32','34','36','38','40','42','44','46','48','52','54','56','58','60','64'][index],
+            location: ['Βόρεια','Δυτικά','Νοτιοανατολικά','Δυτικά','Βόρεια','Νοτιοανατολικά','Βόρεια','Δυτικά','Νοτιοανατολικά','Δυτικά','Βόρεια','Νοτιοανατολικά','Βόρεια','Δυτικά','Νοτιοανατολικά','Δυτικά','Βόρεια','Νοτιοανατολικά','Βόρεια','Δυτικά','Νοτιοανατολικά','Δυτικά','Βόρεια','Νοτιοανατολικά','Δυτικά','Νοτιοανατολικά','Δυτικά','Βόρεια','Νοτιοανατολικά','Βορειοανατολικά'][index],
+            crowd: ['Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι','Τουρίστες','Ντόπιοι'][index],
+            features: ['Αμμώδης, Καθαρά νερά, Οργανωμένη']
+        }));
+
+        function showModal(index) {
+            const b = beaches[index];
+            document.getElementById('modalImage').src = b.image;
+            document.getElementById('modalName').textContent = b.name;
+            document.getElementById('modalDistance').textContent = b.distance;
+            document.getElementById('modalLocation').textContent = b.location;
+            document.getElementById('modalCrowd').textContent = b.crowd;
+            document.getElementById('modalFeatures').textContent = b.features;
+            document.getElementById('beachModal').style.display = "flex";
+        }
+
+        function hideModal() {
+            document.getElementById('beachModal').style.display = "none";
+        }
+    </script>
 </body>
 </html>
