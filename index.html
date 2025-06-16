@@ -4,121 +4,108 @@
   <meta charset="UTF-8">
   <title>Corfu 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
-    .tabs { display: flex; background: #003366; }
-    .tab-button {
-      flex: 1; padding: 14px; color: white; text-align: center;
-      cursor: pointer; background: #003366; border: none;
-    }
-    .tab-button.active { background: #0055a5; }
-    .tab-content { display: none; padding: 20px; }
-    .tab-content.active { display: block; }
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    .tabs { display: flex; background: #333; color: white; cursor: pointer; }
+    .tab { flex: 1; text-align: center; padding: 15px; }
+    .tab:hover { background: #444; }
+    .active { background: #222; }
+    .content { display: none; padding: 20px; }
+    .content.active { display: block; }
 
-    .section-title { font-size: 1.5em; margin: 20px 0 10px; }
-    .beaches-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .beach-card {
-      width: calc(33.33% - 10px); cursor: pointer; background: white;
-      padding: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .beach-card img { width: 100%; height: 150px; object-fit: cover; }
-    .beach-card h4 { margin: 10px 0 0; }
+    .beach-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+    .beach-card { width: calc(33.333% - 10px); cursor: pointer; background: white; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); overflow: hidden; }
+    .beach-card img { width: 100%; height: 180px; object-fit: cover; }
+    .beach-card h3 { margin: 0; padding: 10px; font-size: 1.1em; }
 
-    /* Modal */
-    .modal {
-      display: none; position: fixed; z-index: 1000; left: 0; top: 0;
-      width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: none;
+             background: rgba(0,0,0,0.6); align-items: center; justify-content: center; z-index: 10; }
+    .modal-content { background: white; padding: 20px; max-width: 500px; border-radius: 8px; position: relative; }
+    .modal-content img { width: 100%; height: auto; border-radius: 5px; }
+    .close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-weight: bold; font-size: 1.5em; }
+
+    @media (max-width: 768px) {
+      .beach-card { width: 100%; }
     }
-    .modal-content {
-      background-color: #fff; margin: 10% auto; padding: 20px;
-      border: 1px solid #888; width: 80%; max-width: 600px; position: relative;
-    }
-    .close { color: #aaa; position: absolute; top: 10px; right: 20px;
-      font-size: 28px; font-weight: bold; cursor: pointer;
-    }
-    .info-image { width: 100%; height: auto; margin-top: 10px; }
   </style>
 </head>
 <body>
-  <div class="tabs">
-    <button class="tab-button active" onclick="showTab('corfu')">Πόλη της Κέρκυρας</button>
-    <button class="tab-button" onclick="showTab('benitses')">Μπενίτσες</button>
-    <button class="tab-button" onclick="showTab('beaches')">Παραλίες</button>
+
+<div class="tabs">
+  <div class="tab active" onclick="openTab('corfu')">Πόλη της Κέρκυρας</div>
+  <div class="tab" onclick="openTab('benitses')">Μπενίτσες</div>
+  <div class="tab" onclick="openTab('beaches')">Παραλίες</div>
+</div>
+
+<div id="corfu" class="content active">
+  <h2>Πόλη της Κέρκυρας</h2>
+  <p>Η Παλιά Πόλη της Κέρκυρας αποτελεί ένα ζωντανό μνημείο πολιτιστικής κληρονομιάς. Στενά καντούνια, βενετσιάνικα κτίρια και η επιβλητική Σπιανάδα συνθέτουν ένα μοναδικό σκηνικό. Ιδανική για περιπάτους, ανακαλύψεις και αυθεντικές εμπειρίες. Καφές στο Λιστόν, ψώνια στα στενά, και ένα ηλιοβασίλεμα από το Παλαιό Φρούριο είναι μόνο λίγες από τις στιγμές που προσφέρει αυτή η μαγευτική πόλη.</p>
+</div>
+
+<div id="benitses" class="content">
+  <h2>Μπενίτσες</h2>
+  <p>Οι Μπενίτσες είναι ένα από τα πιο γοητευτικά παραθαλάσσια χωριά της Κέρκυρας. Με πλούσια ιστορία και παραδοσιακό χαρακτήρα, προσφέρει ιδανικές επιλογές για χαλάρωση, φαγητό και εξερεύνηση.</p>
+  <h3>Που να μείνεις</h3>
+  <div class="beach-grid">
+    <div class="beach-card"><img src="images/beaches/benitses_house.jpg"><h3>Benitses House</h3></div>
+    <div class="beach-card"><img src="images/beaches/benitses_2.jpg"><h3>Παραδοσιακό Δωμάτιο 2</h3></div>
+    <div class="beach-card"><img src="images/beaches/benitses_3.jpg"><h3>Δωμάτιο με Θέα</h3></div>
+    <div class="beach-card"><img src="images/beaches/benitses_4.jpg"><h3>Κήπος & Καθιστικό</h3></div>
   </div>
+  <h3>Video</h3>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
+</div>
 
-  <div id="corfu" class="tab-content active">
-    <h2>Πόλη της Κέρκυρας</h2>
-    <p>Η παλιά πόλη της Κέρκυρας είναι ένα μνημείο παγκόσμιας πολιτιστικής κληρονομιάς της UNESCO...</p>
-    <img src="images/beaches/corfu_old_fortress.jpg" class="info-image" alt="Old Fortress">
-    <p>Η παλιά Φορτέτσα δεσπόζει στο ανατολικό άκρο της πόλης...</p>
-    <img src="images/beaches/spianada_square.jpg" class="info-image" alt="Spianada Square">
-    <p>Η Σπιανάδα είναι η μεγαλύτερη πλατεία των Βαλκανίων...</p>
-    <img src="images/beaches/liston.jpg" class="info-image" alt="Liston">
-    <p>Το Λιστόν με τις χαρακτηριστικές αψίδες αποτελεί σημείο συνάντησης για ντόπιους και επισκέπτες...</p>
+<div id="beaches" class="content">
+  <h2>Παραλίες</h2>
+  <div class="beach-grid" id="beachGrid"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content" id="modalContent">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalLocation"></p>
+    <p id="modalCrowd"></p>
+    <p id="modalFeatures"></p>
   </div>
+</div>
 
-  <div id="benitses" class="tab-content">
-    <h2>Μπενίτσες</h2>
-    <p>Οι Μπενίτσες αποτελούν έναν ιστορικό και παραθαλάσσιο προορισμό με ζωντανό χαρακτήρα.</p>
-    <div class="section-title">Που θα μείνεις</div>
-    <div class="beaches-grid">
-      <div class="beach-card"><img src="images/beaches/Benitses House.jpg"><h4>Παραδοσιακό σπίτι</h4></div>
-      <div class="beach-card"><img src="images/beaches/Benitses 2.jpg"><h4>Θέα στο Ιόνιο</h4></div>
-      <div class="beach-card"><img src="images/beaches/Benitses 3.jpg"><h4>Άνετο διαμέρισμα</h4></div>
-      <div class="beach-card"><img src="images/beaches/Benitses 4.jpg"><h4>Κλασική φιλοξενία</h4></div>
-    </div>
-    <div class="section-title">Βίντεο</div>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
-  </div>
+<script>
+  function openTab(id) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelector(`.tab[onclick="openTab('${id}')"]`).classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
 
-  <div id="beaches" class="tab-content">
-    <h2>Παραλίες</h2>
-    <div class="beaches-grid" id="beachList"></div>
-  </div>
+  function openModal(beach) {
+    document.getElementById('modalImage').src = beach.image;
+    document.getElementById('modalTitle').innerText = beach.name;
+    document.getElementById('modalLocation').innerText = "📍 Τοποθεσία: " + beach.location;
+    document.getElementById('modalCrowd').innerText = "👥 Επισκέπτες: " + beach.crowd;
+    document.getElementById('modalFeatures').innerText = "⭐ Παροχές: " + beach.features.join(", ");
+    document.getElementById('modal').style.display = 'flex';
+  }
 
-  <!-- Modal -->
-  <div id="beachModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDescription"></p>
-      <img id="modalImage" class="info-image" src="" alt="">
-    </div>
-  </div>
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-      document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    }
-
-    function closeModal() {
-      document.getElementById("beachModal").style.display = "none";
-    }
-
-    function openModal(title, description, imagePath) {
-      document.getElementById("modalTitle").textContent = title;
-      document.getElementById("modalDescription").textContent = description;
-      document.getElementById("modalImage").src = imagePath;
-      document.getElementById("beachModal").style.display = "block";
-    }
-
-    fetch('data/beachDetails.json')
-      .then(response => response.json())
-      .then(data => {
-        const beachList = document.getElementById("beachList");
-        data.forEach(beach => {
-          const card = document.createElement("div");
-          card.className = "beach-card";
-          card.innerHTML = `
-            <img src="images/beaches/${beach.image}" alt="${beach.name}">
-            <h4>${beach.name}</h4>
-          `;
-          card.onclick = () => openModal(beach.name, beach.description, `images/beaches/${beach.image}`);
-          beachList.appendChild(card);
-        });
+  fetch('data/beachDetails.json')
+    .then(res => res.json())
+    .then(data => {
+      const grid = document.getElementById('beachGrid');
+      data.beaches.forEach(beach => {
+        const card = document.createElement('div');
+        card.className = 'beach-card';
+        card.innerHTML = `<img src="${beach.image}"><h3>${beach.name}</h3>`;
+        card.onclick = () => openModal(beach);
+        grid.appendChild(card);
       });
-  </script>
+    });
+</script>
+
 </body>
 </html>
