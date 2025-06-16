@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <title>Corfu 2025</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-    .tabs { display: flex; background: #333; color: white; cursor: pointer; }
+    body { font-family: sans-serif; margin: 0; background: #f8f8f8; }
+    .tabs { display: flex; background: #003366; color: white; cursor: pointer; }
     .tab { flex: 1; text-align: center; padding: 15px; }
-    .tab:hover { background: #444; }
-    .active { background: #222; }
+    .tab:hover { background: #005599; }
+    .active { background: #002244; }
     .content { display: none; padding: 20px; }
     .content.active { display: block; }
 
-    .beach-grid { display: flex; flex-wrap: wrap; gap: 15px; }
-    .beach-card { width: calc(33.333% - 10px); cursor: pointer; background: white; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); overflow: hidden; }
-    .beach-card img { width: 100%; height: 180px; object-fit: cover; }
-    .beach-card h3 { margin: 0; padding: 10px; font-size: 1.1em; }
+    .section-image { width: 100%; max-width: 600px; margin: 10px auto; display: block; border-radius: 6px; }
 
-    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: none;
-             background: rgba(0,0,0,0.6); align-items: center; justify-content: center; z-index: 10; }
+    .beach-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+    .beach-card { width: calc(33.333% - 10px); background: white; cursor: pointer; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .beach-card img { width: 100%; height: 180px; object-fit: cover; }
+    .beach-card h3 { padding: 10px; margin: 0; }
+
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 10; }
     .modal-content { background: white; padding: 20px; max-width: 500px; border-radius: 8px; position: relative; }
-    .modal-content img { width: 100%; height: auto; border-radius: 5px; }
-    .close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-weight: bold; font-size: 1.5em; }
+    .modal-content img { width: 100%; }
+    .close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; cursor: pointer; }
 
     @media (max-width: 768px) {
       .beach-card { width: 100%; }
@@ -31,27 +32,35 @@
 <body>
 
 <div class="tabs">
-  <div class="tab active" onclick="openTab('corfu')">Πόλη της Κέρκυρας</div>
-  <div class="tab" onclick="openTab('benitses')">Μπενίτσες</div>
+  <div class="tab" onclick="openTab('corfu')">Πόλη της Κέρκυρας</div>
+  <div class="tab active" onclick="openTab('benitses')">Μπενίτσες</div>
   <div class="tab" onclick="openTab('beaches')">Παραλίες</div>
 </div>
 
-<div id="corfu" class="content active">
+<div id="corfu" class="content">
   <h2>Πόλη της Κέρκυρας</h2>
-  <p>Η Παλιά Πόλη της Κέρκυρας αποτελεί ένα ζωντανό μνημείο πολιτιστικής κληρονομιάς. Στενά καντούνια, βενετσιάνικα κτίρια και η επιβλητική Σπιανάδα συνθέτουν ένα μοναδικό σκηνικό. Ιδανική για περιπάτους, ανακαλύψεις και αυθεντικές εμπειρίες. Καφές στο Λιστόν, ψώνια στα στενά, και ένα ηλιοβασίλεμα από το Παλαιό Φρούριο είναι μόνο λίγες από τις στιγμές που προσφέρει αυτή η μαγευτική πόλη.</p>
+  <p>Η Παλιά Πόλη της Κέρκυρας αποτελεί ένα ζωντανό μνημείο πολιτιστικής κληρονομιάς...</p>
 </div>
 
-<div id="benitses" class="content">
+<div id="benitses" class="content active">
   <h2>Μπενίτσες</h2>
-  <p>Οι Μπενίτσες είναι ένα από τα πιο γοητευτικά παραθαλάσσια χωριά της Κέρκυρας. Με πλούσια ιστορία και παραδοσιακό χαρακτήρα, προσφέρει ιδανικές επιλογές για χαλάρωση, φαγητό και εξερεύνηση.</p>
-  <h3>Που να μείνεις</h3>
+  <p>Οι Μπενίτσες είναι ένα γοητευτικό ψαροχώρι στην ανατολική ακτή της Κέρκυρας, που συνδυάζει την παραδοσιακή ελληνική φιλοξενία με την κοσμοπολίτικη αύρα.</p>
+
+  <img src="images/beaches/Benitses.jpg" class="section-image" alt="Benitses main">
+
+  <p>Η ιστορία του χωριού χάνεται στα βάθη των αιώνων, ενώ η τοπική κουζίνα προσφέρει γευστικά θαλασσινά, τοπικά εδέσματα και φρέσκα προϊόντα. Ο παραλιακός δρόμος είναι γεμάτος ταβέρνες, καφέ και μικρά μαγαζάκια, ενώ η μαρίνα προσελκύει επισκέπτες με σκάφη.</p>
+
+  <h3>Πού να μείνετε</h3>
   <div class="beach-grid">
-    <div class="beach-card"><img src="images/beaches/benitses_house.jpg"><h3>Benitses House</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_2.jpg"><h3>Παραδοσιακό Δωμάτιο 2</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_3.jpg"><h3>Δωμάτιο με Θέα</h3></div>
-    <div class="beach-card"><img src="images/beaches/benitses_4.jpg"><h3>Κήπος & Καθιστικό</h3></div>
+    <div class="beach-card"><img src="images/beaches/Benitses.jpg"><h3>Παραθαλάσσια Κατοικία</h3></div>
+    <div class="beach-card"><img src="images/beaches/benitses_2.jpg"><h3>Παραδοσιακό Δωμάτιο</h3></div>
+    <div class="beach-card"><img src="images/beaches/benitses_3.jpg"><h3>Διαμέρισμα με Θέα</h3></div>
   </div>
-  <h3>Video</h3>
+
+  <h3>Δραστηριότητες</h3>
+  <p>Μπορείτε να επισκεφτείτε το Μουσείο Θαλάσσης, να περπατήσετε στα σοκάκια του παλιού χωριού ή να απολαύσετε την παραλία και τα γαλάζια νερά.</p>
+
+  <h3>Βίντεο από τις Μπενίτσες</h3>
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/KWFHOFjXKUA" frameborder="0" allowfullscreen></iframe>
 </div>
 
