@@ -2,273 +2,264 @@
   "beaches": [
     {
       "id": 1,
-      "name": "Περαμά",
+      "name": "Perama",
       "image": "images/beaches/Perama.png",
       "distance_km": 2,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "North",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 2,
-      "name": "Αχαράβη",
+      "name": "Acharavi",
       "image": "images/beaches/acharavi.jpg",
       "distance_km": 4,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "NorthWest",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 3,
-      "name": "Άγιος Γεώργιος Πάγων",
+      "name": "Agios Georgios of the Ice",
       "image": "images/beaches/agios_georgios_pagon.jpg",
-      "distance_km": 6,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 41,
+      "location": "NorthWest",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 4,
-      "name": "Άγιος Γόρδιος",
+      "name": "Ai Gordis",
       "image": "images/beaches/agios_gordios.jpg",
       "distance_km": 8,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "West",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 5,
-      "name": "Άγιος Ιωάννης",
+      "name": "Agios Ioannis Peristeron",
       "image": "images/beaches/agios_ioannis.jpg",
       "distance_km": 10,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "South",
+      "crowd": "Tourisrts",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 6,
-      "name": "Άγιος Στέφανος",
+      "name": "Agios Stefanos Avliotes",
       "image": "images/beaches/agios_stefanos.jpg",
-      "distance_km": 12,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 47,
+      "location": "NorthWest",
+      "crowd": "Locals and Tourists",
+      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη", "From here you depart to Diapomtia Islands"]
     },
     {
       "id": 7,
-      "name": "Άγιος Στέφανος (Βορράς)",
+      "name": "Agios Stefanos",
       "image": "images/beaches/agios_stefanos_north.jpg",
       "distance_km": 14,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "South",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 8,
-      "name": "Άγιος Στέφανος Πάγοι",
+      "name": "Agios Stefanos Pagoi",
       "image": "images/beaches/agios_stefanos_pagi.jpg",
-      "distance_km": 16,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 40,
+      "location": "West",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 9,
-      "name": "Άγνι",
+      "name": "Agni",
       "image": "images/beaches/agni.jpg",
       "distance_km": 18,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "SouthEast",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 10,
-      "name": "Αρίλλας",
+      "name": "Arillas",
       "image": "images/beaches/arillas.jpg",
       "distance_km": 20,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "West",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 11,
-      "name": "Μπαρμπάτι",
+      "name": "Barbati",
       "image": "images/beaches/barmpati.jpg",
       "distance_km": 22,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "North",
+      "crowd": "Tourists",
+      "features": ["Light peblled", "Clean Water", "Organised"]
     },
     {
       "id": 12,
-      "name": "Μπενίτσες",
+      "name": "Benitses",
       "image": "images/beaches/benitses.jpg",
-      "distance_km": 24,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 0,
+      "location": "SouthEast",
+      "crowd": "Locals",
+      "features": ["Hard Sandy", "Καθαρά νερά", "Mildly Organised", "Valleys of Posidonia"]
     },
     {
       "id": 13,
       "name": "Canal d'Amour",
       "image": "images/beaches/canal_damour.jpg",
       "distance_km": 26,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
-    },
-    {
-      "id": 14,
-      "name": "Κανάλι του Έρωτα",
-      "image": "images/beaches/canal_erotas.jpg",
-      "distance_km": 28,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "location": "North",
+      "crowd": "Heavily Touristic",
+      "features": ["Multiterrain", "Clean Waters", "Heavily Organised", "Great place to rent a small boat on your own"]
     },
     {
       "id": 15,
-      "name": "Δασσιά",
+      "name": "Dassia",
       "image": "images/beaches/dassia.jpg",
-      "distance_km": 30,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 20,
+      "location": "NorthEast",
+      "crowd": "Tourists",
+      "features": ["Mildly Sandy", "Clean but Crowded", "Heavily Organised", "Many Pubs caffes just by the road"]
     },
     {
       "id": 16,
-      "name": "Γλυφάδα",
+      "name": "Glyfada",
       "image": "images/beaches/glyfada.jpg",
-      "distance_km": 32,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 23,
+      "location": "West",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 17,
-      "name": "Χαλικούνας",
+      "name": "Chalikounas",
       "image": "images/beaches/halikounas.jpg",
-      "distance_km": 34,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 17,
+      "location": "SouthWest",
+      "crowd": "50% - 50%",
+      "features": ["Sandy", "Clean Water", "Non Organised"]
     },
     {
       "id": 18,
-      "name": "Ίσσος",
+      "name": "Issos",
       "image": "images/beaches/issos.jpg",
-      "distance_km": 36,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 17,
+      "location": "SouthWest",
+      "crowd": "50% - 50%",
+      "features": ["Sandy", "Clean Water", "Organised", "Vast"]
     },
     {
       "id": 19,
-      "name": "Καλάμι",
+      "name": "Kalami",
       "image": "images/beaches/kalami.jpg",
-      "distance_km": 38,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 14,
+      "location": "South",
+      "crowd": "Touristic",
+      "features": ["Multi terrainς", "Clean", "Organised"]
     },
     {
       "id": 20,
-      "name": "Καρδάκι",
+      "name": "Kardaki",
       "image": "images/beaches/kardaki.jpg",
-      "distance_km": 40,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 12,
+      "location": "Corfu Town - Mon Repo",
+      "crowd": "Locals",
+      "features": ["Pebled", "Clean", "Isolated", "Royal"]
     },
     {
       "id": 21,
-      "name": "Κοντόκαλι",
+      "name": "Komtokali",
       "image": "images/beaches/kontokali.jpg",
-      "distance_km": 42,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 18,
+      "location": "NorthEast",
+      "crowd": "Tourists",
+      "features": ["Multiterrain", "Crowded", "Heavily ORganised"]
     },
     {
       "id": 22,
-      "name": "Κουλούρα",
+      "name": "Kouloura",
       "image": "images/beaches/kouloura.jpg",
-      "distance_km": 44,
-      "location": "Δυτικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 40,
+      "location": "NorthEast",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean", "Beautiful Drive"]
     },
     {
       "id": 23,
-      "name": "Μιρτιώτισσα",
+      "name": "Mirtiotissa",
       "image": "images/beaches/mirtiotissa.jpg",
-      "distance_km": 46,
-      "location": "Βόρεια",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 21,
+      "location": "West",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Clean Water", "Organised"]
     },
     {
       "id": 24,
-      "name": "Μωραΐτικα",
+      "name": "Moraitica",
       "image": "images/beaches/moraitika.jpg",
-      "distance_km": 48,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 15,
+      "location": "SouthEast",
+      "crowd": "Tourists",
+      "features": ["Sandy", "Crowded", "Heavily Organised"]
     },
     {
       "id": 25,
-      "name": "Νησάκι",
+      "name": "Nissaki",
       "image": "images/beaches/nissaki.jpeg",
-      "distance_km": 52,
-      "location": "Δυτικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 36,
+      "location": "NorthWest",
+      "crowd": "50%-50%",
+      "features": ["Pebbled", "Clean", "Organised"]
     },
     {
       "id": 26,
-      "name": "Παλαιοκαστρίτσα",
+      "name": "Palaiokastritsa",
       "image": "images/beaches/palaiokastritsa.jpg",
-      "distance_km": 54,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 32,
+      "location": "NorthEast",
+      "crowd": "Tourists",
+      "features": ["Multiterrain", "COLD WATERS", "Heavily Organised"]
     },
     {
       "id": 27,
-      "name": "Πόρτο Τιμόνι",
+      "name": "Porto Timoni",
       "image": "images/beaches/porto_timoni.jpg",
-      "distance_km": 56,
-      "location": "Δυτικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 46,
+      "location": "NorthWest",
+      "crowd": "Tourists",
+      "features": ["Picturesque", "Instagramable", "Twin Beach"]
     },
     {
       "id": 28,
-      "name": "Ρόδα",
+      "name": "Roda",
       "image": "images/beaches/roda.jpg",
-      "distance_km": 58,
-      "location": "Βόρεια",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 47,
+      "location": "North",
+      "crowd": "Locals",
+      "features": ["Sandy", "Clean", "Can get Windy"]
     },
     {
       "id": 29,
-      "name": "Ροβινιά",
+      "name": "Rovinia",
       "image": "images/beaches/rovienia.jpg",
-      "distance_km": 60,
-      "location": "Νοτιοανατολικά",
-      "crowd": "Τουρίστες",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 30,
+      "location": "NorthWest",
+      "crowd": "Tourists",
+      "features": ["Lightly Sandy", "Clean Waters", "Non Organised", "Difficult Parking", "Cave", "Small Hile Possibility", "Boat Bar", "Need to see" ]
     },
     {
       "id": 30,
-      "name": "Μπατάρια",
+      "name": "Bataria",
       "image": "images/beaches/bataria.jpg",
-      "distance_km": 64,
-      "location": "Βορειοανατολικά",
-      "crowd": "Ντόπιοι",
-      "features": ["Αμμώδης", "Καθαρά νερά", "Οργανωμένη"]
+      "distance_km": 47,
+      "location": "NorthEast",
+      "crowd": "Locals",
+      "features": ["Mildly Rocky", "Can get windy", "Small bays around"]
     }
   ]
 }
